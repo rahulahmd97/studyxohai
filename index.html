@@ -3,199 +3,239 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StudyXohai</title>
-    <link rel="stylesheet" href="homepage.css">
-<script>
-//<![CDATA[
-window.MathJax = {
-tex: {
-inlineMath: [['$', '$'], ['\\(', '\\)']],
-displayMath: [['$$', '$$'], ['\\[', '\\]']],
-packages: ['base', 'ams', 'mhchem']
-},
-options: {
-renderActions: {
-addMenu: []
-}
-}
-};
-//]]> 
-</script>
+    <title>StudyXohai | Resources</title>
+    <script>
+    //<![CDATA[
+    window.MathJax = {
+    tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']],
+    packages: ['base', 'ams', 'mhchem']
+    },
+    options: { renderActions: { addMenu: [] } }
+    };
+    //]]> 
+    </script>
+    <style>
+        :root {
+            --dark-blue: #0f172a;
+            --blue-800: #1e3a8a;
+            --blue-600: #2563eb;
+            --blue-100: #dbeafe;
+            --bg: #f8fafc;
+            --card-bg: #ffffff;
+            --text: #1e293b;
+            --muted: #64748b;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Inter", "Segoe UI", Roboto, Arial, sans-serif;
+            font-size: 15px;
+            line-height: 1.7;
+            color: var(--text);
+            background: var(--bg);
+            padding: 24px 16px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 32px;
+            padding: 20px;
+            background: linear-gradient(135deg, var(--dark-blue), var(--blue-800));
+            color: white;
+            border-radius: 14px;
+        }
+
+        header h1 {
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        header p {
+            color: var(--blue-100);
+            margin-top: 4px;
+            font-size: 14px;
+        }
+
+        section {
+            background: var(--card-bg);
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 18px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(15, 23, 42, 0.06);
+        }
+
+        h2 {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--dark-blue);
+            margin-bottom: 12px;
+        }
+
+        details {
+            border-top: 1px solid #e2e8f0;
+            padding-top: 12px;
+            margin-top: 12px;
+        }
+
+        summary {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--blue-600);
+            cursor: pointer;
+            list-style: none;
+            padding: 6px 0;
+        }
+        summary::-webkit-details-marker { display: none; }
+        summary:hover { color: var(--blue-800); }
+
+        h3.section-title {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--blue-800);
+            margin: 14px 0 10px;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 12px;
+        }
+
+        .card {
+            display: block;
+            background: var(--bg);
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            padding: 14px 12px;
+            text-decoration: none;
+            color: var(--text);
+            transition: all 0.2s ease;
+        }
+
+        .card h3 {
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .card:hover {
+            background: var(--blue-100);
+            border-color: var(--blue-600);
+            transform: translateY(-2px);
+        }
+
+        footer {
+            text-align: center;
+            color: var(--muted);
+            font-size: 13px;
+            margin-top: 32px;
+        }
+
+        /* Mobile optimization */
+        @media (max-width: 640px) {
+            header h1 { font-size: 20px; }
+            header p { font-size: 12px; }
+            h2 { font-size: 16px; }
+            body { font-size: 14px; padding: 16px 12px; }
+            .card-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+    </style>
 </head>
-<body><br><br>
-    <h1 style="text-align: center;">1ST year GROUP B</h1><br>
-    <h2 class="section-title">PYQ(ModuleWise)
-    </h2>
+<body>
+    <div class="container">
+        <header>
+            <h1>StudyXohai</h1>
+            <p>PYQs + Notes for 1st Year & 3rd Sem ETE</p>
+        </header>
 
-<div class="card-grid">
+        <!-- GROUP B - VISIBLE BY DEFAULT -->
+        <section>
+            <h2>1ST YEAR - GROUP B</h2>
+            <details open>
+                <summary>PYQ - Module Wise</summary>
+                <div class="card-grid">
+                    <a href="beemodulewiseq.html" class="card"><h3>BEE PYQ</h3></a>
+                    <a href="physics.html" class="card"><h3>Physics PYQ</h3></a>
+                    <a href="maths2pyq.html" class="card"><h3>Maths 2 PYQ</h3></a>
+                    <a href="trwpyq.html" class="card"><h3>TRW PYQ</h3></a>
+                    <a href="dtpyq.html" class="card"><h3>DT PYQ</h3></a>
+                    <a href="egpyq.html" class="card"><h3>EG PYQ</h3></a>
+                </div>
+            </details>
 
-    <a href="beemodulewiseq.html" class="card">
-        <h3>BEE PYQ</h3>
-    </a>
+            <details open>
+                <summary>Notes Section</summary>
+                <div class="card-grid">
+                    <a href="beenotes.html" class="card"><h3>BEE Notes</h3></a>
+                    <a href="physicsnotes.html" class="card"><h3>Physics Notes</h3></a>
+                    <a href="mathsnotes.html" class="card"><h3>Maths 2 Notes</h3></a>
+                    <a href="trwnotes.html" class="card"><h3>TRW Notes</h3></a>
+                    <a href="dtnotes.html" class="card"><h3>DT Notes</h3></a>
+                    <a href="egnotes.html" class="card"><h3>EG Notes</h3></a>
+                </div>
+            </details>
+        </section>
 
-    <a href="physics.html" class="card">
-        <h3>Physics PYQ</h3>
-    </a>
+        <!-- GROUP A - HIDDEN -->
+        <section>
+            <h2>1ST YEAR - GROUP A</h2>
+            <details>
+                <summary>Click to view PYQ</summary>
+                <div class="card-grid">
+                    <a href="chemistrypyq.html" class="card"><h3>Chemistry PYQ</h3></a>
+                    <a href="empyq.html" class="card"><h3>Eng. Mechanics PYQ</h3></a>
+                    <a href="maths1pyq.html" class="card"><h3>Maths 1 PYQ</h3></a>
+                    <a href="pyq.html" class="card"><h3>PFPS PYQ</h3></a>
+                    <a href="uhvpyq.html" class="card"><h3>UHV PYQ</h3></a>
+                    <a href="biologypyq.html" class="card"><h3>Biology PYQ</h3></a>
+                </div>
+            </details>
 
-    <a href="maths2pyq.html" class="card">
-        <h3>Mathematics 2 PYQ</h3>
-    </a>
-    <a href="trwpyq.html" class="card">
-        <h3>TRW PYQ</h3>
-    </a>
-    <a href="dtpyq.html" class="card">
-        <h3>DT PYQ</h3>
-    </a>
-    <a  href="egpyq.html" class="card">
-        <h3>EG PYQ</h3>
-    </a>
+            <details>
+                <summary>Click to view Notes</summary>
+                <div class="card-grid">
+                    <a href="emnotes.html" class="card"><h3>Eng. Mechanics Notes</h3></a>
+                    <a href="physicsnotes.html" class="card"><h3>Physics Notes</h3></a>
+                    <a href="maths1notes.html" class="card"><h3>Maths 1 Notes</h3></a>
+                    <a href="pfpsnotes.html" class="card"><h3>PFPS Notes</h3></a>
+                    <a href="uhvnotes.html" class="card"><h3>UHV Notes</h3></a>
+                    <a href="egnotes.html" class="card"><h3>EG Notes</h3></a>
+                </div>
+            </details>
+        </section>
 
-</div>
- 
+        <!-- 3RD SEM - HIDDEN -->
+        <section>
+            <h2>ETE - 3RD SEM</h2>
+            <details>
+                <summary>Click to view Modulewise PYQ</summary>
+                <div class="card-grid">
+                    <a href="dsspyq.html" class="card"><h3>DSS</h3></a>
+                    <a href="ntpyq.html" class="card"><h3>NT</h3></a>
+                    <a href="signalandsystempyq.html" class="card"><h3>Signal and System</h3></a>
+                    <a href="math3pyq.html" class="card"><h3>Maths 3</h3></a>
+                    <a href="LMILpyq.html" class="card"><h3>LMIL</h3></a>
+                    <a href="iispyq.html" class="card"><h3>IIS</h3></a>
+                </div>
+            </details>
+        </section>
 
- 
-
-<h2 class="section-title">Notes Section</h2>
-
-<div class="card-grid">
-
-    <a href="beenotes.html" class="card">
-        <h3>BEE </h3>
-    </a>
-
-    <a href="physicsnotes.html" class="card">
-        <h3>Physics </h3>
-    </a>
-
-    <a href="mathsnotes.html" class="card">
-        <h3>Mathematics 2 </h3>
-    </a>
-    <a href="trwnotes.html" class="card">
-        <h3>TRW </h3>
-    </a>
-    <a href="dtnotes.html" class="card">
-        <h3>DT</h3>
-    </a>
-    <a  href="egnotes...html" class="card">
-        <h3>EG</h3> </a>   
-
-</div>
-<h1 style="text-align: center;">1ST year GROUP A</h1><br>
-    <h2 class="section-title">PYQ(ModuleWise)
-    </h2>
-
-<div class="card-grid">
-
-    <a href="chemistrypyq.html" class="card">
-        <h3>Chemistry PYQ</h3>
-    </a>
-
-    <a href="empyq.html" class="card">
-        <h3>Eng. Mechanics PYQ</h3>
-    </a>
-
-    <a href="maths1pyq.html" class="card">
-        <h3>Mathematics 1 PYQ</h3>
-    </a>
-    <a href="pyq.html" class="card">
-        <h3>PFPS PYQ</h3>
-    <a href="uhvpyq.html" class="card">
-        <h3>UHV PYQ</h3>
-    </a>
-    
-    </a>
-    <a  href="egpyq.html" class="card">
-        <h3>Biology PYQ</h3>
-    </a>
-
-</div>
- 
-
- 
-
-<h2 class="section-title">Notes Section</h2>
-
-<div class="card-grid">
-
-    <a href="emnotes.html" class="card">
-        <h3>Eng. Mechanics </h3>
-    </a>
-
-    <a href="maths1notes.html" class="card">
-        <h3>Physics </h3>
-    </a>
-
-    <a href="mathsnotes.html" class="card">
-        <h3>Mathematics 2 </h3>
-    </a>
-    <a href="pfpsnotes.html" class="card">
-        <h3>TRW </h3>
-    </a>
-    <a href="dtnotes.html" class="card">
-        <h3>DT</h3>
-    </a>
-    <a  href="egnotes.html" class="card">
-        <h3>EG</h3>
-
-</div>
-<h1 style="text-align: center;">1ST year GROUP A</h1><br>
-    <h2 class="section-title">PYQ(ModuleWise)
-    </h2>
-
-<div class="card-grid">
-
-    <a href="chemistrypyq.html" class="card">
-        <h3>Chemistry PYQ</h3>
-    </a>
-
-    <a href="empyq.html" class="card">
-        <h3>Eng. Mechanics PYQ</h3>
-    </a>
-
-    <a href="maths1pyq.html" class="card">
-        <h3>Mathematics 1 PYQ</h3>
-    </a>
-    <a href="pyq.html" class="card">
-        <h3>PFPS PYQ</h3>
-    <a href="uhvpyq.html" class="card">
-        <h3>UHV PYQ</h3>
-    </a>
-    
-    </a>
-    <a  href="egpyq.html" class="card">
-        <h3>Biology PYQ</h3>
-    </a>
-
-</div>
- 
-
- 
-<h1 style="text-align: center;">ETE 3rd Sem</h1><br>
-<h2 class="section-title">Modulewise Pyq</h2>
-
-<div class="card-grid">
-
-    <a href="dsspyq.html" class="card">
-        <h3>DSS</h3>
-    </a>
-
-    <a href="ntpyq.html" class="card">
-        <h3>NT</h3>
-    </a>
-
-    <a href="signalandsystempyq.html" class="card">
-        <h3>Signal and System</h3>
-    </a>
-    <a href="math3pyq.html" class="card">
-        <h3>Maths 3</h3>
-    </a>
-    <a href="LMILpyq.html" class="card">
-        <h3>LMIL</h3>
-    </a>
-    <a  href="iispyq.html" class="card">
-        <h3>IIS</h3>
-
-</div>
-
+        <footer>
+            © 2026 StudyXohai
+        </footer>
+    </div>
 </body>
 </html>
