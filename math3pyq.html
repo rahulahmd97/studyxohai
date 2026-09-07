@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mathematics III PYQ</title>
+
+  <!-- MathJax Config MUST come before script -->
+  <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']],
+      packages: ['base', 'ams'] // removed mhchem, not needed for DE
+    },
+    svg: {
+      fontCache: 'global'
+    }
+  };
+  </script>
+  <!-- Load MathJax -->
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+  <style>
+    body {
+      background: #070b16;
+      color: #e2e8f0;
+      font-family: Inter, system-ui, sans-serif;
+      padding: 4px;
+      line-height: 1.8;
+      min-height: 100vh;
+    }
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: radial-gradient(circle at 20% 20%, rgba(56, 189, 248, 0.18), transparent 16%),
+                  radial-gradient(circle at 80% 10%, rgba(168, 85, 247, 0.16), transparent 18%),
+                  radial-gradient(circle at 70% 80%, rgba(14, 165, 233, 0.14), transparent 22%);
+      pointer-events: none;
+      z-index: -1;
+    }
+    .container {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 4px;
+    }
+    h1 {
+      margin-bottom: 24px;
+      font-size: 3rem;
+      letter-spacing: -0.04em;
+      background: linear-gradient(90deg, #60a5fa, #8b5cf6, #ec4899);
+      -webkit-background-clip: text;
+      color: transparent;
+      text-shadow: 0 3px 12px rgba(96, 165, 250, 0.22);
+      border-radius: 8px;
+    }
+    p {
+      background: rgba(15, 23, 42, 0.94);
+      padding: 16px 20px;
+      border-radius: 24px;
+      margin: 14px 0;
+      border-left: 6px solid rgba(59, 130, 246, 0.8);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.32);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      color: #e2e8f0;
+    }
+    p:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 28px 70px rgba(15, 23, 42, 0.45);
+    }
+    p span {
+      font-weight: 700;
+      color: #f472b6;
+    }
+    b {
+      color: #38bdf8;
+    }
+    .section-title {
+      display: inline-block;
+      margin-top: 32px;
+      margin-bottom: 12px;
+      padding: 12px 18px;
+      border-radius: 9999px;
+      background: rgba(59, 130, 246, 0.12);
+      color: #bfdbfe;
+      font-weight: 700;
+    }
+    .question-group {
+      padding: 20px;
+      background: rgba(15, 23, 42, 0.92);
+      border: 1px solid rgba(96, 165, 250, 0.14);
+      border-radius: 28px;
+      margin-bottom: 24px;
+      backdrop-filter: blur(14px);
+    }
+  
+
+/* ===== Mobile MathJax Fix ===== */
+html,body{
+    max-width:100%;
+    overflow-x:hidden;
+}
+
+mjx-container{
+    max-width:100% !important;
+}
+
+mjx-container[display="true"]{
+    display:block;
+    max-width:100%;
+    overflow-x:auto;
+    overflow-y:hidden;
+    -webkit-overflow-scrolling:touch;
+    padding:4px 0;
+}
+
+@media (max-width:768px){
+    mjx-container{
+        font-size:88% !important;
+    }
+
+    p{
+        overflow-wrap:anywhere;
+        word-break:break-word;
+    }
+}
+h2{
+    color: #fff;
+    background: linear-gradient(90deg, #60a5fa, #8b5cf6, #ec4899);
+    display: inline-block;
+    border-radius: 8px;
+    padding: 4px 12px;
+}
+
+</style>
+</head>
+<body>
+    <h2>MODULE 1: Linear Algebra</h2>
+
+<p>1. Let $V$ be the vector space of all functions $f$ from $R$ to $R$. Which of the following set of functions are subspaces of $V$?<br>
+(i) all f.s.t. $f(x^2)=f(x)^2$<br>
+(ii) all f.s.t. $f(0)=f(1)$<br>
+(iii) all f.s.t. $f(3)=1+f(-5)$<br>
+(iv) None of these. <span style="color:red">mark 1 ASTU 2025</span></p>
+
+<p>2. Which of the following $T:R^2\rightarrow R^2$ is a linear transformation?<br>
+(i) $T(x_1,x_2)=(1+x_1,x_2)$<br>
+(ii) $T(x_1,x_2)=(\sin x_1,x_2)$<br>
+(iii) $T(x_1,x_2)=(x_1-x_2,0)$<br>
+(iv) None of these. <span style="color:red">mark 1 ASTU 2025</span></p>
+
+<p>3. If $\alpha=(1,2)$, $\beta=(-1,1)$ and $\gamma$ is a vector s.t. $\langle\alpha,\gamma\rangle=-1$ and $\langle\beta,\gamma\rangle=3$, find $\gamma$. <span style="color:red">mark 1 ASTU 2025</span></p>
+
+<p>4. On $R^2$, the two vectors orthonormal to $x=(1,1)$ are ______, ______. <span style="color:red">mark 1 ASTU 2025</span></p>
+
+<p>5. $W=\left[\begin{matrix}x&-x\\y&z\end{matrix}\right]$ is the subspace of the vector space of all $2\times2$ matrices. Find the dimension of $W$. <span style="color:red">mark 4 ASTU 2025</span></p>
+
+<p>6. Consider the linear transformation $T:R^3\rightarrow R^3$ given by $T(x_1,x_2,x_3)=(3x_1+x_2-x_3,x_1+2x_2-x_3,x_1+2x_2)$. Find the characteristic polynomial and nullity of $T$. <span style="color:red">mark 4 ASTU 2025</span></p>
+
+<p>7. Apply Gram-Schmidt method to find an orthonormal basis of $R^3$ from the vectors $u_1=(3,0,4),\ u_2=(-1,0,7),\ u_3=(2,9,11)$. <span style="color:red">mark 4 ASTU 2025</span></p>
+
+<p>8. Show that an orthonormal set of non-zero vectors is always linearly independent. <span style="color:red">mark 4 ASTU 2025</span></p>
+
+<p>9. $T:R^3\rightarrow R^2$ given by $T(x_1,x_2,x_3)=(x_1+x_2,2x_3-x_1)$ is a linear transformation. With respect to the standard bases find the matrix of $T$. <span style="color:red">mark 4 ASTU 2025</span></p>
+
+<p>10. State and prove Cauchy–Schwarz Inequality. <span style="color:red">mark 4 ASTU 2025</span></p>
+
+<h2>MODULE 2: Probability</h2>
+
+<p>1. If an event $A$ can happen in $m$ ways and fail in $n$ ways, all these ways being equally likely to occur, then the probability of the happening of $A$ is<br>
+(a) $\frac{n}{m+n}$<br>
+(b) $\frac{m}{m+n}$<br>
+(c) $\frac{n}{m-n}$<br>
+(d) $\frac{m}{m-n}$. <span style="color:red">mark 1 ASTU 2023</span></p>
+
+<p>2. There are $q$ persons sitting in a row. Two of them are selected at random; the probability that the two selected person are not together is<br>
+(a) $\frac{2}{q}$<br>
+(b) $\frac{q(q-1)}{(q+1)(q+2)}$<br>
+(c) $1-\frac{2}{q}$<br>
+(d) None of these. <span style="color:red">mark 1 ASTU 2023</span></p>
+
+<p>3. If $P(B')=0.65,\ P(A\cup B)=0.85$ and $A$ and $B$ are independent events, then the value of $P(A)$ is<br>
+(a) 0.7<br>
+(b) 0.6<br>
+(c) 0.5<br>
+(d) None of these. <span style="color:red">mark 1 ASTU 2023</span></p>
+
+<p>4. A and B throw alternately with a pair of dice. The one who throws 9 first wins. Show that the chance of their winning are $9:8$. <span style="color:red">mark 5 ASTU 2023</span></p>
+
+<p>5. State Bayes' theorem. <span style="color:red">mark 5 ASTU 2023</span></p>
+
+<p>6. In a bolt factory there are four machines A, B, C, D manufacturing 20%, 15%, 25% and 40% of the total output respectively. Out of their outputs 5%, 4%, 3% and 2% in the same order are defective bolts. A bolt is chosen at random from the factory's production and is found defective. What is the probability that the bolt was manufactured by machine A or machine D? <span style="color:red">mark 5 ASTU 2023</span></p>
+
+<p>7. If $A$ and $B$ are two independent random variables these<br>
+(a) $P(A\cup B)=P(A)+P(B)$<br>
+(b) $P(A\cap B)=P(A)\cdot P(B)$<br>
+(c) $P(A\cup B)=P(A)\cdot P(B)$<br>
+(d) $P(A\cap B)=P(A)+P(B)$. <span style="color:red">mark 1 ASTU 2024</span></p>
+
+<p>8. For any event $A$ if $P(A^c)=\frac{1}{3}$ then $P(A)$ is<br>
+(a) $\frac{2}{3}$<br>
+(b) $1$<br>
+(c) $\frac{3}{4}$<br>
+(d) $\frac{1}{2}$. <span style="color:red">mark 1 ASTU 2024</span></p>
+
+<p>9. An urn contains 10 white and 3 black balls, while another urn contains 3 white and 5 black balls. Two balls are drawn from the first urn and put into the second urn and then a ball is drawn from the later. What is the probability that it is a white ball? <span style="color:red">mark 5 ASTU 2024</span></p>
+
+<p>10. Ten coins are tossed simultaneously. Find the probability of getting at least seven heads. <span style="color:red">mark 3 ASTU 2024</span></p>
+
+<p>11. Two numbers $x$ and $y$ are selected at random between zero and one. Let the events $A$, $B$ and $C$ are defined as follows: $A=\{x>0.5\}$, $B=\{y>0.5\}$ and $C=\{x>y\}$. Discuss whether the pairs $A,B$ and $A,C$ are independent. <span style="color:yellow">mark 4 ASTU 2025</span></p>
+
+<p>12. Show that the probability that exactly one of the events $A$ or $B$ occurs is given by $P(A)+P(B)-2P(A\cap B)$. <span style="color:yellow">mark 4 ASTU 2025</span></p>
+
+<p>13. We have four Boxes. Box 1 contains 2000 components of which 5 percent are defective. Box 2 contains 500 components of which 40 percent are defective. Box 3 and 4 contain 1000 each with 10 percent defective. One component is selected at random and found to be defective. Find the probability that it comes from Box 2. <span style="color:yellow">mark 4 ASTU 2025</span></p>
+
+<p>14. What is the probability that a leap year selected at random will contain either 53 Thursdays or 53 Fridays or both? <span style="color:red">mark 5 ASTU 2019</span></p>
+
+<p>15. The probabilities that three persons $A$, $B$, $C$ becoming managers are $\frac{4}{9},\frac{2}{5}$ and $\frac{1}{3}$ respectively. The probabilities that the bonus scheme will be introduced if they become managers are $\frac{3}{10},\frac{1}{2}$ and $\frac{4}{5}$ respectively.<br>
+(i) What is the probability that the bonus scheme will be introduced?<br>
+(ii) If the bonus scheme has been introduced what is the probability that it was due to Mr. A being appointed as Manager? <span style="color:red">mark 5 ASTU 2019</span></p>
+
+<p>16. The appearing of 1 or 2 on a die is counted as a success. Four dice are thrown 243 times. Find the expected number of times of getting<br>
+(i) at least two successes.<br>
+(ii) exactly three successes. <span style="color:red">mark 4 ASTU 2019</span></p>
+
+<p>17. A problem in statistics is given to three students A, B and C whose chances of solving it are $1/2$, $1/3$ and $1/4$ respectively. What is the probability that the problem will be solved if all of these try independently? <span style="color:red">mark 4 ASTU 2024</span></p>
+
+<h2>MODULE 3: Random Variables</h2>
+
+<p>1. If the mean of a Binomial Distribution is 6 and for each trial $\frac{1}{3}$ is the probability of success. Then the ratio of its variance and standard deviation is<br>
+(a) $2:1$<br>
+(b) $1:2$<br>
+(c) $3:1$<br>
+(d) $1:3$. <span style="color:red">mark 1 ASTU 2023</span></p>
+
+<p>2. For what value of chi-square, the observed and theoretical frequencies fit perfectly to the model<br>
+(a) $-1$<br>
+(b) $1$<br>
+(c) $0$<br>
+(d) None of these. <span style="color:red">mark 1 ASTU 2023</span></p>
+
+<p>3. For what value of the standard normal variate $z$, the difference between the observed and expected no. of successes is not significant.<br>
+(a) $|z|>2.58$<br>
+(b) $1.95<|z|<2.58$<br>
+(c) $|z|>1.96$<br>
+(d) $|z|<1.96$. <span style="color:red">mark 1 ASTU 2023</span></p>
+
+<p>4. Is the function defined as follows a density function? $f(x)=e^{-x},\ x\geq0$ and $f(x)=0,\ x<0$. Find the distribution function $F(2)$. <span style="color:red">mark 2 ASTU 2023</span></p>
+
+<p>5. The distribution function for a random variable $X$ is $F(x)=\{1-e^{-2x},x\geq0\}$ and $f(x)=0,x<0$. Find the density function and $P(-3<X<4)$. <span style="color:red">mark 2 ASTU 2023</span></p>
+
+<p>6. Prove that $P(X=x)=\frac{e^{-\lambda}\lambda^x}{x!},\ x=0,1,2,3,\ldots$, where $P(X)$ is a Poisson Distribution. <span style="color:red">mark 5 ASTU 2023</span></p>
+
+<p>7. A manufacturer of envelopes knows that the weight of the envelopes is normally distributed with mean 1.9 gm. and the variance 0.01 gm. Find how many envelopes weighing<br>
+(i) 2 gm or more<br>
+(ii) 2.1 gm or more<br>
+can be expected in a packet of 1000 envelopes. $(A(0\leq z\leq1)=0.3413,\ A(0\leq z\leq2)=0.4772)$. <span style="color:red">mark 5 ASTU 2023</span></p>
+
+<p>8. If $f(x)=cx,\ x=1,2,3,4$ is a probability mass function then the value of $C$ is<br>
+(a) $\frac{1}{10}$<br>
+(b) $\frac{1}{5}$<br>
+(c) $\frac{2}{5}$<br>
+(d) $\frac{3}{10}$. <span style="color:red">mark 1 ASTU 2024</span></p>
+
+<p>9. If $f(x)$ is a probability density function for a continuous random variable $X$, where $C$ is a fixed point, then the value of $f(c)$ is<br>
+(a) $0$<br>
+(b) $1$<br>
+(c) $\frac{1}{3}$<br>
+(d) $\frac{1}{2}$. <span style="color:red">mark 1 ASTU 2024</span></p>
+
+<p>10. The median of the values $20,15,25,28,18,16,30$ is<br>
+(a) $28$<br>
+(b) $18$<br>
+(c) $20$<br>
+(d) $16$. <span style="color:red">mark 1 ASTU 2024</span></p>
+
+<p>11. Find the mean and variance of the Poisson distribution with parameter $\lambda$ and $p$ having usual notation. <span style="color:red">mark 7 ASTU 2024</span></p>
+
+<p>12. In a normal distribution of marks, 31% are under 45 and 8% are over 64. Find the mean and standard deviation of the distribution. <span style="color:red">mark 5 ASTU 2024</span></p>
+
+<p>13. Three balls are drawn at random from a box containing 2 white, 3 red and 4 black balls. If $X$ denotes the number of white balls drawn and $Y$ denotes the number of red balls drawn. Find the joint probability distribution of $(X,Y)$. Also find the marginal distribution of $X$ and $Y$. <span style="color:red">mark 7 ASTU 2024</span></p>
+
+<p>14. The joint distribution of $X$ and $Y$ is given by $P(x,y)=\frac{x+y}{21};\ x=1,2,3;\ y=1,2$. Find the marginal distribution of $X$ and $Y$. Also find $P(X\leq2,Y\leq2)$. <span style="color:red">mark 5 ASTU 2024</span></p>
+
+<p>15. The density function of a continuous random variable is $f(x)=\{k,\ a\leq x\leq b;\ 0,\ otherwise\}$. Then in the interval $[a,b]$ the distribution function $F(x)$ is ______. <span style="color:yellow">mark 1 ASTU 2025</span></p>
+
+<p>16. A random vector variable $(x,y)$ has the joint pdf $f(x,y)=k(x+y)$,$ 0<x<1; 0<y<1. Then the value of $k$ is ______. <span style="color:yellow">mark 1 ASTU 2025</span></p>
+
+<p>17. Let $b_1b_2b_3\ldots$ be the binary expansion of a number $\xi$ selected at random from the interval $[0,1]$. The discrete-time random process $X(n,\xi)$ is defined as $X(n,\xi)=b_n,\ n=1,2,\ldots$. Then $P[X(1,\xi)=0]$ is<br>
+(i) $1$<br>
+(ii) $\frac{1}{2}$<br>
+(iii) $\frac{1}{4}$<br>
+(iv) $\frac{1}{8}$. <span style="color:yellow">mark 1 ASTU 2025</span></p>
+
+<p>18. A random variable $X$ has the density function $f(x)=\frac{a}{x^2+1},\ -\infty<x<\infty$. Find (i) $a$ (ii) $P\left(\frac{1}{3}<X<1\right)$ (iii) The distribution function of $X$. <span style="color:yellow">mark 4 ASTU 2025</span></p>
+
+<p>19. If 5% of the electric bulbs manufactured by a company are defective then in a sample of 100 bulbs find the probability that at least 5 bulbs are defective. (Given that $e^{-5}=0.007$). <span style="color:yellow">mark 4 ASTU 2025</span></p>
+
+<p>20. The daily wage of 10,000 workers in a factory follows normal distribution with mean Rs. 700 and standard deviation Rs. 50. Find the expected number of workers whose daily wages are<br>
+(i) between Rs. 660 and Rs. 720<br>
+(ii) more than Rs. 720. <span style="color:yellow">mark 4 ASTU 2025</span></p>
+
+<p>21. The joint mass function of two random variables $X$ and $Y$ is given as $f(x,y)=\{C(2x+y);\ 0\leq x\leq2,\ 0\leq y\leq3,\ x,y\in Z;\ 0,\ otherwise\}$. Find $P(X=2,Y=1)$ and $P(X\geq1,Y\leq2)$. <span style="color:yellow">mark 4 ASTU 2025</span></p>
+
+<p>22. Three Coins are tossed simultaneously. The random variables $X$ and $Y$ give the number of heads and the number of tails respectively. Find the joint distribution and the marginal distributions. <span style="color:yellow">mark 4 ASTU 2025</span></p>
+
+<h2>MODULE 4: Operation on One Random Variable</h2>
+
+<p>1. The expectation of sum of two random variables $A$ and $B$ is<br>
+(a) $E(A)+E(B)$<br>
+(b) $E(A)\cdot E(B)$<br>
+(c) $E(A)/E(B)$<br>
+(d) $E(A)-E(B)$<br>
+where $E(A)$ means expectation of $A$. <span style="color:red">mark 1 ASTU 2024</span></p>
+
+<p>2. If the standard deviation of a distribution is 20, then its mean deviation is<br>
+(a) 16<br>
+(b) 8<br>
+(c) 14<br>
+(d) 12. <span style="color:red">mark 1 ASTU 2023</span></p>
+
+<p>3. Show that $\mu_2=\mu'_2-(\mu'_1)^2$ where $\mu_2$ is the second central moment and $\mu'_1$ and $\mu'_2$ are 1st and 2nd moments. <span style="color:red">mark 3 ASTU 2023</span></p>
+
+<p>4. What is skewness and kurtosis? <span style="color:red">mark 2 ASTU 2023</span></p>
+
+<p>5. You are given the following frequency distribution of the daily earning of employees of a company:<br>
+Earning (in Rs): 50-70, 70-90, 90-110, 110-130, 130-150, 150-170, 170-190<br>
+No. of workers: 4, 8, 12, 20, 6, 7, 3<br>
+Calculate the first 4 moments about the point 120. Hence find the moments about mean. Also compute the value of $\beta_1$. <span style="color:red">mark 6 ASTU 2023</span></p>
+
+<p>6. The Joint Probability Function of two discrete random variable $X$ and $Y$ is given by $f(x,y)=C(2x+y)$ where $x$ and $y$ can assume all integers such that $0\leq X\leq2$ and $0\leq Y\leq3$ and $f(x,y)=0$, otherwise.<br>
+(i) Find the value of constant $C$<br>
+(ii) Find $P(X=2,Y=1)$<br>
+(iii) Find $P(X\geq1,Y\leq2)$. <span style="color:red">mark 5 ASTU 2023</span></p>
+
+<p>7. Prove that Variance $(X)=E(X^2)-[E(X)]^2$. <span style="color:red">mark 3 ASTU 2023</span></p>
+
+<p>8. From an urn containing 3 red balls and 2 white balls, a man is to draw two balls at random without replacement, being promised Rs. 20 for each red ball he draws and Rs. 10 for each white one. Find his expectations. <span style="color:red">mark 5 ASTU 2023</span></p>
+
+<p>9. Prove that for any two independent random variables $X$ and $Y$, $E(XY)=E(X)\cdot E(Y)$. <span style="color:red">mark 5 ASTU 2024</span></p>
+
+<p>10. If $X$ and $Y$ are independent random variables prove that $Var(X+Y)=Var(X)+Var(Y)$ and $Cov(X,Y)=0$. <span style="color:yellow">mark 4 ASTU 2025</span></p>
+
+<p>11. Find the first three raw moments and central moments of the discrete random variable $X$ with probability mass function:<br>
+$f(x)=\begin{cases}
+0.7,&x=1\\
+0.2,&x=2\\
+0.1,&x=3\\
+0,&otherwise
+\end{cases}$ <span style="color:red">mark 7 ASTU 2024</span></p>
+
+<p>12. Calculate arithmetic mean and median of the distribution. Also calculate mode.<br>
+<table>
+<tr><th>Class interval</th><th>Frequency</th></tr>
+<tr><td>130-134</td><td>7</td></tr>
+<tr><td>135-139</td><td>15</td></tr>
+<tr><td>140-144</td><td>28</td></tr>
+<tr><td>145-149</td><td>24</td></tr>
+<tr><td>150-154</td><td>17</td></tr>
+<tr><td>155-159</td><td>10</td></tr>
+<tr><td>160-164</td><td>1</td></tr>
+</table> <span style="color:red">mark 7 ASTU 2024</span></p>
+
+<p>13. Calculate the first four moments about mean for the following distribution and hence find $\beta_1$ and $\beta_2$.<br>
+$x:\ 0\quad1\quad2\quad3\quad4\quad5\quad6\quad7\quad8$<br>
+$f:\ 1\quad8\quad28\quad56\quad70\quad56\quad28\quad8\quad1$ <span style="color:red">mark 6 ASTU 2024</span></p>
+
+<p>14. The first three moments of a distribution about the value 4 are $-1.5,\ 17$ and $-30$. Find the mean and standard deviation of the distribution. <span style="color:red">mark 3 ASTU 2024</span></p>
+
+<p>15. If the mean of a Binomial Distribution is 6 and for each trial $\frac{1}{3}$ is the probability of success. Then the ratio of its variance and standard deviation is<br>
+(a) $2:1$<br>
+(b) $1:2$<br>
+(c) $3:1$<br>
+(d) $1:3$. <span style="color:red">mark 1 ASTU 2023</span></p>
+
+<h2>MODULE 5: Random Process</h2>
+
+<p>1. Let $b_1b_2b_3\ldots$ be the binary expansion of a number $\xi$ selected at random from the interval $[0,1]$. The discrete-time random process $X(n,\xi)$ is defined as $X(n,\xi)=b_n,\ n=1,2,\ldots$. Then $P[X(1,\xi)=0]$ is<br>
+(i) $1$<br>
+(ii) $\frac{1}{2}$<br>
+(iii) $\frac{1}{4}$<br>
+(iv) $\frac{1}{8}$. <span style="color:yellow">mark 1 ASTU 2025</span></p>
+
+<p>2. Show that the random process $X(t)=A\cos\omega t+B\sin\omega t$ where $A$ and $B$ are uncorrelated random variables each with mean 0 and variance 1, $\omega$ is a positive constant, is covariance stationary. <span style="color:yellow">mark 4 ASTU 2025</span></p>
+
+<p>3. Find an expression for $E[|X_t-X_{t-\tau}|^2]$ in terms of autocorrelation function. <span style="color:yellow">mark 4 ASTU 2025</span></p>
+
+<p>4. Let the random variable be defined as $Y=aX+b$ where $a$ is a non-zero constant. Suppose that $X$ has cdf $F_X(x)$. Find the pdf $f_Y(y)$. <span style="color:yellow">mark 4 ASTU 2025</span></p>
+
+<p>5. The TPM of a Markov chain is $\begin{bmatrix}\frac12&\frac14&\frac14\\0&1&0\\0&\frac12&\frac12\end{bmatrix}$. Draw the transition diagram of three states. <span style="color:red">mark 5 ASTU 2024</span></p>
+
+<p>6. The TPM of a Markov chain is $\begin{bmatrix}0&1&0\\\frac13&0&\frac23\\\frac14&\frac12&\frac14\end{bmatrix}$. Draw the transition diagram for the following transition matrix. <span style="color:red">mark 3 ASTU 2019</span></p>
+
+<p>7. Define:<br>
+(i) Markov process<br>
+(ii) Markov chain and<br>
+(iii) Stochastic matrix. <span style="color:red">mark 3 ASTU 2019</span></p>
+
+<p>8. Show that correlation coefficient is the geometric mean of the two regression coefficients. <span style="color:red">mark 2 ASTU 2019</span></p>
+
+<h2>Outside/Not Clearly Covered in Syllabus</h2>
+
+<p>1. The relationship among mean, median and mode is<br>
+(a) Mode − Mean = 3 (Mean − Median)<br>
+(b) Mean − Mode = 3 (Median − Mean)<br>
+(c) Median − Mode = 3 (Mode − Mean)<br>
+(d) Mean − Mode = 3 (Mean − Median). <span style="color:red">mark 1 ASTU 2023</span></p>
+
+<p>2. If the correlation coefficient is 0, then the two regression lines are<br>
+(a) Parallel<br>
+(b) Perpendicular<br>
+(c) Coincident<br>
+(d) Inclined at $45^\circ$ to each other. <span style="color:red">mark 1 ASTU 2023</span></p>
+
+<p>3. If the degree of peakness of a distribution is 3, then the curve is called<br>
+(a) Leptokurtic<br>
+(b) Platykurtic<br>
+(c) Mesokurtic<br>
+(d) None of these. <span style="color:red">mark 1 ASTU 2023</span></p>
+
+<p>4. A group of scientific mens reported 1705 sons and 1527 daughters. Do these figures conform to the hypothesis that the sex ratio is $1/2$? <span style="color:red">mark 5 ASTU 2023</span></p>
+
+<p>5. Fit a Poisson distribution to the following data and test the goodness of fit.<br>
+$x:\ 0\quad1\quad2\quad3\quad4\quad5\quad6$<br>
+$f:\ 275\quad72\quad30\quad7\quad5\quad2\quad1$ <span style="color:red">mark 5 ASTU 2023</span></p>
+
+<p>6. Find the mean and median of the frequency distribution below.<br>
+<table>
+<tr><th>Class Interval</th><th>20-25</th><th>25-30</th><th>30-35</th><th>35-40</th><th>40-45</th></tr>
+<tr><td>Frequency</td><td>14</td><td>28</td><td>33</td><td>30</td><td>20</td></tr>
+</table> <span style="color:red">mark 5 ASTU 2023</span></p>
+
+<p>7. Calculate the coefficient of correlation between $X$ and $Y$ from the following data:<br>
+$X:\ 9\quad8\quad7\quad6\quad5\quad4\quad3\quad2\quad1$<br>
+$Y:\ 15\quad16\quad14\quad12\quad10\quad13\quad11\quad8\quad9$ <span style="color:red">mark 5 ASTU 2023</span></p>
+
+<p>8. Determine if the matrix $P=\begin{bmatrix}1&0&0\\0&0&1\\\frac13&\frac13&\frac13\end{bmatrix}$ is a regular stochastic matrix or not? <span style="color:red">mark 2 ASTU 2023</span></p>
+
+<p>9. Prove that correlation coefficient is independent of the change of origin and scale. <span style="color:red">mark 2 ASTU 2023</span></p>
+
+<p>10. The median of the values $20,15,25,28,18,16,30$ is<br>
+(a) $28$<br>
+(b) $18$<br>
+(c) $20$<br>
+(d) $16$. <span style="color:red">mark 1 ASTU 2024</span></p>
+
+<p>11. The mode of the series: $6,5,3,4,3,7,8,5,9,5,4$ is<br>
+(a) 4<br>
+(b) 8<br>
+(c) 3<br>
+(d) 5. <span style="color:red">mark 1 ASTU 2024</span></p>
+
+<p>12. In a symmetric distribution all moments are<br>
+(a) 1<br>
+(b) 2<br>
+(c) 0<br>
+(d) none of these. <span style="color:red">mark 1 ASTU 2024</span></p>
+
+<p>13. The co-efficient of skewness usually lies between<br>
+(a) −1 and 1<br>
+(b) −1 and 0<br>
+(c) 0 and 1<br>
+(d) none of these. <span style="color:red">mark 1 ASTU 2024</span></p>
+
+<p>14. The following table gives the number of accidents that took place in an industry during various days in a week. Test whether accidents are uniformly distributed over the week.<br>
+<table>
+<tr><th>Day</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thur</th><th>Fri</th><th>Sat</th></tr>
+<tr><td>No. of accidents</td><td>14</td><td>18</td><td>12</td><td>11</td><td>15</td><td>14</td></tr>
+</table> <span style="color:red">mark 5 ASTU 2024</span></p>
+
+<p>15. The average marks in Mathematics of a sample space of 100 students was 51 with a standard deviation of 6 marks. Could this have been a random sample from a population with average marks 50? Justify it. <span style="color:red">mark 5 ASTU 2024</span></p>
+
+<p>16. Give the bivariate data:<br>
+$X:\ 2\quad4\quad5\quad6\quad8\quad11$<br>
+$Y:\ 18\quad12\quad10\quad8\quad7\quad5$<br>
+(i) Obtain the two regression lines.<br>
+(ii) Calculate Karl Pearson's co-efficient of correlation. <span style="color:red">mark 5 ASTU 2024</span></p>
+
+<p>17. Give the differences of positive and negative correlation. <span style="color:red">mark 2 ASTU 2024</span></p>
+
+<p>18. Fit a linear trend of the following by the method of least squares and estimate the production for the year 1986.<br>
+<table>
+<tr><th>Years</th><td>1978</td><td>1979</td><td>1980</td><td>1981</td><td>1982</td><td>1983</td><td>1984</td></tr>
+<tr><th>Production (in quantities)</th><td>40</td><td>45</td><td>46</td><td>42</td><td>47</td><td>49</td><td>46</td></tr>
+</table> <span style="color:red">mark 7 ASTU 2024</span></p>
+
+<p>19. Calculate arithmetic mean and median of the distribution. Also calculate mode.<br>
+<table>
+<tr><th>Class interval</th><th>Frequency</th></tr>
+<tr><td>130-134</td><td>7</td></tr>
+<tr><td>135-139</td><td>15</td></tr>
+<tr><td>140-144</td><td>28</td></tr>
+<tr><td>145-149</td><td>24</td></tr>
+<tr><td>150-154</td><td>17</td></tr>
+<tr><td>155-159</td><td>10</td></tr>
+<tr><td>160-164</td><td>1</td></tr>
+</table> <span style="color:red">mark 7 ASTU 2024</span></p>
+
+<p>20. The first four moments about mean for the following distribution and hence find $\beta_1$ and $\beta_2$.<br>
+$x:\ 0\quad1\quad2\quad3\quad4\quad5\quad6\quad7\quad8$<br>
+$f:\ 1\quad8\quad28\quad56\quad70\quad56\quad28\quad8\quad1$ <span style="color:red">mark 6 ASTU 2024</span></p>
+
+<p>21. A random variable $X$ has the density function $f(x)=\frac{a}{x^2+1},\ -\infty<x<\infty$. Find (i) $a$ (ii) $P\left(\frac{1}{3}<X<1\right)$ (iii) The distribution function of $X$. <span style="color:yellow">mark 4 ASTU 2025</span></p>
+
+<p>22. Give the bivariate data:<br>
+$X:\ 2\quad4\quad5\quad6\quad8\quad11$<br>
+$Y:\ 18\quad12\quad10\quad8\quad7\quad5$<br>
+Obtain the two regression lines. Calculate Karl Pearson's co-efficient of correlation. <span style="color:red">mark 5 ASTU 2024</span></p>
+
+<p>23. The following values were obtained from a frequency distribution: $\sum f=100,\ \sum fx=-100,\ \sum fx^2=5500,\ \sum fx^3=-6250$ and $\sum fx^4=775000$. Find the moments about mean and hence find the moment co-efficients of skewness and kurtosis. Also discuss the nature of skewness and kurtosis. <span style="color:red">mark 7 ASTU 2019</span></p>
+
+<p>24. The mean of $n$ terms is $\bar{x}$. If the first term is increased by 1, second by 2 and so on, then the new mean is<br>
+(a) $\bar{x}+n$<br>
+(b) $\bar{x}+\frac{n}{2}$<br>
+(c) $\bar{x}+\frac{n+1}{2}$<br>
+(d) None of these. <span style="color:red">mark 1 ASTU 2019</span></p>
+
+<p>25. In two throws of a dice probability that 6 appears at least once is<br>
+(a) $\frac{1}{6}$<br>
+(b) $\frac{1}{4}$<br>
+(c) $\frac{10}{36}$<br>
+(d) $\frac{11}{36}$. <span style="color:red">mark 1 ASTU 2019</span></p>
+
+<p>26. The mean of a binomial distribution is 10 and its standard deviation is 2. The value of $p$ is<br>
+(a) 0.4<br>
+(b) 0.6<br>
+(c) 1<br>
+(d) 0.8. <span style="color:red">mark 1 ASTU 2019</span></p>
+
+<p>27. If $A$ and $B$ are any two events, then $P$(neither $A$ nor $B$) equals<br>
+(a) $1-P(A\cup B)$<br>
+(b) $P(A)+P(B)$<br>
+(c) $1-P(A)-P(B)$<br>
+(d) $1-P(A)-P(B)$. <span style="color:red">mark 1 ASTU 2019</span></p>
+
+<p>28. If the correlation co-efficient between $x$ and $y$ is 0.28, covariance between $x$ and $y$ is 7.6 and the variance of $x$ is 9, then the standard deviation of $y$ is approximately<br>
+(a) 9.8<br>
+(b) 10.1<br>
+(c) 9.05<br>
+(d) 10.05. <span style="color:red">mark 1 ASTU 2019</span></p>
+
+<p>29. If the angle between the two lines of regression is $90^\circ$, then it represents<br>
+(a) perfect correlation<br>
+(b) perfect negative correlation<br>
+(c) no linear correlation<br>
+(d) none of these. <span style="color:red">mark 1 ASTU 2019</span></p>
+
+<p>30. If $P(X=2)=9P(X=4)=90P(X=6)$, then the standard deviation of the Poisson variate is<br>
+(a) 1<br>
+(b) $\sqrt{2}$<br>
+(c) 2<br>
+(d) 4. <span style="color:red">mark 1 ASTU 2019</span></p>
+
+<p>31. Which vectors is a probability vector?<br>
+(a) $\left(\frac12,\frac13,0,\frac15\right)$<br>
+(b) $(3,4,1,-7)$<br>
+(c) $\left(\frac14,\frac13,\frac34,\frac13\right)$<br>
+(d) $\left(\frac14,\frac14,0,\frac12\right)$. <span style="color:red">mark 1 ASTU 2019</span></p>
+
+<p>32. If $d_i$ denotes the rank difference of the $i^{th}$ individual, then the rank correlation co-efficient between two characteristics of a group of $n$ individuals is given by ______. <span style="color:red">mark 1 ASTU 2019</span></p>
+
+<p>33. The value that separates the acceptance region from the rejection region is called the ______. <span style="color:red">mark 1 ASTU 2019</span></p>
+
+<p>34. Fit a least square straight line to the following data:<br>
+$x:\ 2\quad7\quad9\quad1\quad5$<br>
+$y:\ 13\quad21\quad23\quad14\quad15$<br>
+Hence predict $y(4)$. <span style="color:red">mark 4 ASTU 2019</span></p>
+
+<p>35. Two dice are tossed simultaneously. Write the probability distribution for the difference of the numbers shown on the two faces. Also find its mean and variance. <span style="color:red">mark 4 ASTU 2019</span></p>
+
+<p>36. A variable $x$ has binomial distribution with $n=100$ and $p=0.01$. Using suitable distribution find<br>
+(i) $P(x=0)$<br>
+(ii) $P(x>2)$ and<br>
+(iii) $E(x)$. <span style="color:red">mark 3 ASTU 2019</span></p>
+
+<p>37. Find the unit fixed probability vector of the matrix $A=\begin{bmatrix}0&1&0\\\frac12&0&\frac12\\\frac12&\frac14&\frac14\end{bmatrix}$. <span style="color:red">mark 4 ASTU 2019</span></p>
+
+<p>38. A fair coin is tossed twice. Let $x$ denotes 0 or 1 according as a head or a tail appears on the first toss. Let $y$ denotes the number of heads which occur.<br>
+(i) Find the marginal distributions of $x$ and $y.<br>
+(ii) Write the joint distribution of $x$ and $y.<br>
+(iii) Find $E(x)$ and $E(xy)$. <span style="color:red">mark 6 ASTU 2019</span></p>
+
+<p>39. A continuous random variable $x$ has the following probability density function $f(x)=\{k(1-x^2),\ 0<x<1;\ 0,\ elsewhere\}$. Find (i) $k$ (ii) $P(x>0.5)$. <span style="color:red">mark 3 ASTU 2019</span></p>
+
+<p>40. The regression lines between two variables $x$ and $y$ are given as $2x+3y-6=0$ and $5x+7y-12=0$. Find<br>
+(i) the mean of $x$ and the mean of $y$<br>
+(ii) correlation co-efficient between $x$ and $y$<br>
+(iii) $\sigma_x$, if $\sigma_y$ is given to be 3. <span style="color:red">mark 5 ASTU 2019</span></p>
+
+<p>41. In a sample analysis of 600 students it was found that 280 students have failed, 170 secured a 3rd class, 90 secured a second class and the rest a first class. Do these figures support the general belief that above categories are in the ratio 4:3:2:1? <span style="color:red">mark 4 ASTU 2019</span></p>
+
+<p>42. Test whether the given matrix is regular stochastic or not<br>
+$B=\begin{bmatrix}\frac12&\frac12&0\\\frac12&\frac12&0\\\frac14&\frac14&\frac12\end{bmatrix}$. <span style="color:red">mark 3 ASTU 2019</span></p>
+
+<p>43. The mean height of 500 students in a certain college is 151 cm and the standard deviation is 15 cm. Assuming the heights to be normally distributed find how many students have heights<br>
+(i) between 120 cm and 145 cm<br>
+(ii) below 165 cm. <span style="color:red">mark 5 ASTU 2019</span></p>
+
+<p>44. Write the conditions under which $t$-test is applicable. Also write one application of it. <span style="color:red">mark 2 ASTU 2019</span></p>
+
+<p>45. It is known from the past experience that the mean weight of the products from a filling machine is 10 gms. A random sample of 10 shows that weight (in grams) of the sample are as follows: 9.8, 10.3, 10.4, 9.6, 9.5, 9.7, 9.8, 10.4, 10.2, 10.3. Test the significance of the difference of the sample mean from the population mean. <span style="color:red">mark 5 ASTU 2019</span></p>
+
+<p>46. The screws produced in machine A has a mean length 5.2 cm with s.d. 0.4 cm while that produced by machine B has mean length 6.4 cm with s.d. 0.6 cm. Which of these is more variable? <span style="color:red">mark 3 ASTU 2019</span></p>
+
+
+    </body></html>
