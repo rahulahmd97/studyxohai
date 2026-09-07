@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Electronic Devices PYQ</title>
+
+  <!-- MathJax Config MUST come before script -->
+  <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']],
+      packages: ['base', 'ams'] // removed mhchem, not needed for DE
+    },
+    svg: {
+      fontCache: 'global'
+    }
+  };
+  </script>
+  <!-- Load MathJax -->
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+  <style>
+    body {
+      background: #070b16;
+      color: #e2e8f0;
+      font-family: Inter, system-ui, sans-serif;
+      padding: 4px;
+      line-height: 1.8;
+      min-height: 100vh;
+    }
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: radial-gradient(circle at 20% 20%, rgba(56, 189, 248, 0.18), transparent 16%),
+                  radial-gradient(circle at 80% 10%, rgba(168, 85, 247, 0.16), transparent 18%),
+                  radial-gradient(circle at 70% 80%, rgba(14, 165, 233, 0.14), transparent 22%);
+      pointer-events: none;
+      z-index: -1;
+    }
+    .container {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 4px;
+    }
+    h1 {
+      margin-bottom: 24px;
+      font-size: 3rem;
+      letter-spacing: -0.04em;
+      background: linear-gradient(90deg, #60a5fa, #8b5cf6, #ec4899);
+      -webkit-background-clip: text;
+      color: transparent;
+      text-shadow: 0 3px 12px rgba(96, 165, 250, 0.22);
+      border-radius: 8px;
+    }
+    p {
+      background: rgba(15, 23, 42, 0.94);
+      padding: 16px 20px;
+      border-radius: 24px;
+      margin: 14px 0;
+      border-left: 6px solid rgba(59, 130, 246, 0.8);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.32);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      color: #e2e8f0;
+    }
+    p:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 28px 70px rgba(15, 23, 42, 0.45);
+    }
+    p span {
+      font-weight: 700;
+      color: #f472b6;
+    }
+    b {
+      color: #38bdf8;
+    }
+    .section-title {
+      display: inline-block;
+      margin-top: 32px;
+      margin-bottom: 12px;
+      padding: 12px 18px;
+      border-radius: 9999px;
+      background: rgba(59, 130, 246, 0.12);
+      color: #bfdbfe;
+      font-weight: 700;
+    }
+    .question-group {
+      padding: 20px;
+      background: rgba(15, 23, 42, 0.92);
+      border: 1px solid rgba(96, 165, 250, 0.14);
+      border-radius: 28px;
+      margin-bottom: 24px;
+      backdrop-filter: blur(14px);
+    }
+  
+
+/* ===== Mobile MathJax Fix ===== */
+html,body{
+    max-width:100%;
+    overflow-x:hidden;
+}
+
+mjx-container{
+    max-width:100% !important;
+}
+
+mjx-container[display="true"]{
+    display:block;
+    max-width:100%;
+    overflow-x:auto;
+    overflow-y:hidden;
+    -webkit-overflow-scrolling:touch;
+    padding:4px 0;
+}
+
+@media (max-width:768px){
+    mjx-container{
+        font-size:88% !important;
+    }
+
+    p{
+        overflow-wrap:anywhere;
+        word-break:break-word;
+    }
+}
+h2{
+    color: #fff;
+    background: linear-gradient(90deg, #60a5fa, #8b5cf6, #ec4899);
+    display: inline-block;
+    border-radius: 8px;
+    padding: 4px 12px;
+}
+
+</style>
+</head>
+<body>
+    <h2>Module 1 — Introduction to Semiconductor Physics</h2>
+<p>1. (i) If an intrinsic semiconductor is doped with small amount of Al, the extrinsic semiconductor so formed, the number of electrons and holes will: <br>(a) Increase and decrease <br>(b) Decrease<br>(c) Increase <br>(d) Decrease and increase <span style="color:red;">ASTU 2025 | mark 1</span></p>
+
+<p>1. (iii) For N type semiconductor: <br>(a) Fermi energy level lies below donor level energy <br>(b) Fermi level = Donor energy level at some intermediate temperature <br>(c) Fermi energy level is independent of temperature <br>(d) All of the above <span style="color:red;">ASTU 2025 | mark 1</span></p>
+
+<p>1. (iv) Referring to energy level diagram of semiconductor materials, the width of forbidden band gap energy is about: <br>(a) 10 eV <br>(b) 100 eV <br>(c) 1 eV <br>(d) 0.1 eV <span style="color:red;">ASTU 2025 | mark 1</span></p>
+
+<p>2. (a) What is energy quanta? Define wave particle duality principle. <span style="color:red;">ASTU 2025 | mark 4</span></p>
+
+<p>2. (b) What is Fermi energy level? Draw the energy band diagram of P-N junction diode showing Fermi level also. <span style="color:red;">ASTU 2025 | mark 5</span></p>
+
+<p>2. (c) Calculate the conductivity of pure silicon at 300 K. Given n<sub>i</sub>=1.5&times;10<sup>16</sup>/m<sup>3</sup>,    &mu;<sub>n</sub>=0.13 m<sup>2</sup>/V-s, &mu;<sub>p</sub>=0.05 m<sup>2</sup>/V-s and q=1.602&times;10<sup>-19</sup> C. Now silicon is doped 2 in 10<sup>3</sup> of a donor impurity. Calculate the conductivity if there are 5&times;10<sup>28</sup> silicon/m<sup>3</sup>. By what factor has the conductivity increased. <span style="color:red;">ASTU 2025 | mark 3</span></p>
+
+<p>2. (d) What is diffusion current in Semiconductor? State mass-action law. <span style="color:red;">ASTU 2025 | mark 3</span></p>
+<h2>Module 2 — P-N Junction and Diode Applications</h2>
+<p>1. (i) In a forward biased PN junction diode, the sequence of event that best describe the mechanism of current is: <br>(a) Injection and subsequent diffusion and recombination of minority carriers <br>(b) Injection and subsequent drift and generation of minority carriers <br>(c) Extraction and subsequent diffusion and generation of minority carriers <br>(d) Injection and subsequent drift and generation of minority carriers <span style="color:red;">ASTU 2025 | mark 1</span></p>
+
+<p>3. (a) Explain the formation of depletion region in PN junction. Draw the V-I characteristics of PN junction diode. <span style="color:red;">ASTU 2025 | mark 6</span></p>
+
+<p>3. (b) The reverse saturation current of a PN junction diode is 10 &micro;A. Calculate the diode current for the forward bias voltage of 0.6 V at 25&deg;C. <span style="color:red;">ASTU 2025 | mark 3</span></p>
+
+<p>3. (c) Describe the piece wise linear approximation model of diode. <span style="color:red;">ASTU 2025 | mark 2</span></p>
+
+<p>3. (d) Can an ordinary diode be used as Zener diode? Explain the Zener breakdown mechanism. <span style="color:red;">ASTU 2025 | mark 4</span></p>
+
+<p>4. (a) With suitable diagram explain the application of diode as centre tapped transformer. What is PIV for a diode. <span style="color:red;">ASTU 2025 | mark 3</span></p>
+
+<p>4. (b) For the network in the figure, determine the range of R<sub>L</sub> and I<sub>L</sub> that will result in V<sub>RL</sub> being maintained at 10V. <span style="color:red;">ASTU 2025 | mark 5</span><br>
+<img src="https://i.ibb.co/67pSP8yJ/Screenshot-2026-09-07-175810.png" alt="Logic Circuit" width="250px"></p>
+
+<p>4. (c) The resistivities of P-region and N-region of a Silicon diode are 6 &Omega;-cm and 4 &Omega;-cm respectively. Calculate the contact potential V<sub>0</sub> and energy barrier E<sub>0</sub>. Given n<sub>i</sub>=1.5&times;10<sup>10</sup>/cm<sup>3</sup>, &mu;<sub>n</sub>=1300 cm<sup>2</sup>/V-s, &mu;<sub>p</sub>=500 cm<sup>2</sup>/V-s, V<sub>T</sub>=0.026 V at 300 K. <span style="color:red;">ASTU 2025 | mark 4</span></p>
+<h2>Module 3 — Bipolar Junction Transistor (BJT)</h2>
+<p>1. (v) The early effect in a Bipolar Junction transistor is caused by: (a) Fast turned up (b) Fast turned off (c) Large collector based reversed biased (d) Large emitter based forward biased <span style="color:red;">ASTU 2025 | mark 1</span></p>
+
+<p>1. (viii) The common base DC current gain of a transistor is 0.967. If the emitter current is 10 mA, what is the value of base current: (a) 0.4mA (b) 0.33mA (c) 3.3mA (d) 4.3mA <span style="color:red;">ASTU 2025 | mark 1</span></p>
+
+<p>5. (a) Why is the transistor called a current controlled device? Does a transistor act as a switch? <span style="color:red;">ASTU 2025 | mark 4</span></p>
+
+<p>5. (b) What is the need for biasing a transistor? Draw the circuit diagram of CE transistor using emitter biasing. Describe the stability action of the circuit. <span style="color:red;">ASTU 2025 | mark 4</span></p>
+
+<p>5. (c) What is thermal runaway? How can it be avoided? <span style="color:red;">ASTU 2025 | mark 2</span></p>
+
+<p>5. (d) The various parameters of a Silicon transistor CE amplifier with the biasing (self) are R<sub>1</sub>=10 K&Omega;, R<sub>2</sub>=5 K&Omega;, R<sub>C</sub>=1K&Omega;, R<sub>E</sub>=2 K&Omega; and &beta;=100. Find the co-ordinates of the operating point and stability factor. V<sub>CC</sub>=12V. <span style="color:red;">ASTU 2025 | mark 4</span><br>
+<img src="https://i.ibb.co/S77ryLFz/Screenshot-2026-09-07-175831.png" alt="Logic Circuit" width="250px"></p>
+<h2>Module 4 — Field Effect Transistor (FET)</h2>
+<p>1. (vi) The punched off voltage for a N-Channel JFET 4V. When V<sub>GS</sub>=1V the V<sub>DS</sub>(min) at which the pinched off occur is: (a) 3V (b) 5V (c) 4V (d) 1V <span style="color:red;">ASTU 2025 | mark 1</span></p>
+
+<p>1. (vii) The MOSFET switch in ON state may be considered at equivalent to: (a) Resistor (b) Inductor (c) Capacitor (d) Battery <span style="color:red;">ASTU 2025 | mark 1</span></p>
+
+<p>6. (a) Write some differences between JFET and BJT. <span style="color:red;">ASTU 2025 | mark 2</span></p>
+
+<p>6. (b) Why Field effect transistor is so called? With the help of neat sketch and characteristics curve explain the operation of JFET. What is trans conductance g<sub>m</sub> and drain resistance r<sub>d</sub> of JFET. <span style="color:red;">ASTU 2025 | mark 7</span></p>
+
+<p>6. (c) For the circuit shown, find the values of V<sub>DS</sub> and V<sub>GS</sub>. Given I<sub>D</sub>=5mA, V<sub>DD</sub>=10V, R<sub>D</sub>=1K&Omega;, R<sub>S</sub>=500&Omega;. <span style="color:red;">ASTU 2025 | mark 3</span><br>
+<img src="https://i.ibb.co/pvTkxqFs/Screenshot-2026-09-07-181130.png" alt="Logic Circuit" width="250px"></p>
+
+<p>7. (a) Draw the diagram (constructional) of N-MOSFET. What is threshold voltage of MOSFET and how it impacts its performance. How does MOSFET differ from JFET? <span style="color:red;">ASTU 2025 | mark 6</span></p>
+
+<p>7. (b) Draw the Current-Voltage (I<sub>D</sub>-V<sub>DS</sub>) characteristics of N-MOSFET. Show different regions of operation. <span style="color:red;">ASTU 2025 | mark 2</span></p>
+
+<h2>Module 5 — Integrated Circuit Fabrication Process</h2>
+<p>1. (ix) In the context of IC fabrication metallization means: (a) Connecting metallic wires (b) Covering with metallic cap (c) Forming interconnects between the various components of a chip (d) Depositing insulating layer <span style="color:red;">ASTU 2025 | mark 1</span></p>
+
+<p>7. (c) Generalize the steps involved in IC fabrication. What are the advantages of ICs over discrete component circuits? <span style="color:red;">ASTU 2025 | mark 4</span></p>
+
+<p>8. (a) What is the purpose of oxidation process in IC fabrication? What is photolithography? How positive and negative photoresist differ? <span style="color:red;">ASTU 2025 | mark 3</span></p>
+
+<p>8. (b) Explain ion implementation. List the advantages of ion implantation technique. <span style="color:red;">ASTU 2025 | mark 3</span></p>
+<h2>Module 6 — Novel Devices</h2>
+<p>1. (x) Graphene, a famous 2D material, is essentially: (a) a 3D diamond lattice. (b) a single layer of graphite. (c) a silicon-carbide composite. (d) a bulk metal. <span style="color:red;">ASTU 2025 | mark 1</span></p>
+
+<p>8. (c) Draw the structure of TFET. Write some characteristics of TFET. <span style="color:red;">ASTU 2025 | mark 4</span></p>
+
+<p>8. (d) What is 2D material. Give some examples. <span style="color:red;">ASTU 2025 | mark 3</span></p>
+
+    </body></html>
