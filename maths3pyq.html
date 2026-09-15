@@ -95,35 +95,20 @@
       backdrop-filter: blur(14px);
     }
   
+ .math-container {
+  max-width: 100%;
+  overflow-x: auto; /* Adds a scrollbar if the equation is too wide */
+  padding: 10px;
+  background-color: rgba(15, 23, 42, 0.94);
 
-/* ===== Mobile MathJax Fix ===== */
-html,body{
-    max-width:100%;
-    overflow-x:hidden;
-}
-
-mjx-container{
-    max-width:100% !important;
-}
-
-mjx-container[display="true"]{
-    display:block;
-    max-width:100%;
-    overflow-x:auto;
-    overflow-y:hidden;
-    -webkit-overflow-scrolling:touch;
-    padding:4px 0;
-}
-
-@media (max-width:768px){
-    mjx-container{
-        font-size:88% !important;
-    }
-
-    p{
-        overflow-wrap:anywhere;
-        word-break:break-word;
-    }
+      padding: 16px 20px;
+      border-radius: 24px;
+      margin: 14px 0;
+      border-left: 6px solid rgba(59, 130, 246, 0.8);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.32);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      color: #e2e8f0;
+      font-size: 88%;
 }
 h2{
     color: #fff;
@@ -156,9 +141,9 @@ h2{
 
 <p>5. $W=\left[\begin{matrix}x&-x\\y&z\end{matrix}\right]$ is the subspace of the vector space of all $2\times2$ matrices. Find the dimension of $W$. <span style="color:red">mark 4 ASTU 2025</span></p>
 
-<p>6. Consider the linear transformation $T:R^3\rightarrow R^3$ given by $T(x_1,x_2,x_3)=(3x_1+x_2-x_3,x_1+2x_2-x_3,x_1+2x_2)$. Find the characteristic polynomial and nullity of $T$. <span style="color:red">mark 4 ASTU 2025</span></p>
+<p>6. Consider the linear transformation $T:R^3\rightarrow R^3$ given by</p> <div class="math-container">$T(x_1,x_2,x_3)=(3x_1+x_2-x_3,x_1+2x_2-x_3,x_1+2x_2)$</div> <p>Find the characteristic polynomial and nullity of $T$ <span style="color:red">mark 4 ASTU 2025</span></p>
 
-<p>7. Apply Gram-Schmidt method to find an orthonormal basis of $R^3$ from the vectors $u_1=(3,0,4),\ u_2=(-1,0,7),\ u_3=(2,9,11)$. <span style="color:red">mark 4 ASTU 2025</span></p>
+<p>7. Apply Gram-Schmidt method to find an orthonormal basis of $R^3$ from the vectors<span style="color:red">mark 4 ASTU 2025</span></p><div class="math-container"> $u_1=(3,0,4),\ u_2=(-1,0,7),\ u_3=(2,9,11)$</div> 
 
 <p>8. Show that an orthonormal set of non-zero vectors is always linearly independent. <span style="color:red">mark 4 ASTU 2025</span></p>
 
@@ -255,7 +240,7 @@ h2{
 <p>7. A manufacturer of envelopes knows that the weight of the envelopes is normally distributed with mean 1.9 gm. and the variance 0.01 gm. Find how many envelopes weighing<br>
 (i) 2 gm or more<br>
 (ii) 2.1 gm or more<br>
-can be expected in a packet of 1000 envelopes. $(A(0\leq z\leq1)=0.3413,\ A(0\leq z\leq2)=0.4772)$. <span style="color:red">mark 5 ASTU 2023</span></p>
+can be expected in a packet of 1000 envelopes.<span style="color:red">mark 5 ASTU 2023</span></p><div class="math-container"> $(A(0\leq z\leq1)=0.3413,\ A(0\leq z\leq2)=0.4772)$. </div>
 
 <p>8. If $f(x)=cx,\ x=1,2,3,4$ is a probability mass function then the value of $C$ is<br>
 (a) $\frac{1}{10}$<br>
@@ -301,7 +286,7 @@ can be expected in a packet of 1000 envelopes. $(A(0\leq z\leq1)=0.3413,\ A(0\le
 (i) between Rs. 660 and Rs. 720<br>
 (ii) more than Rs. 720. <span style="color:yellow">mark 4 ASTU 2025</span></p>
 
-<p>21. The joint mass function of two random variables $X$ and $Y$ is given as $f(x,y)=\{C(2x+y);\ 0\leq x\leq2,\ 0\leq y\leq3,\ x,y\in Z;\ 0,\ otherwise\}$. Find $P(X=2,Y=1)$ and $P(X\geq1,Y\leq2)$. <span style="color:yellow">mark 4 ASTU 2025</span></p>
+<p>21. The joint mass function of two random variables $X$ and $Y$ is given as <div class="math-container">$f(x,y)=\{C(2x+y);\ 0\leq x\leq2,\ 0\leq y\leq3,\ x,y\in Z;\ 0,\ otherwise\}$</div> <p>Find $P(X=2,Y=1)$ and $P(X\geq1,Y\leq2)$. <span style="color:yellow">mark 4 ASTU 2025</span></p>
 
 <p>22. Three Coins are tossed simultaneously. The random variables $X$ and $Y$ give the number of heads and the number of tails respectively. Find the joint distribution and the marginal distributions. <span style="color:yellow">mark 4 ASTU 2025</span></p>
 
@@ -402,10 +387,10 @@ $f:\ 1\quad8\quad28\quad56\quad70\quad56\quad28\quad8\quad1$ <span style="color:
 <h2>Outside/Not Clearly Covered in Syllabus</h2>
 
 <p>1. The relationship among mean, median and mode is<br>
-(a) Mode − Mean = 3 (Mean − Median)<br>
-(b) Mean − Mode = 3 (Median − Mean)<br>
-(c) Median − Mode = 3 (Mode − Mean)<br>
-(d) Mean − Mode = 3 (Mean − Median). <span style="color:red">mark 1 ASTU 2023</span></p>
+(a) Mode - Mean = 3 (Mean - Median)<br>
+(b) Mean - Mode = 3 (Median - Mean)<br>
+(c) Median - Mode = 3 (Mode - Mean)<br>
+(d) Mean - Mode = 3 (Mean - Median). <span style="color:red">mark 1 ASTU 2023</span></p>
 
 <p>2. If the correlation coefficient is 0, then the two regression lines are<br>
 (a) Parallel<br>
@@ -479,11 +464,11 @@ $Y:\ 18\quad12\quad10\quad8\quad7\quad5$<br>
 
 <p>17. Give the differences of positive and negative correlation. <span style="color:red">mark 2 ASTU 2024</span></p>
 
-<p>18. Fit a linear trend of the following by the method of least squares and estimate the production for the year 1986.<br>
+<p>18. Fit a linear trend of the following by the method of least squares and estimate the production for the year 1986.<span style="color:red">   mark 7 ASTU 2024</span></p><div class="math-container">
 <table>
 <tr><th>Years</th><td>1978</td><td>1979</td><td>1980</td><td>1981</td><td>1982</td><td>1983</td><td>1984</td></tr>
 <tr><th>Production (in quantities)</th><td>40</td><td>45</td><td>46</td><td>42</td><td>47</td><td>49</td><td>46</td></tr>
-</table> <span style="color:red">mark 7 ASTU 2024</span></p>
+</table></div> 
 
 <p>19. Calculate arithmetic mean and median of the distribution. Also calculate mode.<br>
 <table>
@@ -508,7 +493,7 @@ $X:\ 2\quad4\quad5\quad6\quad8\quad11$<br>
 $Y:\ 18\quad12\quad10\quad8\quad7\quad5$<br>
 Obtain the two regression lines. Calculate Karl Pearson's co-efficient of correlation. <span style="color:red">mark 5 ASTU 2024</span></p>
 
-<p>23. The following values were obtained from a frequency distribution: $\sum f=100,\ \sum fx=-100,\ \sum fx^2=5500,\ \sum fx^3=-6250$ and $\sum fx^4=775000$. Find the moments about mean and hence find the moment co-efficients of skewness and kurtosis. Also discuss the nature of skewness and kurtosis. <span style="color:red">mark 7 ASTU 2019</span></p>
+<p>23. The following values were obtained from a frequency distribution: $\sum f=100$, $\sum fx=-100$, $\sum fx^2=5500$, $\sum fx^3=-6250$ and $\sum fx^4=775000$. Find the moments about mean and hence find the moment co-efficients of skewness and kurtosis. Also discuss the nature of skewness and kurtosis. <span style="color:red">mark 7 ASTU 2019</span></p>
 
 <p>24. The mean of $n$ terms is $\bar{x}$. If the first term is increased by 1, second by 2 and so on, then the new mean is<br>
 (a) $\bar{x}+n$<br>
