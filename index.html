@@ -166,6 +166,37 @@
             body { font-size: 14px; padding: 16px 12px; }
             .card-grid { grid-template-columns: repeat(2, 1fr); }
         }
+        .update-notice {
+  width: 100%;
+  overflow: hidden;
+  background: #eef4ff;
+  border-left: 4px solid #123b70;
+  margin: 15px 0;
+  padding: 9px 0;
+  white-space: nowrap;
+}
+
+.update-track {
+  display: inline-flex;
+  width: max-content;
+  animation: update-scroll 18s linear infinite;
+}
+
+.update-track span {
+  padding-right: 70px;
+  color: #123b70;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+@keyframes update-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-33.333%);
+  }
+}
     </style>
 </head>
 <body>
@@ -177,20 +208,28 @@
         <section>
     <h2>ASTU Previous Year Question Papers - Module Wise</h2>
         <p>StudyXohai provides ASTU (Assam Science and Technology University) previous year question papers organized module-wise for easy exam preparation.</p></section>
-        <section>
-            <h2>1ST YEAR - GROUP B</h2>
+        
+            <div class="update-notice">
+  <div class="update-track">
+    <span>📢 Huge updates for 3rd Semester ETE students.</span>
+    <span>📢 Huge updates for 3rd Semester ETE students.</span>
+    <span>📢 Huge updates for 3rd Semester ETE students.</span>
+  </div>
+</div>
+<section>
+ <h2>1ST YEAR - GROUP B</h2>
             <details open>
                 <summary>PYQ - Module Wise</summary>
                 <div class="card-grid">
                     <a href="beemodulewiseq.html" class="card"><h3>BEE PYQ</h3></a>
                     <a href="physics.html" class="card"><h3>Physics PYQ</h3></a>
                     <a href="maths2pyq.html" class="card"><h3>Maths 2 PYQ</h3></a>
-                    <a href="trwpyq.html" class="card"><h3>TRW PYQ</h3></a>
-                    <a href="dtpyq.html" class="card"><h3>DT PYQ</h3></a>
-                    <a href="egpyq.html" class="card"><h3>EG PYQ</h3></a>
+                    <a href="comingsoon.html" class="card"><h3>TRW PYQ</h3></a>
+                    <a href="comingsoon.html" class="card"><h3>DT PYQ</h3></a>
+                    <a href="comingsoon.html" class="card"><h3>EG PYQ</h3></a>
                 </div>
             </details>
-
+<!-- 
             <details default>
                 <summary>Notes Section</summary>
                 <div class="card-grid">
@@ -201,25 +240,25 @@
                     <a href="dtnotes.html" class="card"><h3>DT Notes</h3></a>
                     <a href="egnotes.html" class="card"><h3>EG Notes</h3></a>
                 </div>
-            </details>
+            </details> -->
         </section>
 
       
         <section>
             <h2>1ST YEAR - GROUP A</h2>
-            <details>
-                <summary>Click to view PYQ</summary>
+            <details open>
+                <summary>PYQ - Module Wise</summary>
                 <div class="card-grid">
-                    <a href="chemistrypyq.html" class="card"><h3>Chemistry PYQ</h3></a>
-                    <a href="empyq.html" class="card"><h3>Eng. Mechanics PYQ</h3></a>
-                    <a href="maths1pyq.html" class="card"><h3>Maths 1 PYQ</h3></a>
-                    <a href="pyq.html" class="card"><h3>PFPS PYQ</h3></a>
-                    <a href="uhvpyq.html" class="card"><h3>UHV PYQ</h3></a>
-                    <a href="biologypyq.html" class="card"><h3>Biology PYQ</h3></a>
+                    <a href="comingsoon.html" class="card"><h3>Chemistry PYQ</h3></a>
+                    <a href="comingsoon.html" class="card"><h3>EM PYQ</h3></a>
+                    <a href="comingsoon.html" class="card"><h3>Maths 1 PYQ</h3></a>
+                    <a href="comingsoon.html" class="card"><h3>PFPS PYQ</h3></a>
+                    <a href="comingsoon.html" class="card"><h3>UHV PYQ</h3></a>
+                    <a href="comingsoon.html" class="card"><h3>Biology PYQ</h3></a>
                 </div>
             </details>
 
-            <details>
+            <!-- <details>
                 <summary>Click to view Notes</summary>
                 <div class="card-grid">
                     <a href="emnotes.html" class="card"><h3>Eng. Mechanics Notes</h3></a>
@@ -229,7 +268,7 @@
                     <a href="uhvnotes.html" class="card"><h3>UHV Notes</h3></a>
                     <a href="egnotes.html" class="card"><h3>EG Notes</h3></a>
                 </div>
-            </details>
+            </details> -->
         </section>
 
      
@@ -240,7 +279,7 @@
                 <div class="card-grid">
                     <a href="dsdpyq.html" class="card"><h3>DSD</h3></a>
                     <a href="ntpyq.html" class="card"><h3>NT</h3></a>
-                    <a href="signalandsystempyq.html" class="card"><h3>Signal and System</h3></a>
+                    <a href="signalandsystempyq.html" class="card"><h3>SS</h3></a>
                     <a href="math3pyq.html" class="card"><h3>Maths 3</h3></a>
                     <a href="edpyq.html" class="card"><h3>ED</h3></a>
                 </div>
