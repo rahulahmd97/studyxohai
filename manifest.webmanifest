@@ -1,0 +1,17 @@
+{
+  "name": "StudyXohai",
+  "short_name": "StudyXohai",
+  "description": "ASTU Module Wise Previous Year Question Papers, Notes and Study Materials for Students.",
+  "start_url": "/https://studyxohai.netlify.app/",
+  "scope": "/https://studyxohai.netlify.app/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0b1f3a",
+  "icons": [
+    {
+      "src": "/preview.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
