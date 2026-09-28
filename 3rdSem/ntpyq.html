@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Network Theory PYQ</title>
+
+  <!-- MathJax Config MUST come before script -->
+  <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']],
+      packages: ['base', 'ams'] // removed mhchem, not needed for DE
+    },
+    svg: {
+      fontCache: 'global'
+    }
+  };
+  </script>
+  <!-- Load MathJax -->
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+  <link rel="stylesheet" href="pagestyle.css">
+  
+</head>
+<body>
+    <h1 style="color:#60a5fa;">Network Theory PYQ</h1>
+  <h2>Module 1</h2>
+<p>1. If all the elements of a network are linear, then superposition theorem would hold when the excitation is<br>(a) dc only<br>(b) ac only<br>(c) either dc or ac<br>(d) an impulse. <span style="color:red">mark 1 ASTU 2024</span></p>
+<div class="question-box">
+  
+  <a href="https://www.google.com/search?q=%3Cp%3E1.+If+all+the+elements+of+a+network+are+linear%2C+then+superposition+theorem+would+hold+when+the+excitation+is%3Cbr%3E%28a%29+dc+only%3Cbr%3E%28b%29+ac+only%3Cbr%3E%28c%29+either+dc+or+ac%3Cbr%3E%28d%29+an+impulse.+%3Cspan+style%3D%22color%3Ared%22%3Emark+1+ASTU+2024%3C%2Fspan%3E%3C%2Fp%3E+book+style+reply&sca_esv=72ab3b0da61ae678&sxsrf=APpeQnuKxo3f0J90_c-9RnUgXy6l0dUwkg%3A1790444001521&ei=4QG4as60H-SghvcPuJylEA&biw=1220&bih=603&uact=5&oq=%3Cp%3E1.+If+all+the+elements+of+a+network+are+linear%2C+then+superposition+theorem+would+hold+when+the+excitation+is%3Cbr%3E%28a%29+dc+only%3Cbr%3E%28b%29+ac+only%3Cbr%3E%28c%29+either+dc+or+ac%3Cbr%3E%28d%29+an+impulse.+%3Cspan+style%3D%22color%3Ared%22%3Emark+1+ASTU+2024%3C%2Fspan%3E%3C%2Fp%3E+book+style+reply&gs_lp=Egxnd3Mtd2l6LXNlcnAi_AE8cD4xLiBJZiBhbGwgdGhlIGVsZW1lbnRzIG9mIGEgbmV0d29yayBhcmUgbGluZWFyLCB0aGVuIHN1cGVycG9zaXRpb24gdGhlb3JlbSB3b3VsZCBob2xkIHdoZW4gdGhlIGV4Y2l0YXRpb24gaXM8YnI-KGEpIGRjIG9ubHk8YnI-KGIpIGFjIG9ubHk8YnI-KGMpIGVpdGhlciBkYyBvciBhYzxicj4oZCkgYW4gaW1wdWxzZS4gPHNwYW4gc3R5bGU9ImNvbG9yOnJlZCI-bWFyayAxIEFTVFUgMjAyNDwvc3Bhbj48L3A-IGJvb2sgc3R5bGUgcmVwbHlIAFAAWABwAHgAkAEAmAEAoAEAqgEAuAEDyAEA-AEBmAIAoAIAmAMAkgcAoAcAsgcAuAcAwgcAyAcAgAgB&sclient=gws-wiz-serp" 
+     target="_blank" 
+     rel="noopener noreferrer" 
+     class="search-answer-btn">
+     🔍 Search Answer on Google
+  </a>
+</div>
+
+
+<p>2. Explain the concept of duality and show that duality exists between a series R-L-C circuit and parallel R-L-C circuit. <span style="color:red">mark 5 ASTU 2024</span></p>
+<div class="question-box">
+    <a href="https://www.google.com/search?q=%3Cp%3E2.+Explain+the+concept+of+duality+and+show+that+duality+exists+between+a+series+R-L-C+circuit+and+parallel+R-L-C+circuit.+%3Cspan+style%3D%22color%3Ared%22%3Emark+5+ASTU+2024%3C%2Fspan%3E%3C%2Fp%3E+book+style+reply&sca_esv=72ab3b0da61ae678&biw=1220&bih=603&sxsrf=APpeQnsjoRaVM46GL4gBMFjjft6RaM4HeQ%3A1790444053722&ei=FQK4apfZK9unhvcPsbfnmAQ&uact=5&oq=%3Cp%3E2.+Explain+the+concept+of+duality+and+show+that+duality+exists+between+a+series+R-L-C+circuit+and+parallel+R-L-C+circuit.+%3Cspan+style%3D%22color%3Ared%22%3Emark+5+ASTU+2024%3C%2Fspan%3E%3C%2Fp%3E+book+style+reply&gs_lp=Egxnd3Mtd2l6LXNlcnAiwQE8cD4yLiBFeHBsYWluIHRoZSBjb25jZXB0IG9mIGR1YWxpdHkgYW5kIHNob3cgdGhhdCBkdWFsaXR5IGV4aXN0cyBiZXR3ZWVuIGEgc2VyaWVzIFItTC1DIGNpcmN1aXQgYW5kIHBhcmFsbGVsIFItTC1DIGNpcmN1aXQuIDxzcGFuIHN0eWxlPSJjb2xvcjpyZWQiPm1hcmsgNSBBU1RVIDIwMjQ8L3NwYW4-PC9wPiBib29rIHN0eWxlIHJlcGx5SOcZUABY5wRwAHgAkAEAmAGJAqABiQKqAQMyLTG4AQPIAQD4AQH4AQKYAgCgAgCYAwCSBwCgByOyBwC4BwDCBwDIBwCACAE&sclient=gws-wiz-serp" 
+     target="_blank" 
+     rel="noopener noreferrer" 
+     class="search-answer-btn">
+     🔍 Search Answer on Google
+  </a>
+</div>
+
+
+<p>3. Using superposition theorem find the current through j3 Ω inductive reactance. <span style="color:red">mark 5 ASTU 2024</span>
+<br><img src="https://i.ibb.co/zhz05gJ7/ntm1q3.webp" alt="image" width="300"></p>
+
+<p>4. Find the current through the 10 Ω resistor in the network. <span style="color:red">mark 5 ASTU 2024</span>
+  <br><img src="https://i.ibb.co/TBrBMyQg/image.png" alt="image" width="300"></a></p>
+
+<p>5. When a 3-phase system is said to be a balanced system? Find the Relationship between line voltage and phase voltage, line current and phase current and power. Also draw its phasor diagram. <span style="color:yellow">mark 10 ASTU 2021</span></p>
+
+<p>6. Find the value of Z(L) for maximum power transfer in the network shown and find maximum power.<br><a href="https://imgbb.com/"><img src="https://i.ibb.co/vMg3dhL/Screenshot-2026-08-22-234653.png" alt="Screenshot 2026 08 22 234653" width="300"></a><br><span style="color:yellow">mark 10 ASTU 2021</span></p>
+
+<p>7. Norton's theorem states that a complex network connected to a load can be replaced with an equivalent impedances<br>(a) in series with a current source<br>(b) in parallel with a voltage source<br>(c) in series with a voltage source<br>(d) in parallel with a current source. <span style="color:red">mark 1 ASTU 2019</span></p>
+
+<p>8. In the interconnection of ideal sources shown in the figure, it is known that the 60 V source is absorbing power. Which of the following can be the value of the current source I? <span style="color:red">mark 1 ASTU 2019</span><br><img src="https://i.ibb.co/nsYj9KLk/Screenshot-2026-08-15-163403.png" alt="Logic Circuit" width="300px"></p>
+
+<p>9. In the fig shown, find the value of the load resistor RL which maximizes the power delivered to it. Find the thevenin's equivalent network for the fig shown. <span style="color:red">mark 7 ASTU 2019</span><br><img src="https://i.ibb.co/JWzqXCZX/Screenshot-2026-08-15-164623.png" alt="Logic Circuit" width="300px"></p>
+
+<p>10. State superposition theorem. Find V₀ of the circuit of fig below using the superposition theorem. <br><a href="https://ibb.co/ccw8qdny"><img src="https://i.ibb.co/DDYMdn21/Screenshot-2026-08-22-233839.png" alt="Screenshot-2026-08-22-233839" width="300"></a><br><span style="color:red">mark 8 ASTU 2019</span></p>
+
+<p>11. State tellegen's theorem. Power delivered by the current source? <span style="color:red">mark 7 ASTU 2019</span><br><a href="https://imgbb.com/"><img src="https://i.ibb.co/v4Wr9wLc/Screenshot-2026-08-22-234101.png" alt="Screenshot 2026 08 22 234101" width="300"></a></p>
+
+<p>12. State Norton's theorem. Find Norton's equivalent network across terminals A and B in the fig below. <span style="color:red">mark 8 ASTU 2019</span><br><a href="https://ibb.co/7dXv2hZ7"><img src="https://i.ibb.co/NdsxZRJw/Screenshot-2026-08-22-234252.png" alt="Screenshot-2026-08-22-234252" width="300"></a></p>
+
+<p>13. State duality principle? Construct the dual of the circuit in the figure.<span style="color:red">mark 5 ASTU 2019</span> <br><a href="https://ibb.co/Q3HSrs1g"><img src="https://i.ibb.co/21MVgXf9/Screenshot-2026-08-22-234424.png" alt="Screenshot-2026-08-22-234424" width="300"></a></p>
+<h2>Module 2</h2>
+<p>1. The Laplace transform of unit impulse function is<br>(a) 1/s<br>(b) 1/s²<br>(c) 1<br>(d) s. <span style="color:red">(1 mark, 2024)</span></p>
+ 
+<p>2. What is the Laplace transform of a function δ(t - 2)?<br>(a) 2<br>(b) 0<br>(c) e⁻²ˢ<br>(d) 2s. <span style="color:red">mark ASTU</span> (1 mark, 2024)</p>
+
+<p>3. When a series R-L circuit is connected to a voltage V at t = 0, the current passing through the inductor L at t = 0⁺ is<br>(a) V/R<br>(b) infinity<br>(c) zero<br>(d) V/L. <span style="color:red">mark ASTU</span> (1 mark, 2024)</p>
+
+<p>4. The switch K is moved to position 2 from position 1 at t = 0 in the circuit. Obtain the current in the circuit at t &gt; 0. Assume a steady state current of 1 A in the R-L circuit when the switch was at position 1. (8 marks, 2024) <span style="color:red">mark ASTU</span><br><a href="https://i.ibb.co/qMV2742v/image.png"><img src="https://i.ibb.co/qMV2742v/image.png" alt="image" width="300"></a></p>
+
+<p>5. In the circuit V = 10 V, R = 10 Ω, L = 1 H, C = 10 μF, and Vc(0) = 0. Determine $i(0^+), \quad \frac{di}{dt}(0^+), \quad \text{and} \quad \frac{d^2 i}{dt^2}(0^+)$. <span style="color:red">mark 7 ASTU 2024</span><a href="https://i.ibb.co/Rpkwn9QZ/image.png"><img src="https://i.ibb.co/Rpkwn9QZ/image.png" alt="image" width="300"></a></p>
+
+<p>6. Calculate the Laplace transform of the function f(t) = 1 - e⁻ᵃᵗ, a is constant. (5 marks, 2024) <span style="color:red">mark ASTU</span></p>
+
+<p>7. A pulse is applied to a series RC circuit by closing a switch K at t = 0, using Laplace transform calculate the current in the circuit. (10 marks, 2024) <span style="color:red">mark ASTU</span><a href="https://i.ibb.co/MkT0btnY/image.png"><img src="https://i.ibb.co/MkT0btnY/image.png" alt="image" width="300"></a></p>
+
+<p>8. The Laplace transform of a unit ramp function starting at t = a is ______. <span style="color:yellow">(1 mark, 2021)</span></p>
+
+<p>9. When a unit impulse voltage is applied to an inductor of 1H, what will be the energy supplied by the source? <span style="color:yellow">(1 mark, 2021)</span></p>
+
+<p>10. The network has acquired steady-state at t &lt; 0 with the switch open. The switch is closed at t = 0. Determine v(t). <span style="color:yellow">(10 marks, 2021)</span><a href="https://i.ibb.co/TMwt21my/Whats-App-Image-2026-09-12-at-12-11-30-PM.jpg"><img src="https://i.ibb.co/TMwt21my/Whats-App-Image-2026-09-12-at-12-11-30-PM.jpg" alt="Whats-App-Image-2026-09-12-at-12-11-30-PM" width="300"></a></p>
+
+<p>11. A DC voltage source is connected across a series R-L-C circuit. Under steady-state conditions, the applied DC voltage drops entirely across the<br>(a) R only<br>(b) L only<br>(c) C only<br>(d) R and L Combination. <span style="color:red">(1 mark, 2019)</span></p>
+
+<p>12. In the following figure, C₁ and C₂ are ideal capacitors. C₁ had been charged to 12 V before the ideal switch S is closed at t = 0. The current i(t) for all t is<br>(a) zero<br>(b) a step function<br>(c) an exponential decaying function<br>(d) an impulse function. <span style="color:red">(1 mark, 2019)</span>
+<br><a href="https://i.ibb.co/wrY4RXJK/Screenshot-2026-09-26-150002.webp"><img src="https://i.ibb.co/wrY4RXJK/Screenshot-2026-09-26-150002.webp" alt="Screenshot-2026-09-26-150002" width="300"></a></p>
+
+<p>13. Draw the waveform for Vc(t) and i(t) for the figure shown. <span style="color:red">(8 marks, 2019)</span>
+<br><a href="https://i.ibb.co/RkYML4BD/Screenshot-2026-09-26-150100.webp"><img src="https://i.ibb.co/RkYML4BD/Screenshot-2026-09-26-150100.webp" alt="Screenshot-2026-09-26-150100" width="300"></a>
+
+<br>The switch has been in position 1 for a long time and abruptly changed to position 2 at t = 0. If time t is in seconds, find the capacitor voltage Vc (in volts) for t &gt; 0? <span style="color:red">(7 marks, 2019)</span>
+<br><a href="https://i.ibb.co/jPQGNKKZ/Screenshot-2026-09-26-150136.webp"><img src="https://i.ibb.co/jPQGNKKZ/Screenshot-2026-09-26-150136.webp" alt="Screenshot-2026-09-26-150136" width="300"></a></p>
+
+<p>15. The following series RLC circuit with zero initial conditions is excited by a unit impulse function δ(t).<br>(i) For t &gt; 0, find the output voltage Vc(t).<br>(ii) For t &gt; 0, find the voltage across the resistor. <span style="color:red">(7 marks, 2019)</span>
+<br><a href="https://i.ibb.co/6cyNgL8g/Screenshot-2026-09-26-150215.webp"><img src="https://i.ibb.co/6cyNgL8g/Screenshot-2026-09-26-150215.webp" alt="Screenshot-2026-09-26-150215" width="300"></a></p>
+
+
+<h2>Module 3</h2>
+
+    
+    <p>1. The condition of reciprocity of Z-parameters is<br>(a) $Z_{11}=Z_{22}$<br>(b) $Z_{12}=Z_{21}$<br>(c) $Z_{11}=Z_{12}$<br>(d) $Z_{22}=Z_{21}$. <span style="color:red">mark 1 ASTU 2024</span></p>
+
+<p>2. Derive the condition of symmetry and reciprocity in Z-parameter for two port network. <span style="color:red">mark 4 ASTU 2024</span></p>
+
+<p>3. Determine the Z-parameters for a $\pi$-type network shown below. <span style="color:red">mark 7 ASTU 2024</span><br><a href="https://i.ibb.co/Xfkmq6Gb/Screenshot-2026-09-26-220334.webp"><img src="https://i.ibb.co/Xfkmq6Gb/Screenshot-2026-09-26-220334.webp" width="300"></a></p>
+
+<p>4. A two port network has transmission parameters. What will be the input impedance of the network at port 1? <span style="color:yellow">mark 1 ASTU 2021</span></p>
+
+<p>5. With the usual notations, a two port resistive network satisfies the conditions $A=D=\frac{3}{2}B=\frac{4}{3}C$. What will be the $Z_{11}$ of the network? <span style="color:yellow">mark 1 ASTU 2021</span></p>
+
+<p>6. For a symmetrical bilateral network, if $A=3$ and $B=1$, what will be the value of the parameter $C$? <span style="color:yellow">mark 1 ASTU 2021</span></p>
+
+<p>7. Find the conditions of reciprocity and symmetry for short circuit parameters and also draw its equivalent circuit. <span style="color:yellow">mark 10 ASTU 2021</span></p>
+
+<p>8. Two two-port networks are connected in cascade. The combination is to be represented as a single two-port network. The parameters of the network are obtained by multiplying the individual<br>(a) Z-parameter matrices<br>(b) h-parameter matrices<br>(c) Y-parameter matrices<br>(d) ABCD-parameter matrices. <span style="color:red">mark 1 ASTU 2019</span></p>
+
+<p>9. Consider a two-port network with the transmission matrix: $T = \begin{bmatrix} A & B \\ C & D \end{bmatrix}$. If the network is reciprocal, then<br>(a) $T^{-1}=T$<br>(b) $T^2=T$<br>(c) Determinant $(T)=0$<br>(d) Determinant $(T)=1$. <span style="color:red">mark 1 ASTU 2019</span></p>
+
+<p>10. A two port network is represented by ABCD parameters given by $V_1=AV_2+BI_2$, $I_1=CV_2+DI_2$. If port-2 is terminated by $R_L$, find the input impedance seen at port-1?<br><br>Find the open-circuit impedance parameters for the network shown in the figure. Determine whether the network is symmetrical or reciprocal. <span style="color:red">mark 7 ASTU 2019</span>
+<br><a href="https://i.ibb.co/7NnXbMcf/Screenshot-2026-09-26-223903.webp"><img src="https://i.ibb.co/7NnXbMcf/Screenshot-2026-09-26-223903.webp" width="300"></a></p>
+
+<p>11. A two port network shown below is excited by external dc sources. The voltages and the currents are measured with voltmeters $V_1$, $V_2$ and ammeters $A_1$ and $A_2$ (all assumed to be ideal) as indicated. Under the following switch conditions, the readings obtained are<br><br>(i) $S_1 \rightarrow$ Open, $S_2 \rightarrow$ Closed, $A_1=0$ A, $V_1=4.5$ V, $V_2=1.5$ V, $A_2=1$ A<br><br>(ii) $S_1 \rightarrow$ Closed, $S_2 \rightarrow$ Open, $A_1=4$ A, $V_1=6$ V, $V_2=6$ V, $A_2=0$ A<br><br>Find the Z-parameter matrix and h-parameter matrix for the network shown. <span style="color:red">mark 8 ASTU 2019</span>
+<br><a href="https://i.ibb.co/5gP08tYz/Screenshot-2026-09-26-224117.webp"><img src="https://i.ibb.co/5gP08tYz/Screenshot-2026-09-26-224117.webp" width="400"></a></p>
+<h2>Module 4</h2>
+<p>1. The Q-factor of a series R-L-C circuit at resonance frequency of 10 Hz and bandwidth of 5 Hz is <span style="color:red">mark 1 ASTU 2024</span></p>
+
+<p>2. A high Q coil has<br>(a) Large bandwidth<br>(b) High losses<br>(c) Low losses<br>(d) None of the above. <span style="color:red">mark 1 ASTU 2024</span></p>
+
+<p>3. An R-L-C series circuit has $f_1$ and $f_2$ as the half power frequencies and $f_0$ as the resonant frequency. The Q-factor of the circuit is ______. <span style="color:red">mark 1 ASTU 2024</span></p>
+
+<p>4. Define coefficient of coupling. Calculate the total inductance of the three series connected coupled coils with inductances $L_1 = 1$ H, $L_2 = 2$ H, $L_3 = 5$ H, $M_{12} = 0.5$ H, $M_{23} = 1$ H and $M_{13} = 1$ H. <span style="color:red">mark 4 ASTU 2024</span>
+<br><a href="https://i.ibb.co/pv6Bdx7c/Screenshot-2026-09-26-224335.webp"><img src="https://i.ibb.co/pv6Bdx7c/Screenshot-2026-09-26-224335.webp" width="300"></a></p>
+
+<p>5. A series RLC circuit resonates at 1.5 kHz and consumes 50 W from a 50 V a.c. source operating at the resonance frequency. Obtain the values of R, L and C in the series circuit. The bandwidth is 0.5 kHz. <span style="color:red">mark 5 ASTU 2024</span></p>
+
+<p>6. Derive the electrical circuit model of an ideal transformer and draw the current and voltage source equivalent of transformer. <span style="color:red">mark 6 ASTU 2024</span></p>
+
+<p>7. In a series RLC high Q circuit, the current peaks at a frequency ______. <span style="color:yellow">mark 1 ASTU 2021</span></p>
+
+<p>8. For a series resonant circuit at low frequency, circuit impedance is ______ and at a high frequency circuit impedance is ______. <span style="color:yellow">mark 1 ASTU 2021</span></p>
+
+<p>9. Derive the equation $Q = \frac{\text{resonant frequency}}{\text{Bandwidth}}$, where Q is quality factor. <span style="color:yellow">mark 10 ASTU 2021</span></p>
+
+<p>10. Impedance of a circuit is observed to be capacitive and decreasing from 1Hz to 100 Hz. Beyond 100 Hz the impedance start increasing. Find the values of circuit elements if the power drawn by this circuit is 100 Watt at 100 Hz, when the current is 1 A. The power factor of the circuit at 70Hz is 0.707. <span style="color:yellow">mark 10 ASTU 2021</span></p>
+
+<p>11. A series RLC circuit has a resonance frequency of 1KHz and a quality factor Q = 100. If each of R, L and C is doubled from its original value, the new Q of the circuit is<br>(a) 25<br>(b) 50<br>(c) 100<br>(d) 200. <span style="color:red">mark 1 ASTU 2019</span></p>
+
+<p>12. Impedance Z as shown in the given figure. <span style="color:red">mark 1 ASTU 2019</span>
+<br><a href="https://i.ibb.co/8L5kbG5p/image.png"><img src="https://i.ibb.co/8L5kbG5p/image.png" width="300"></a></p>
+
+<p>13. What do you understand by electrical resonance? <span style="color:red">mark 5 ASTU 2019</span></p>
+<p>In the circuit shown, V is a sinusoidal voltage source. The current I is in phase with voltage V. The ratio (Amplitude of voltage across the capacitor / Amplitude of voltage across the resistor)is ______. <span style="color:red">mark 5 ASTU 2019</span>
+<br><a href="https://i.ibb.co/dwFTqSq2/Screenshot-2026-09-26-225143.webp"><img src="https://i.ibb.co/dwFTqSq2/Screenshot-2026-09-26-225143.webp" width="330"></a></p>
+
+<p> Compare series resonance and parallel resonance in a RLC circuit. <span style="color:red">mark 10 ASTU 2019</span></p>
+<h2>Module 5</h2>
+<p>1. Design a constant k-low pass filter having $f_c = 2$ kHz and design impedance $R_0 = 600$ ohm. Obtain the value of attenuation at 4 kHz. <span style="color:red">mark 4 ASTU 2024</span></p>
+
+<p>2. What are the chief properties of a passive filter? <span style="color:yellow">mark 5 ASTU 2021</span></p>
+
+<p>3. Differentiate between active and passive filter. <span style="color:yellow">mark 5 ASTU 2021</span></p>
+
+<p>4. The circuit shown below represents a ______ filter.<br>(a) Low pass filter<br>(b) High pass filter<br>(c) Band pass filter<br>(d) Band reject filter <span style="color:red">mark 1 ASTU 2019</span><br><img src="https://i.ibb.co/p6CH7SkP/Screenshot-2026-08-15-164214.png" alt="Logic Circuit" width="300px"></p>
+
+<h2>Module 6</h2>
+
+<p>1. For the graph of a network shown below show the tree, twigs and links. <span style="color:red">mark 7 ASTU 2024</span>
+<br><a href="https://i.ibb.co/sxYTbHq/Screenshot-2026-09-28-214315.webp"><img src="https://i.ibb.co/sxYTbHq/Screenshot-2026-09-28-214315.webp" width="300"></a></p>
+
+<p>2. Draw the graph and determine the tie-set and cut-set matrix of the network shown below. <span style="color:red">mark 8 ASTU 2024</span>
+<br><a href="https://i.ibb.co/Rkx9XkN2/Screenshot-2026-09-28-214355.webp"><img src="https://i.ibb.co/Rkx9XkN2/Screenshot-2026-09-28-214355.webp" width="300"></a></p>
+
+<p>3. The graph of an electrical network has $n$ nodes and $b$ branches. The numbers of links with respect to the choice of a tree is gives by ______. <span style="color:yellow">mark 1 ASTU 2021</span></p>
+
+<p>4. Define tree, cut-set & tie-set. Obtain the incidence matrix of the graph shown. What are the properties of an incidence matrix? <span style="color:yellow">mark 10 ASTU 2021</span>
+<br><a href="https://i.ibb.co/Xxjmt8Tm/Screenshot-2026-09-28-214835.webp"><img src="https://i.ibb.co/Xxjmt8Tm/Screenshot-2026-09-28-214835.webp" width="300"></a></p>
+
+<p>5. The graph associated with an electrical network has 7 branches and 5 nodes. The number of independent KCL equations and the number of independent KVL equations, respectively are<br>(a) 2 & 5<br>(b) 5 & 2<br>(c) 3 & 4<br>(d) 4 & 3. <span style="color:red">mark 1 ASTU 2019</span></p>
+
+
+<p>6. Define the terminologies related to a Graph.<br>(i) Degree of a Node<br>(ii) Tree<br>(iii) Link<br>(iv) Complete graph.<br><br>For the network shown form an oriented graph and then write down the incidence matrix, Tie-set matrix and cut-set matrix. <span style="color:red">mark 15 ASTU 2019</span>
+<br><a href="https://i.ibb.co/ZpXF8QNK/Screenshot-2026-09-28-215147.webp"><img src="https://i.ibb.co/ZpXF8QNK/Screenshot-2026-09-28-215147.webp" width="300"></a></p>
+</body></html>
