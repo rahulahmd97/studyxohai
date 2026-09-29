@@ -5,11 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StudyXohai</title>
     <link rel="stylesheet" href="homepage.css">
-     <link rel="icon" type="image/png" href="/preview.png">
-    <link rel="apple-touch-icon" href="/preview.png">
-    
-<script src="https://cloudflare.com"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+    <script type='text/javascript'>
+//<![CDATA[
+window.MathJax = {
+tex: {
+inlineMath: [['$', '$'], ['\\(', '\\)']],
+displayMath: [['$$', '$$'], ['\\[', '\\]']],
+packages: ['base', 'ams', 'mhchem']
+},
+options: {
+renderActions: {
+addMenu: []
+}
+}
+};
+//]]> 
+</script>
+<script async='async' id='MathJax-script' src='https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js'></script>
 <style id='page-skin-1' type='text/css'>
 body {
 font-family: system-ui, Arial;
@@ -2328,5 +2340,18 @@ margin: 0px 0;
     (c) Write down Maxwell's equations for free space and show that EM-waves travel with the speed of light in free space (or vacuum). 
     <span style="color: red;">mark 4 ASTU2024</span>
 </p>
+<nav class="bottom-nav">
+
+    <a href="/" class="bottom-nav-item active">
+        <span class="nav-icon">⌂</span>
+        <span>Home</span>
+    </a>
+
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSedUsQrVbQSeFWNbfARpo1dpVXqSl_Z7SNLRG7q0t6ADYStZA/viewform" class="bottom-nav-item">
+        <span class="nav-icon">⚑</span>
+        <span>Report</span>
+    </a>
+
+</nav>
 </body>
 </html>
