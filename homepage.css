@@ -164,7 +164,6 @@
     transform: translateX(-33.333%);
   }
 }
-```css
 .social-links {
     display: flex;
     justify-content: center;
@@ -205,4 +204,71 @@
 .social-links a:active {
     transform: scale(0.96);
 }
-```
+/* ===== 1ST YEAR TABS ===== */
+
+.first-year-section {
+    width: 100%;
+}
+
+.year-tabs {
+    display: flex;
+    gap: 8px;
+    margin: 15px 0;
+    padding: 5px;
+    background: #eef2f7;
+    border-radius: 10px;
+}
+
+.year-tab {
+    flex: 1;
+    border: none;
+    padding: 11px 15px;
+    border-radius: 7px;
+    background: transparent;
+    color: #344054;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.year-tab:hover {
+    background: #ffffff;
+}
+
+.year-tab.active {
+    background: #ffffff;
+    color: #0b5ed7;
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.08);
+}
+
+
+/* ===== GROUP CONTENT ===== */
+
+.year-group {
+    display: none;
+}
+
+.year-group.active-group {
+    display: block;
+}
+
+
+/* ===== MOBILE ===== */
+
+@media (max-width: 600px) {
+
+    .year-tabs {
+        gap: 5px;
+    }
+
+    .year-tab {
+        padding: 10px 8px;
+        font-size: 13px;
+    }
+
+}
+/* =========================================
+   STUDYXOHAI - FIXED BOTTOM NAVIGATION
+========================================= */
+

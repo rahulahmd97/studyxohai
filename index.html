@@ -48,67 +48,126 @@
         
             <div class="update-notice">
   <div class="update-track">
-    <span>📢 Huge updates for 3rd Semester ETE students.</span>
-    <span>📢 Huge updates for 3rd Semester ETE students.</span>
+    <span>📢 NT module wise question uploaded.</span>
+    <span>📢 Chemistry, Biology, PFPF module wise question uploaded.</span>
+    <span>📢 New UI Tab.</span>
     <span>📢 Huge updates for 3rd Semester ETE students.</span>
   </div>
 </div>
-<section>
- <h2>1ST YEAR - GROUP B</h2>
-            <details open>
-                <summary>PYQ - Module Wise</summary>
-                <div class="card-grid">
-                    <a href="/1SemB/beemodulewiseq.html" class="card"><h3>Basic Electrical Engineering</h3></a>
-                    <a href="/1SemB/physicspyq.html" class="card"><h3>Engineering Physics</h3></a>
-                    <a href="/1SemB/maths2pyq.html" class="card"><h3>Mathematics 2</h3></a>
-                    <a href="/1semB/trwpyq.html" class="card"><h3>Technical Report Writing</h3></a>
-                    <a href="comingsoon.html" class="card"><h3>Design Thinking</h3></a>
-                    <a href="comingsoon.html" class="card"><h3>Engineering Graphics</h3></a>
-                </div>
-            </details>
-<!-- 
-            <details default>
-                <summary>Notes Section</summary>
-                <div class="card-grid">
-                    <a href="beenotes.html" class="card"><h3>BEE Notes</h3></a>
-                    <a href="physicsnotes.html" class="card"><h3>Physics Notes</h3></a>
-                    <a href="mathsnotes.html" class="card"><h3>Maths 2 Notes</h3></a>
-                    <a href="trwnotes.html" class="card"><h3>TRW Notes</h3></a>
-                    <a href="dtnotes.html" class="card"><h3>DT Notes</h3></a>
-                    <a href="egnotes.html" class="card"><h3>EG Notes</h3></a>
-                </div>
-            </details> -->
-        </section>
+<section class="first-year-section">
 
-      
-        <section>
-            <h2>1ST YEAR - GROUP A</h2>
-            <details open>
-                <summary>PYQ - Module Wise</summary>
-                <div class="card-grid">
-                    <a href="comingsoon.html" class="card"><h3>Chemistry PYQ</h3></a>
-                    <a href="comingsoon.html" class="card"><h3>Engineering Mechanics</h3></a>
-                    <a href="comingsoon.html" class="card"><h3>Mathematics 1</h3></a>
-                    <a href="comingsoon.html" class="card"><h3>PFPS</h3></a>
-                    <a href="comingsoon.html" class="card"><h3>Universal Human Value</h3></a>
-                    <a href="comingsoon.html" class="card"><h3>Biology</h3></a>
+    
 
-                </div>
-            </details>
+    <!-- Group Selection -->
+    <div class="year-tabs">
+        <button class="year-tab active" onclick="showGroup('groupA', this)">
+            1ST YEAR - A
+        </button>
 
-            <!-- <details>
-                <summary>Click to view Notes</summary>
-                <div class="card-grid">
-                    <a href="emnotes.html" class="card"><h3>Eng. Mechanics Notes</h3></a>
-                    <a href="physicsnotes.html" class="card"><h3>Physics Notes</h3></a>
-                    <a href="maths1notes.html" class="card"><h3>Maths 1 Notes</h3></a>
-                    <a href="pfpsnotes.html" class="card"><h3>PFPS Notes</h3></a>
-                    <a href="uhvnotes.html" class="card"><h3>UHV Notes</h3></a>
-                    <a href="egnotes.html" class="card"><h3>EG Notes</h3></a>
-                </div>
-            </details> -->
-        </section>
+        <button class="year-tab" onclick="showGroup('groupB', this)">
+            1ST YEAR - B
+        </button>
+    </div>
 
+
+    <!-- GROUP A -->
+    <div id="groupA" class="year-group active-group">
+
+        
+            <span style="color: blue;">PYQ - Module Wise</span>
+
+            <div class="card-grid">
+
+                <a href="/1semA/chemistrypyq.html" class="card">
+                    <h3>Chemistry PYQ</h3>
+                </a>
+
+                <a href="comingsoon.html" class="card">
+                    <h3>Engineering Mechanics</h3>
+                </a>
+
+                <a href="comingsoon.html" class="card">
+                    <h3>Mathematics 1</h3>
+                </a>
+
+                <a href="/1semA/pfpspyq.html" class="card">
+                    <h3>PFPS</h3>
+                </a>
+
+                <a href="/1semA/uhvpyq.html" class="card">
+                    <h3>Universal Human Value</h3>
+                </a>
+
+                <a href="/1semA/bfepyq.html" class="card">
+                    <h3>Biology</h3>
+                </a>
+
+            </div>
+        
+
+    </div>
+
+
+    <!-- GROUP B -->
+    <div id="groupB" class="year-group">
+
+        <details open>
+            <summary>PYQ - Module Wise</summary>
+
+            <div class="card-grid">
+
+                <a href="/1SemB/beemodulewiseq.html" class="card">
+                    <h3>Basic Electrical Engineering</h3>
+                </a>
+
+                <a href="/1SemB/physicspyq.html" class="card">
+                    <h3>Engineering Physics</h3>
+                </a>
+
+                <a href="/1SemB/maths2pyq.html" class="card">
+                    <h3>Mathematics 2</h3>
+                </a>
+
+                <a href="/1semB/trwpyq.html" class="card">
+                    <h3>Technical Report Writing</h3>
+                </a>
+
+                <a href="comingsoon.html" class="card">
+                    <h3>Design Thinking</h3>
+                </a>
+
+                <a href="comingsoon.html" class="card">
+                    <h3>Engineering Graphics</h3>
+                </a>
+
+            </div>
+        </details>
+
+    </div>
+
+</section>
+
+
+<script>
+function showGroup(groupId, button) {
+
+    // Hide both groups
+    document.querySelectorAll('.year-group').forEach(group => {
+        group.classList.remove('active-group');
+    });
+
+    // Remove active state from buttons
+    document.querySelectorAll('.year-tab').forEach(tab => {
+        tab.classList.remove('active');
+    });
+
+    // Show selected group
+    document.getElementById(groupId).classList.add('active-group');
+
+    // Activate clicked button
+    button.classList.add('active');
+}
+</script>
      
         <section>
             <h2>ETE - 3RD SEM</h2>
@@ -116,7 +175,7 @@
             
                 <div class="card-grid">
                     <a href="/3rdSem/dsdpyq.html" class="card"><h3>Digital System Design</h3></a>
-                    <a href="comingsoon.html" class="card"><h3>Network Theory</h3></a>
+                    <a href="/3rdSem/ntpyq.html" class="card"><h3>Network Theory</h3></a>
                     <a href="/3rdSem/signalandsystempyq.html" class="card"><h3>System and Signal</h3></a>
                     <a href="/3rdSem/maths3pyq.html" class="card"><h3>Mathematics 3</h3></a>
                     <a href="/3rdSem/edpyq.html" class="card"><h3>Electronic Devices</h3></a>
@@ -135,5 +194,6 @@
             </a></div>
         </footer>
     </div>
+    
 </body>
 </html>
