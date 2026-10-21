@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit - 3: Conditional Branching And Loops</title>
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']],
+      packages: ['base', 'ams'] // removed mhchem, not needed for DE
+    },
+    svg: {
+      fontCache: 'global'
+    }
+  };
+  </script>
+  <!-- Load MathJax -->
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    <style>
+        /* Base typography & colors matching Module 1 */
+        body {
+            font-family: Georgia, "Times New Roman", serif;
+            color: #222222;
+            background-color: #fbfbfb;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        /* Main Container */
+        .study-notes {
+            max-width: 960px;
+            padding: 18px 14px 36px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.03);
+            box-sizing: border-box;
+        }
+
+        /* Header styling */
+        header {
+            border-bottom: 2px solid #b21f1f;
+            padding-bottom: 12px;
+            margin-bottom: 24px;
+            text-align: center;
+        }
+
+        .subject-title {
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #555555;
+            margin-bottom: 4px;
+            font-weight: bold;
+        }
+
+        .unit-title {
+            font-size: 1.1rem;
+            color: #b21f1f;
+            font-weight: bold;
+            margin-bottom: 6px;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            color: #111111;
+            margin: 8px 0 4px;
+            line-height: 1.25;
+        }
+
+        /* Section Headings */
+        h2 {
+            font-size: 1.35rem;
+            color: #b21f1f;
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 6px;
+            margin-top: 30px;
+            margin-bottom: 14px;
+        }
+
+        h3 {
+            font-size: 1.15rem;
+            color: #222222;
+            margin-top: 22px;
+            margin-bottom: 10px;
+        }
+
+        h4 {
+            font-size: 1.02rem;
+            color: #444444;
+            margin-top: 16px;
+            margin-bottom: 8px;
+        }
+
+        p {
+            margin-top: 0;
+            margin-bottom: 14px;
+            text-align: justify;
+        }
+
+        ul, ol {
+            margin-top: 0;
+            margin-bottom: 14px;
+            padding-left: 24px;
+        }
+
+        li {
+            margin-bottom: 6px;
+        }
+
+        /* Code Block Styling */
+        pre {
+            font-family: "Courier New", Courier, monospace;
+            background-color: #f7f7f7;
+            border: 1px solid #dddddd;
+            padding: 12px 13px;
+            border-radius: 6px;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            font-size: 0.9rem;
+            line-height: 1.45;
+            overflow-x: auto;
+            margin-top: 8px;
+            margin-bottom: 16px;
+            color: #111111;
+        }
+
+        code {
+            font-family: "Courier New", Courier, monospace;
+            background-color: #f2f2f2;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-size: 0.9em;
+        }
+
+        pre code {
+            background-color: transparent;
+            padding: 0;
+            border-radius: 0;
+        }
+
+        /* Tables & Wrappers */
+        .table-wrap {
+            width: 100%;
+            overflow-x: auto;
+            margin-bottom: 18px;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        table {
+            width: 100%;
+            min-width: 560px;
+            border-collapse: collapse;
+            font-size: 0.92rem;
+            margin-top: 6px;
+        }
+
+        th, td {
+            border: 1px solid #777777;
+            padding: 8px 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        th {
+            background-color: #f7f7f7;
+            font-weight: bold;
+            color: #111111;
+        }
+
+        /* Diagrams & Inline SVGs */
+        .diagram-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        .svg-diagram {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Responsive Media Queries */
+        @media screen and (max-width: 600px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+            h2 {
+                font-size: 1.2rem;
+            }
+            h3 {
+                font-size: 1.05rem;
+            }
+            .study-notes {
+                padding: 14px 10px 24px;
+            }
+        }
+
+        @media screen and (max-width: 420px) {
+            body {
+                font-size: 0.95rem;
+            }
+            pre {
+                font-size: 0.82rem;
+                padding: 10px;
+            }
+            th, td {
+                padding: 6px 8px;
+            }
+        }
+
+        @media screen and (max-width: 340px) {
+            h1 {
+                font-size: 1.3rem;
+            }
+            .unit-title {
+                font-size: 0.95rem;
+            }
+            pre {
+                font-size: 0.78rem;
+            }
+        }
+    /* Module Navigation */
+.module-navigation {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 16px;
+    margin: 20px 0;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.05);
+}
+
+.module-nav-title {
+    color: #0f172a;
+    font-size: 17px;
+    font-weight: 700;
+    margin: 0 0 12px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #dbeafe;
+}
+
+.module-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.module-list li {
+    margin: 0;
+    padding: 0;
+}
+
+.module-list a {
+    display: block;
+    padding: 10px 12px;
+    color: #036bfc;
+    background: #f8fafc;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 1.5;
+    transition: background 0.2s ease,
+                color 0.2s ease,
+                border-color 0.2s ease;
+}
+
+.module-list a:hover {
+    color: #1d4ed8;
+    background: #eff6ff;
+    border-color: #bfdbfe;
+}
+
+/* Mobile-friendly layout */
+@media (max-width: 600px) {
+    .module-navigation {
+        padding: 12px;
+    }
+
+    .module-nav-title {
+        font-size: 16px;
+    }
+
+    .module-list a {
+        padding: 10px;
+        font-size: 13px;
+    }
+}
+
+</style></head><body>
+
+  
+<!-- Module Navigation -->
+<nav class="module-navigation">
+    <p class="module-nav-title">📚 Programming for Problem Solving</p>
+
+    <ul class="module-list">
+        <li><a href="/notes/pfpsmodule1.html">Module 1: Introduction to Programming</a></li>
+        <li><a href="/notes/pfpsmodule2.html">Module 2: Conditional Branching and Loops</a></li>
+        <li><a href="/notes/pfpsmodule3.html">Module 3: Basic Algorithms</a></li>
+        <li><a href="/notes/pfpsmodule4.html">Module 4: Functions</a></li>
+        <li><a href="/notes/pfpsmodule5.html">Module 5: Structures and Arrays</a></li>
+    </ul>
+</nav>
+
+
+<div class="study-notes">
+    <!-- Header Section -->
+    <header>
+        <div class="subject-title">PPS (Programming for Problem Solving)</div>
+        <div class="unit-title">Unit - 3</div>
+        <h1>Conditional Branching And Loops</h1>
+    </header>
+
+    <!-- Main Content -->
+    <section>
+        <h2>3.1 Writing And Evaluation Of Conditionals And Consequent Branching</h2>
+
+        <h3>Control Structures</h3>
+        <p>
+            By default, instructions in a C program are executed sequentially—one after another from top to bottom. However, complex problems require altering the execution flow based on conditions or repeating a block of instructions until a requirement is satisfied. 
+        </p>
+        <p>
+            A <strong>Control Structure</strong> is a programming construct that controls the flow of execution in a program.
+        </p>
+
+        <h4>Advantages of Control Structures:</h4>
+        <ul>
+            <li>Enable decision-making capability in programs.</li>
+            <li>Allow repetition (looping) without duplicating code.</li>
+            <li>Improve program readability, modularity, and maintainability.</li>
+            <li>Enable efficient problem solving for complex logic.</li>
+        </ul>
+
+        <h3>Types of Control Statements</h3>
+        <p>Control statements in C are broadly classified into two categories:</p>
+        <ol>
+            <li><strong>Conditional Branching Statements:</strong> Execution branches to different paths based on whether a conditional expression evaluates to true (non-zero) or false (zero). Examples: <code>if</code>, <code>if-else</code>, <code>nested if-else</code>, <code>switch</code>.</li>
+            <li><strong>Unconditional Branching Statements:</strong> Execution jumps directly to another part of the program without testing any condition. Examples: <code>break</code>, <code>continue</code>, <code>goto</code>, <code>return</code>.</li>
+        </ol>
+
+        <!-- SVG Flowchart -->
+        <div class="diagram-container">
+            <svg class="svg-diagram" width="480" height="260" viewBox="0 0 480 260" xmlns="http://www.w3.org/2000/svg">
+                <!-- Entry Point -->
+                <circle cx="240" cy="20" r="12" fill="#333333" />
+                <line x1="240" y1="32" x2="240" y2="60" stroke="#333" stroke-width="2" marker-end="url(#arrow)" />
+                
+                <!-- Decision Diamond -->
+                <polygon points="240,60 330,100 240,140 150,100" fill="#f7f7f7" stroke="#b21f1f" stroke-width="2" />
+                <text x="240" y="104" font-family="Georgia, serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#111">Condition</text>
+
+                <!-- True Branch (Left) -->
+                <line x1="150" y1="100" x2="80" y2="100" stroke="#333" stroke-width="2" />
+                <line x1="80" y1="100" x2="80" y2="160" stroke="#333" stroke-width="2" marker-end="url(#arrow)" />
+                <text x="110" y="93" font-family="Georgia, serif" font-size="12" font-weight="bold" fill="#008000">True</text>
+
+                <!-- False Branch (Right) -->
+                <line x1="330" y1="100" x2="400" y2="100" stroke="#333" stroke-width="2" />
+                <line x1="400" y1="100" x2="400" y2="160" stroke="#333" stroke-width="2" marker-end="url(#arrow)" />
+                <text x="350" y="93" font-family="Georgia, serif" font-size="12" font-weight="bold" fill="#b21f1f">False</text>
+
+                <!-- Branch 1 Box -->
+                <rect x="25" y="160" width="110" height="40" rx="5" ry="5" fill="#f0f0f0" stroke="#333" stroke-width="1.5" />
+                <text x="80" y="184" font-family="Georgia, serif" font-size="13" text-anchor="middle" fill="#111">Branch 1</text>
+
+                <!-- Branch 2 Box -->
+                <rect x="345" y="160" width="110" height="40" rx="5" ry="5" fill="#f0f0f0" stroke="#333" stroke-width="1.5" />
+                <text x="400" y="184" font-family="Georgia, serif" font-size="13" text-anchor="middle" fill="#111">Branch 2</text>
+
+                <!-- Merge Lines -->
+                <line x1="80" y1="200" x2="80" y2="230" stroke="#333" stroke-width="2" />
+                <line x1="400" y1="200" x2="400" y2="230" stroke="#333" stroke-width="2" />
+                <line x1="80" y1="230" x2="400" y2="230" stroke="#333" stroke-width="2" />
+                <line x1="240" y1="230" x2="240" y2="250" stroke="#333" stroke-width="2" marker-end="url(#arrow)" />
+
+                <!-- Marker definition -->
+                <defs>
+                    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                        <path d="M 0 0 L 10 5 L 0 10 z" fill="#333"/>
+                    </marker>
+                </defs>
+            </svg>
+        </div>
+
+        <h3>Conditional Branching Constructs</h3>
+
+        <h4>1. Simple <code>if</code> Statement</h4>
+        <p>Executes a block of code only if the condition evaluates to true.</p>
+        <pre><code>if (condition) {
+    // Statement(s) executed if condition is true
+}</code></pre>
+
+        <h4>2. <code>if-else</code> Statement</h4>
+        <p>Executes the <code>if</code> block if the condition evaluates to true, otherwise executes the <code>else</code> block.</p>
+        <pre><code>if (condition) {
+    // Code block 1 (Condition is True)
+} else {
+    // Code block 2 (Condition is False)
+}</code></pre>
+
+        <h4>Example 1: Even or Odd Check</h4>
+<pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int num;
+    printf("Enter an integer: ");
+    scanf("%d", &amp;num);
+
+    if (num % 2 == 0) {
+        printf("%d is even.\n", num);
+    } else {
+        printf("%d is odd.\n", num);
+    }
+
+    return 0;
+}</code></pre>
+
+        <h4>Example 2: Comparing Two Integers (<code>==</code>, <code>&gt;</code>, <code>&lt;</code>)</h4>
+<pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int num1, num2;
+    printf("Enter two integers: ");
+    scanf("%d %d", &amp;num1, &amp;num2);
+
+    if (num1 == num2) {
+        printf("Result: %d is equal to %d\n", num1, num2);
+    } else if (num1 &gt; num2) {
+        printf("Result: %d is greater than %d\n", num1, num2);
+    } else {
+        printf("Result: %d is less than %d\n", num1, num2);
+    }
+
+    return 0;
+}</code></pre>
+
+        <h3>The <code>switch</code> Statement</h3>
+        <p>
+            The <code>switch</code> statement is a multi-way decision maker that tests whether an expression matches one of a number of constant integer or character values, branching accordingly.
+        </p>
+
+        <h4>Key Keywords:</h4>
+        <ul>
+            <li><code>switch</code>: Evaluates an expression against multiple cases.</li>
+            <li><code>case</code>: Represents a constant value to test against the expression.</li>
+            <li><code>break</code>: Exits the switch block once a matching case is executed (prevents fall-through).</li>
+            <li><code>default</code>: Optional block executed if no case value matches the expression.</li>
+        </ul>
+
+        <h4>General Syntax:</h4>
+<pre><code>switch (expression) {
+    case value1:
+        // Statements executed if expression == value1
+        break;
+    case value2:
+        // Statements executed if expression == value2
+        break;
+    default:
+        // Statements executed if no case matches
+}</code></pre>
+
+        <h4>Example: Spelling Single-Digit Number in English</h4>
+<pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int digit;
+    printf("Enter a single digit (0-9): ");
+    scanf("%d", &amp;digit);
+
+    switch (digit) {
+        case 0: printf("Zero\n"); break;
+        case 1: printf("One\n"); break;
+        case 2: printf("Two\n"); break;
+        case 3: printf("Three\n"); break;
+        case 4: printf("Four\n"); break;
+        case 5: printf("Five\n"); break;
+        case 6: printf("Six\n"); break;
+        case 7: printf("Seven\n"); break;
+        case 8: printf("Eight\n"); break;
+        case 9: printf("Nine\n"); break;
+        default: printf("Invalid input! Please enter a single digit (0-9).\n");
+    }
+
+    return 0;
+}</code></pre>
+
+        <h3>Unconditional Branching Statements</h3>
+        <p>Unconditional branching transfers program control directly to another statement without checking any condition.</p>
+
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Keyword</th>
+                        <th>Syntax</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>break</code></td>
+                        <td><code>break;</code></td>
+                        <td>Terminates the nearest enclosing loop or <code>switch</code> statement immediately.</td>
+                    </tr>
+                    <tr>
+                        <td><code>continue</code></td>
+                        <td><code>continue;</code></td>
+                        <td>Skips the rest of the current loop iteration and proceeds to the next iteration.</td>
+                    </tr>
+                    <tr>
+                        <td><code>goto</code></td>
+                        <td><code>goto label;<br>...<br>label: statement;</code></td>
+                        <td>Transfers control unconditionally to a specified labeled statement within the same function.</td>
+                    </tr>
+                    <tr>
+                        <td><code>return</code></td>
+                        <td><code>return expression;</code></td>
+                        <td>Terminates execution of the current function and returns a value to the caller.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Section 3.2 -->
+    <section>
+        <h2>3.2 Iteration And Loops</h2>
+        <p>
+            Iteration constructs repeat a block of code as long as a specified condition remains true. C provides three primary loop control structures: <code>while</code>, <code>do-while</code>, and <code>for</code>.
+        </p>
+
+        <h3>1. The <code>while</code> Statement</h3>
+        <p>
+            A entry-controlled loop where the condition is evaluated <em>before</em> executing the loop body. If the initial condition is false, the loop body never runs.
+        </p>
+        
+        <h4>Syntax:</h4>
+<pre><code>while (condition) {
+    // Loop body
+    // Update expression
+}</code></pre>
+
+        <h4>Example: Countdown ("tick 10" down to "tick 1")</h4>
+<pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int count = 10;
+
+    while (count &gt;= 1) {
+        printf("tick %d\n", count);
+        count--;
+    }
+
+    return 0;
+}</code></pre>
+
+        <h3>2. The <code>do-while</code> Statement</h3>
+        <p>
+            An exit-controlled loop where the condition is tested <em>after</em> executing the loop body. Guarantees that the loop body executes at least once.
+        </p>
+
+        <h4>Syntax:</h4>
+<pre><code>do {
+    // Loop body
+} while (condition);</code></pre>
+
+        <h4>Example:</h4>
+<pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int i = 1;
+
+    do {
+        printf("Iteration number: %d\n", i);
+        i++;
+    } while (i &lt;= 5);
+
+    return 0;
+}</code></pre>
+
+        <h3>3. The <code>for</code> Loop</h3>
+        <p>
+            An entry-controlled loop that combines initialization, condition checking, and iteration (increment/decrement) in a single concise line.
+        </p>
+
+        <h4>General Syntax:</h4>
+<pre><code>for (initialization; condition; iteration) {
+    // Loop body
+}</code></pre>
+
+        <h4>Example: Standard <code>for</code> Loop</h4>
+<pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int i;
+    for (i = 1; i &lt;= 5; i++) {
+        printf("i = %d\n", i);
+    }
+    return 0;
+}</code></pre>
+
+        <h4>Example: Comma Operator in Initialization &amp; Iteration</h4>
+        <p>Multiple variables can be initialized and updated simultaneously within a single <code>for</code> header using the comma operator.</p>
+<pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int i, j;
+    
+    // Multiple initializations (i=1, j=10) and updates (i++, j--)
+    for (i = 1, j = 10; i &lt;= 5; i++, j--) {
+        printf("i = %d, j = %d\n", i, j);
+    }
+
+    return 0;
+}</code></pre>
+
+        <h3>4. Nested Loops</h3>
+        <p>
+            A loop placed inside another loop is called a nested loop. For every single iteration of the outer loop, the inner loop completes all of its iterations.
+        </p>
+
+        <h4>Example: Nested Loop Program</h4>
+<pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int outer, inner;
+
+    for (outer = 1; outer &lt;= 2; outer++) {
+        printf("Outer loop pass %d: ", outer);
+        for (inner = 1; inner &lt;= 4; inner++) {
+            printf(".");
+        }
+        printf("\n");
+    }
+
+    return 0;
+}</code></pre>
+
+        <h4>Program Output:</h4>
+<pre><code>Outer loop pass 1: ....
+Outer loop pass 2: ....</code></pre>
+    </section>
+</div>
+
+    <!-- Section 4.1 -->
+    <section>
+        <h2>4.1 Array Declaration &amp; Initialization</h2>
+        <p>
+            An <strong>Array</strong> is a fixed-size, sequential collection of elements of the same data type stored in contiguous memory locations. It is a derived data type used to represent a collection of homogeneous data under a single variable name.
+        </p>
+        
+        <h4>Key Terminology:</h4>
+        <ul>
+            <li><strong>Array Size:</strong> The total number of elements that an array can hold. It must be declared as a constant integer value or constant expression.</li>
+            <li><strong>Index / Subscript:</strong> An integer value used to identify and access individual elements in an array. In C, array indexing always starts at <code>0</code> and ends at <code>size - 1</code>.</li>
+        </ul>
+    </section>
+
+    <!-- Section 4.2 -->
+    <section>
+        <h2>4.2 Bound Checking Arrays (1-D, 2-D)</h2>
+        <p>
+            C language does not perform automatic <strong>bound checking</strong> on array indices. If a program attempts to read or write beyond the allocated index bounds (e.g., accessing <code>a[5]</code> for an array of size 5), C will access memory outside the array block, leading to undefined behavior, logical errors, or memory corruption without giving a compilation error.
+        </p>
+
+        <h3>1. One Dimensional Array (1-D Array)</h3>
+        <p>
+            A 1-D array represents a single row or list of data items stored sequentially in contiguous memory locations.
+        </p>
+
+        <h4>Syntax:</h4>
+        <pre><code>data_type array_name[array_size];</code></pre>
+
+        <h4>Examples of Declaration &amp; Initialization:</h4>
+<pre><code>int a[3] = {2, 3, 5};
+char ch[10] = "Data";
+float x[3] = {2.5, 3.50, 489.98};</code></pre>
+
+        <h4>Memory Allocation Calculation:</h4>
+        <p>The total memory in bytes allocated for a 1-D array can be calculated using:</p>
+        <div class="formula-box">
+            Total Size in Bytes = Number of Elements &times; sizeof(data_type)
+        </div>
+
+        <h4>1-D Array Memory Allocation Diagram</h4>
+        <p>Consider an integer array declared as <code>int num[5] = {5, 10, 15, 2, 4};</code> assuming 2 bytes per integer starting at base memory address 1000:</p>
+
+        <!-- Inline SVG: 1D Array Memory Allocation -->
+        <div class="diagram-container">
+            <svg class="diagram" width="520" height="150" viewBox="0 0 520 150" xmlns="http://www.w3.org/2000/svg">
+                <style>
+                    .box { fill: #f7f7f7; stroke: #333; stroke-width: 2; }
+                    .text-val { font-family: Courier New, monospace; font-size: 16px; font-weight: bold; fill: #b21f1f; text-anchor: middle; }
+                    .text-lbl { font-family: Georgia, serif; font-size: 12px; fill: #555; text-anchor: middle; }
+                    .text-addr { font-family: Courier New, monospace; font-size: 12px; fill: #111; text-anchor: middle; }
+                    .title-lbl { font-family: Georgia, serif; font-size: 13px; font-weight: bold; fill: #111; }
+                </style>
+
+                <!-- Labels on the Left -->
+                <text x="10" y="38" class="title-lbl">Index:</text>
+                <text x="10" y="78" class="title-lbl">Value:</text>
+                <text x="10" y="128" class="title-lbl">Address:</text>
+
+                <!-- Element 0 -->
+                <text x="110" y="38" class="text-lbl">num[0]</text>
+                <rect x="70" y="50" width="80" height="45" class="box" />
+                <text x="110" y="78" class="text-val">5</text>
+                <text x="110" y="128" class="text-addr">1000</text>
+
+                <!-- Element 1 -->
+                <text x="190" y="38" class="text-lbl">num[1]</text>
+                <rect x="150" y="50" width="80" height="45" class="box" />
+                <text x="190" y="78" class="text-val">10</text>
+                <text x="190" y="128" class="text-addr">1002</text>
+
+                <!-- Element 2 -->
+                <text x="270" y="38" class="text-lbl">num[2]</text>
+                <rect x="230" y="50" width="80" height="45" class="box" />
+                <text x="270" y="78" class="text-val">15</text>
+                <text x="270" y="128" class="text-addr">1004</text>
+
+                <!-- Element 3 -->
+                <text x="350" y="38" class="text-lbl">num[3]</text>
+                <rect x="310" y="50" width="80" height="45" class="box" />
+                <text x="350" y="78" class="text-val">2</text>
+                <text x="350" y="128" class="text-addr">1006</text>
+
+                <!-- Element 4 -->
+                <text x="430" y="38" class="text-lbl">num[4]</text>
+                <rect x="390" y="50" width="80" height="45" class="box" />
+                <text x="430" y="78" class="text-val">4</text>
+                <text x="430" y="128" class="text-addr">1008</text>
+            </svg>
+        </div>
+
+        <h3>1-D Array Programs</h3>
+
+        <h4>Program 1 (P1): Display all elements of a 1-D array</h4>
+<pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int arr[5] = {10, 20, 30, 40, 50};
+    int i;
+
+    printf("Elements of the array are:\n");
+    for (i = 0; i &lt; 5; i++) {
+        printf("arr[%d] = %d\n", i, arr[i]);
+    }
+
+    return 0;
+}</code></pre>
+
+        <h4>Output (P1):</h4>
+<pre><code>Elements of the array are:
+arr[0] = 10
+arr[1] = 20
+arr[2] = 30
+arr[3] = 40
+arr[4] = 50</code></pre>
+
+        <h4>Program 2 (P2): Copy elements of one 1-D array to another array</h4>
+<pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int source[5] = {5, 12, 19, 26, 33};
+    int destination[5];
+    int i;
+
+    // Copying elements
+    for (i = 0; i &lt; 5; i++) {
+        destination[i] = source[i];
+    }
+
+    // Displaying copied array
+    printf("Elements of destination array:\n");
+    for (i = 0; i &lt; 5; i++) {
+        printf("destination[%d] = %d\n", i, destination[i]);
+    }
+
+    return 0;
+}</code></pre>
+
+        <h4>Output (P2):</h4>
+<pre><code>Elements of destination array:
+destination[0] = 5
+destination[1] = 12
+destination[2] = 19
+destination[3] = 26
+destination[4] = 33</code></pre>
+
+        <h4>Program 3 (P3): Find the reverse of a 1-D array</h4>
+<pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int arr[5] = {1, 2, 3, 4, 5};
+    int i;
+
+    printf("Original Array: ");
+    for (i = 0; i &lt; 5; i++) {
+        printf("%d ", arr[i]);
+    }
+
+    printf("\nReversed Array: ");
+    for (i = 4; i &gt;= 0; i--) {
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
+
+    return 0;
+}</code></pre>
+
+        <h4>Output (P3):</h4>
+<pre><code>Original Array: 1 2 3 4 5 
+Reversed Array: 5 4 3 2 1 </code></pre>
+
+        <h3>2. Multi-Dimensional Array (2-D Array)</h3>
+        <p>
+            A <strong>Two-Dimensional (2-D) Array</strong> is an array of arrays, logically structured as a matrix with rows and columns.
+        </p>
+
+        <h4>Declaration Syntax:</h4>
+        <pre><code>data_type array_name[no_of_rows][no_of_columns];</code></pre>
+        <p>The total number of elements in a 2-D array is calculated as: <code>Total Elements = no_of_rows &times; no_of_columns</code>.</p>
+        <p>Example: <code>int a[2][3];</code> creates a matrix with 2 rows and 3 columns (total 6 elements).</p>
+
+        <h4>2-D Array Index Grid Diagram (for <code>a[2][3]</code>):</h4>
+
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Row \ Column</th>
+                        <th>Column 0</th>
+                        <th>Column 1</th>
+                        <th>Column 2</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>Row 0</th>
+                        <td><code>a[0][0]</code></td>
+                        <td><code>a[0][1]</code></td>
+                        <td><code>a[0][2]</code></td>
+                    </tr>
+                    <tr>
+                        <th>Row 1</th>
+                        <td><code>a[1][0]</code></td>
+                        <td><code>a[1][1]</code></td>
+                        <td><code>a[1][2]</code></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h4>Initialization &amp; Storage Representation</h4>
+        <p>2-D arrays can be initialized in multiple ways during declaration:</p>
+<pre><code>// Method 1: Row-wise grouping
+int a[2][3] = { {1, 2, 3}, {4, 5, 6} };
+
+// Method 2: Linear list initialization
+int a[2][3] = {1, 2, 3, 4, 5, 6};
+
+// Method 3: Omitting row size (Column size is mandatory)
+int a[][3] = { {1, 2, 3}, {4, 5, 6} };</code></pre>
+
+        <p>
+            <em>Note:</em> In C, when initializing a 2-D array, the column dimension <strong>must always be specified</strong>, whereas the row dimension can be optionally omitted.
+        </p>
+
+        <h4>General Storage Representation Matrix Table (Row 0..m-1, Col 0..n-1)</h4>
+        
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Row \ Column</th>
+                        <th>Col 0</th>
+                        <th>Col 1</th>
+                        <th>...</th>
+                        <th>Col n-1</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>Row 0</th>
+                        <td>A[0][0]</td>
+                        <td>A[0][1]</td>
+                        <td>...</td>
+                        <td>A[0][n-1]</td>
+                    </tr>
+                    <tr>
+                        <th>Row 1</th>
+                        <td>A[1][0]</td>
+                        <td>A[1][1]</td>
+                        <td>...</td>
+                        <td>A[1][n-1]</td>
+                    </tr>
+                    <tr>
+                        <th>...</th>
+                        <td>...</td>
+                        <td>...</td>
+                        <td>...</td>
+                        <td>...</td>
+                    </tr>
+                    <tr>
+                        <th>Row m-1</th>
+                        <td>A[m-1][0]</td>
+                        <td>A[m-1][1]</td>
+                        <td>...</td>
+                        <td>A[m-1][n-1]</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h4>Accessing Two-Dimensional Array Elements</h4>
+        <p>
+            Elements in a 2-D array are accessed using row index <code>i</code> and column index <code>j</code>.
+        </p>
+<pre><code>int val = A[1][2]; // Accesses element located at Row 1, Column 2</code></pre>
+    </section>
+
+    <!-- Section 4.3 -->
+    <section>
+        <h2>4.3 Character Arrays And Strings</h2>
+        <p>
+            In C, a <strong>String</strong> is represented as a one-dimensional array of characters terminated by a null character (<code>'\0'</code>).
+        </p>
+        <p>Index range for a character array of size <em>N</em> spans from <code>0</code> to <code>N-1</code>.</p>
+
+        <h4>Example 1: Difference between Integer Array &amp; Character Array</h4>
+        <p>An integer array <code>int A[5] = {10, 20, 40, 5, 25};</code> stores numbers directly across indices 0 to 4:</p>
+
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Index</th>
+                        <th>0</th>
+                        <th>1</th>
+                        <th>2</th>
+                        <th>3</th>
+                        <th>4</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>A[i]</th>
+                        <td>10</td>
+                        <td>20</td>
+                        <td>40</td>
+                        <td>5</td>
+                        <td>25</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3>String Data Type &amp; Abstraction</h3>
+        <p>
+            C does not have a built-in primitive <code>string</code> data type. Instead, string abstraction is provided via character arrays and functions declared inside the <code>&lt;string.h&gt;</code> library header (such as <code>strlen</code>, <code>strcat</code>, <code>strcpy</code>, <code>strrev</code>).
+        </p>
+
+        <!-- Inline SVG Diagram: String Abstraction in C -->
+        <div class="diagram-container">
+            <svg class="diagram" width="500" height="200" viewBox="0 0 500 200" xmlns="http://www.w3.org/2000/svg">
+                <style>
+                    .outer-box { fill: #fdfdfd; stroke: #b21f1f; stroke-width: 2; stroke-dasharray: 4,4; }
+                    .inner-box { fill: #f0f4f8; stroke: #333; stroke-width: 1.5; }
+                    .header-lbl { font-family: Georgia, serif; font-size: 14px; font-weight: bold; fill: #b21f1f; text-anchor: middle; }
+                    .func-text { font-family: Courier New, monospace; font-size: 12px; fill: #111; text-anchor: middle; }
+                    .user-data { fill: #ffffff; stroke: #777; stroke-width: 1.5; }
+                </style>
+
+                <!-- Outer Abstraction Shell -->
+                <rect x="20" y="20" width="460" height="160" rx="8" class="outer-box" />
+                <text x="250" y="42" class="header-lbl">&lt;string.h&gt; Abstraction Layer</text>
+
+                <!-- Internal Library Interface -->
+                <rect x="40" y="60" width="190" height="100" rx="5" class="inner-box" />
+                <text x="135" y="82" font-family="Georgia, serif" font-size="13" font-weight="bold" fill="#333" text-anchor="middle">String Functions</text>
+                <text x="135" y="105" class="func-text">strlen() | strcpy()</text>
+                <text x="135" y="125" class="func-text">strcat() | strcmp()</text>
+
+                <!-- User Character Array -->
+                <rect x="270" y="60" width="190" height="100" rx="5" class="user-data" />
+                <text x="365" y="82" font-family="Georgia, serif" font-size="13" font-weight="bold" fill="#333" text-anchor="middle">User Data Array</text>
+                <text x="365" y="110" font-family="Courier New, monospace" font-size="14" fill="#b21f1f" text-anchor="middle">char str[] = "HELLO\0"</text>
+            </svg>
+        </div>
+
+        <h3>String Manipulation in C Language</h3>
+        <ul>
+            <li><strong>Null Character (<code>'\0'</code>):</strong> Marks the exact end of a string in memory.</li>
+            <li><strong>Format Specifier:</strong> <code>%s</code> is used in <code>printf</code> and <code>scanf</code> to handle string operations.</li>
+            <li><strong>Header File:</strong> <code>#include &lt;string.h&gt;</code> must be included to utilize string manipulation functions.</li>
+        </ul>
+
+        <h4>Declaration Syntax:</h4>
+        <pre><code>char string_name[size_of_string];</code></pre>
+        <p>Example: <code>char name[20] = "Program";</code></p>
+
+        <h4>Example Instruction Breakdown Table</h4>
+        
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Sr. No.</th>
+                        <th>Instructions</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td><code>char str[20];</code></td>
+                        <td>Declares a character array <code>str</code> capable of storing up to 19 characters + 1 null character.</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td><code>printf("Enter String: ");</code></td>
+                        <td>Prints a prompt message on the screen asking for user input.</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td><code>scanf("%s", str);</code></td>
+                        <td>Reads a single word string from keyboard input into array <code>str</code> (stops reading at whitespace).</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td><code>printf("Entered: %s\n", str);</code></td>
+                        <td>Outputs the stored string onto the console screen.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3>Common String Manipulation Functions (<code>string.h</code>)</h3>
+
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Function</th>
+                        <th>Syntax Example</th>
+                        <th>Purpose / Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>strlen()</code></td>
+                        <td><code>len = strlen(str);</code></td>
+                        <td>Calculates and returns the length of the string (excluding the null character <code>'\0'</code>).</td>
+                    </tr>
+                    <tr>
+                        <td><code>strcpy()</code></td>
+                        <td><code>strcpy(dest, src);</code></td>
+                        <td>Copies source string <code>src</code> into destination character array <code>dest</code>.</td>
+                    </tr>
+                    <tr>
+                        <td><code>strcat()</code></td>
+                        <td><code>strcat(str1, str2);</code></td>
+                        <td>Concatenates (appends) string <code>str2</code> to the end of string <code>str1</code>.</td>
+                    </tr>
+                    <tr>
+                        <td><code>strcmp()</code></td>
+                        <td><code>res = strcmp(s1, s2);</code></td>
+                        <td>Compares two strings lexicographically. Returns 0 if equal, &lt;0 if s1 &lt; s2, &gt;0 if s1 &gt; s2.</td>
+                    </tr>
+                    <tr>
+                        <td><code>strchr()</code></td>
+                        <td><code>ptr = strchr(str, 'a');</code></td>
+                        <td>Searches for the first occurrence of character <code>'a'</code> in string <code>str</code> and returns a pointer to it.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</div>
+
+
+</body>
+</html>

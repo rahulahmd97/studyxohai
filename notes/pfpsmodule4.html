@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit - 6: Functions</title>
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']],
+      packages: ['base', 'ams'] // removed mhchem, not needed for DE
+    },
+    svg: {
+      fontCache: 'global'
+    }
+  };
+  </script>
+  <!-- Load MathJax -->
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    <style>
+        /* Base typography & CSS variables matching Module 4 */
+        :root {
+            --accent: #b21f1f;
+            --text: #222222;
+            --muted: #555555;
+            --border: #777777;
+            --bg-main: #ffffff;
+            --bg-body: #fbfbfb;
+            --bg-code: #f7f7f7;
+            --border-code: #dddddd;
+        }
+
+        body {
+            font-family: Georgia, "Times New Roman", serif;
+            color: var(--text);
+            background-color: var(--bg-body);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        /* Main Container */
+        .study-notes {
+            max-width: 960px;
+            padding: 18px 14px 36px;
+            margin: 0 auto;
+            background-color: var(--bg-main);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.03);
+            box-sizing: border-box;
+        }
+
+        /* Header styling */
+        header {
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 12px;
+            margin-bottom: 24px;
+            text-align: center;
+        }
+
+        .subject-title {
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--muted);
+            margin-bottom: 4px;
+            font-weight: bold;
+        }
+
+        .unit-title {
+            font-size: 1.1rem;
+            color: var(--accent);
+            font-weight: bold;
+            margin-bottom: 6px;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            color: #111111;
+            margin: 8px 0 4px;
+            line-height: 1.25;
+        }
+
+        /* Section Headings */
+        h2 {
+            font-size: 1.35rem;
+            color: var(--accent);
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 6px;
+            margin-top: 30px;
+            margin-bottom: 14px;
+        }
+
+        h3 {
+            font-size: 1.15rem;
+            color: var(--text);
+            margin-top: 22px;
+            margin-bottom: 10px;
+        }
+
+        h4 {
+            font-size: 1.02rem;
+            color: #444444;
+            margin-top: 16px;
+            margin-bottom: 8px;
+        }
+
+        p {
+            margin-top: 0;
+            margin-bottom: 14px;
+            text-align: justify;
+        }
+
+        ul, ol {
+            margin-top: 0;
+            margin-bottom: 14px;
+            padding-left: 24px;
+        }
+
+        li {
+            margin-bottom: 6px;
+        }
+
+        /* Formula / Highlight Box */
+        .formula-box {
+            background-color: #f0f4f8;
+            border-left: 4px solid var(--accent);
+            padding: 10px 14px;
+            margin: 12px 0 16px;
+            font-family: Georgia, serif;
+            font-weight: bold;
+        }
+
+        /* Code Block Styling */
+        pre {
+            font-family: "Courier New", Courier, monospace;
+            background-color: var(--bg-code);
+            border: 1px solid var(--border-code);
+            padding: 12px 13px;
+            border-radius: 6px;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            font-size: 0.9rem;
+            line-height: 1.45;
+            overflow-x: auto;
+            margin-top: 8px;
+            margin-bottom: 16px;
+            color: #111111;
+        }
+
+        code {
+            font-family: "Courier New", Courier, monospace;
+            background-color: #f2f2f2;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-size: 0.9em;
+        }
+
+        pre code {
+            background-color: transparent;
+            padding: 0;
+            border-radius: 0;
+        }
+
+        /* Tables & Wrappers */
+        .table-wrap {
+            width: 100%;
+            overflow-x: auto;
+            margin-bottom: 18px;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        table {
+            width: 100%;
+            min-width: 540px;
+            border-collapse: collapse;
+            font-size: 0.92rem;
+            margin-top: 6px;
+        }
+
+        th, td {
+            border: 1px solid var(--border);
+            padding: 8px 12px;
+            text-align: left;
+            vertical-align: middle;
+        }
+
+        th {
+            background-color: #f7f7f7;
+            font-weight: bold;
+            color: #111111;
+        }
+
+        /* Diagrams & Inline SVGs */
+        .diagram-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        .diagram {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Responsive Media Queries */
+        @media screen and (max-width: 600px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+            h2 {
+                font-size: 1.2rem;
+            }
+            h3 {
+                font-size: 1.05rem;
+            }
+            .study-notes {
+                padding: 14px 10px 24px;
+            }
+        }
+
+        @media screen and (max-width: 420px) {
+            body {
+                font-size: 0.95rem;
+            }
+            pre {
+                font-size: 0.82rem;
+                padding: 10px;
+            }
+            th, td {
+                padding: 6px 8px;
+            }
+        }
+
+        @media screen and (max-width: 340px) {
+            h1 {
+                font-size: 1.3rem;
+            }
+            .unit-title {
+                font-size: 0.95rem;
+            }
+            pre {
+                font-size: 0.78rem;
+            }
+        }
+   /* Module Navigation */
+.module-navigation {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 16px;
+    margin: 20px 0;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.05);
+}
+
+.module-nav-title {
+    color: #0f172a;
+    font-size: 17px;
+    font-weight: 700;
+    margin: 0 0 12px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #dbeafe;
+}
+
+.module-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.module-list li {
+    margin: 0;
+    padding: 0;
+}
+
+.module-list a {
+    display: block;
+    padding: 10px 12px;
+    color: #036bfc;
+    background: #f8fafc;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 1.5;
+    transition: background 0.2s ease,
+                color 0.2s ease,
+                border-color 0.2s ease;
+}
+
+.module-list a:hover {
+    color: #1d4ed8;
+    background: #eff6ff;
+    border-color: #bfdbfe;
+}
+
+/* Mobile-friendly layout */
+@media (max-width: 600px) {
+    .module-navigation {
+        padding: 12px;
+    }
+
+    .module-nav-title {
+        font-size: 16px;
+    }
+
+    .module-list a {
+        padding: 10px;
+        font-size: 13px;
+    }
+}
+
+</style></head><body>
+
+  
+<!-- Module Navigation -->
+<nav class="module-navigation">
+    <p class="module-nav-title">📚 Programming for Problem Solving</p>
+
+    <ul class="module-list">
+        <li><a href="/notes/pfpsmodule1.html">Module 1: Introduction to Programming</a></li>
+        <li><a href="/notes/pfpsmodule2.html">Module 2: Conditional Branching and Loops</a></li>
+        <li><a href="/notes/pfpsmodule3.html">Module 3: Basic Algorithms</a></li>
+        <li><a href="/notes/pfpsmodule4.html">Module 4: Functions</a></li>
+        <li><a href="/notes/pfpsmodule5.html">Module 5: Structures and Arrays</a></li>
+    </ul>
+</nav>
+
+
+<div class="study-notes">
+    <!-- Header Section -->
+    <header>
+        <div class="subject-title">PPS</div>
+        <div class="unit-title">Unit - 6</div>
+        <h1>Functions, Parameter Passing &amp; Scope</h1>
+    </header>
+
+    <!-- Section 6.1 -->
+    <section>
+        <h2>6.1 Introduction &amp; Writing Functions</h2>
+        <p>
+            A <strong>Function</strong> is a self-contained, reusable block of code designed to perform a specific task. Functions allow complex programs to be broken down into smaller, manageable, and modular sub-problems (a design strategy called <em>Divide and Conquer</em> or <em>Modular Programming</em>).
+        </p>
+
+        <h3>Syntax of a Function</h3>
+        <pre><code>return_type function_name(parameter_list) {
+    // Local variable declarations
+    // Statements / Function body
+    return return_value; // Optional depending on return_type
+}</code></pre>
+
+        <h4>Components of a Function Definition:</h4>
+        <ul>
+            <li><strong>Return Type:</strong> Specifies the data type of the value that the function returns to the calling routine (e.g., <code>int</code>, <code>float</code>, <code>char</code>). If no value is returned, the keyword <code>void</code> is used.</li>
+            <li><strong>Function Name:</strong> A unique identifier used to call/invoke the function following standard identifier rules in C.</li>
+            <li><strong>Parameter / Argument List:</strong> A comma-separated list of variable declarations that act as inputs passed into the function from the caller.</li>
+            <li><strong>Function Body:</strong> Enclosed within curly braces <code>{ ... }</code>, contains instructions executed when the function is called.</li>
+        </ul>
+
+        <h4>Key Advantages of Using Functions:</h4>
+        <ul>
+            <li><strong>Code Reusability:</strong> Write once and execute multiple times without duplicating code.</li>
+            <li><strong>Modularity &amp; Maintainability:</strong> Improves code readability and simplifies debugging and testing.</li>
+            <li><strong>Reduction in Program Size:</strong> Eliminates duplicate lines of code across the program.</li>
+            <li><strong>Abstraction:</strong> Hides complex internal execution details from the caller.</li>
+        </ul>
+    </section>
+
+    <!-- Section 6.2 -->
+    <section>
+        <h2>6.2 Scope Of Variables &amp; Functions</h2>
+        <p>
+            Functions in C are categorized into two primary types based on their source and scope: <strong>Library Functions</strong> and <strong>User-Defined Functions</strong>.
+        </p>
+
+        <h3>1. Library Functions (Built-in Functions)</h3>
+        <p>
+            Library functions are predefined, pre-compiled functions provided by the C standard library. To use them, their corresponding header file must be included at the top of the C program using the <code>#include</code> preprocessor directive.
+        </p>
+        
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Header File</th>
+                        <th>Library Functions</th>
+                        <th>Purpose</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>&lt;stdio.h&gt;</code></td>
+                        <td><code>printf()</code>, <code>scanf()</code>, <code>gets()</code>, <code>puts()</code></td>
+                        <td>Standard Input / Output operations.</td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;math.h&gt;</code></td>
+                        <td><code>pow()</code>, <code>sqrt()</code>, <code>ceil()</code>, <code>floor()</code>, <code>abs()</code></td>
+                        <td>Mathematical and algebraic operations.</td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;string.h&gt;</code></td>
+                        <td><code>strlen()</code>, <code>strcpy()</code>, <code>strcat()</code>, <code>strcmp()</code></td>
+                        <td>String manipulation routines.</td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;stdlib.h&gt;</code></td>
+                        <td><code>malloc()</code>, <code>free()</code>, <code>exit()</code>, <code>rand()</code></td>
+                        <td>Memory allocation and process control utilities.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3>2. User-Defined Functions (UDF)</h3>
+        <p>
+            User-defined functions are created by the programmer to perform specific custom requirements. Creating and using a user-defined function involves three fundamental steps:
+        </p>
+        <ol>
+            <li><strong>Function Declaration (Prototype):</strong> Informs the compiler about the function name, return type, and parameters prior to its actual call. Syntax: <code>return_type name(data_types);</code></li>
+            <li><strong>Function Call:</strong> Invokes the function to perform its designated task. Syntax: <code>name(actual_arguments);</code></li>
+            <li><strong>Function Definition:</strong> Contains the actual statements executed when the function is invoked.</li>
+        </ol>
+
+        <h4>Code Example: Addition of Two Numbers (`add(a, b)`)</h4>
+<pre><code>#include &lt;stdio.h&gt;
+
+// 1. Function Declaration (Prototype)
+int add(int x, int y);
+
+int main() {
+    int num1 = 15, num2 = 25, sum;
+
+    // 2. Function Call
+    sum = add(num1, num2);
+
+    printf("Sum of %d and %d is: %d\n", num1, num2, sum);
+    return 0;
+}
+
+// 3. Function Definition
+int add(int x, int y) {
+    int result;
+    result = x + y;
+    return result; // Returns sum to calling routine
+}</code></pre>
+
+        <h4>Output:</h4>
+<pre><code>Sum of 15 and 25 is: 40</code></pre>
+    </section>
+
+    <!-- Section 6.3 -->
+    <section>
+        <h2>6.3 Parameter Passing In Functions</h2>
+        <p>
+            When calling a function, data is passed between the calling routine and the called function through parameters. Parameters are classified into two groups:
+        </p>
+        <ul>
+            <li><strong>Actual Parameters (Arguments):</strong> Values or variables passed to the function in the function call statement (e.g., <code>num1</code>, <code>num2</code> inside <code>main()</code>).</li>
+            <li><strong>Formal Parameters:</strong> Variables declared in the function definition header that receive the incoming values (e.g., <code>x</code>, <code>y</code> in <code>add()</code>).</li>
+        </ul>
+
+        <h3>1. Call By Value (Pass-by-Value)</h3>
+        <p>
+            In <strong>Call by Value</strong>, exact copies of the values of actual parameters are passed into formal parameters. The called function creates its own temporary variables in a separate stack memory frame.
+        </p>
+        <div class="formula-box">
+            Key Rule: Any modifications made to formal parameters inside the called function DO NOT affect the actual parameters in the caller function.
+        </div>
+
+        <h4>Code Example: `swap(int p1, int p2)` using Call by Value</h4>
+<pre><code>#include &lt;stdio.h&gt;
+
+// Function Definition (Call by Value)
+void swapValue(int p1, int p2) {
+    int temp;
+    temp = p1;
+    p1 = p2;
+    p2 = temp;
+    printf("Inside swapValue(): p1 = %d, p2 = %d\n", p1, p2);
+}
+
+int main() {
+    int a = 10, b = 20;
+
+    printf("Before swap: a = %d, b = %d\n", a, b);
+    swapValue(a, b); // Actual arguments passed by value
+    printf("After swap:  a = %d, b = %d\n", a, b);
+
+    return 0;
+}</code></pre>
+
+        <h4>Output:</h4>
+<pre><code>Before swap: a = 10, b = 20
+Inside swapValue(): p1 = 20, p2 = 10
+After swap:  a = 10, b = 20</code></pre>
+
+        <h3>2. Call By Reference (Pass-by-Pointer)</h3>
+        <p>
+            In <strong>Call by Reference</strong>, instead of passing values, the memory addresses (pointers) of actual variables are passed to the function's formal parameters.
+        </p>
+        <div class="formula-box">
+            Key Rule: Dereferencing pointers allows the called function to directly access and modify original variable values in caller memory.
+        </div>
+
+        <h4>Code Example: `swap(int *p1, int *p2)` using Call by Reference</h4>
+<pre><code>#include &lt;stdio.h&gt;
+
+// Function Definition (Call by Reference)
+void swapRef(int *p1, int *p2) {
+    int temp;
+    temp = *p1;
+    *p1 = *p2;
+    *p2 = temp;
+    printf("Inside swapRef(): *p1 = %d, *p2 = %d\n", *p1, *p2);
+}
+
+int main() {
+    int a = 10, b = 20;
+
+    printf("Before swap: a = %d, b = %d\n", a, b);
+    swapRef(&amp;a, &amp;b); // Memory addresses of 'a' and 'b' passed
+    printf("After swap:  a = %d, b = %d\n", a, b);
+
+    return 0;
+}</code></pre>
+
+        <h4>Output:</h4>
+<pre><code>Before swap: a = 10, b = 20
+Inside swapRef(): *p1 = 20, *p2 = 10
+After swap:  a = 20, b = 10</code></pre>
+
+        <h3>Memory Concept Visual Illustration: Call by Value vs Call by Reference</h3>
+
+        <!-- Inline SVG Diagram: Call by Value vs Reference Memory Layout -->
+        <div class="diagram-container">
+            <svg class="diagram" width="620" height="270" viewBox="0 0 620 270" xmlns="http://www.w3.org/2000/svg">
+                <style>
+                    .box-main { fill: #f0f4f8; stroke: #b21f1f; stroke-width: 2; rx: 6px; }
+                    .box-func { fill: #f7f7f7; stroke: #333333; stroke-width: 1.5; rx: 6px; }
+                    .var-box { fill: #ffffff; stroke: #555555; stroke-width: 1.5; }
+                    .text-head { font-family: Georgia, serif; font-size: 14px; font-weight: bold; fill: #b21f1f; }
+                    .text-lbl { font-family: Courier New, monospace; font-size: 12px; font-weight: bold; fill: #111; }
+                    .text-val { font-family: Courier New, monospace; font-size: 13px; fill: #b21f1f; font-weight: bold; }
+                    .text-addr { font-family: Courier New, monospace; font-size: 10px; fill: #666; }
+                    .arrow { stroke: #b21f1f; stroke-width: 1.8; marker-end: url(#arrowhead); }
+                    .arrow-ref { stroke: #007600; stroke-width: 2; stroke-dasharray: 4,3; marker-end: url(#arrowhead-green); }
+                    .sub-title { font-family: Georgia, serif; font-size: 13px; font-weight: bold; fill: #333; text-anchor: middle; }
+                </style>
+
+                <defs>
+                    <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+                        <polygon points="0 0, 8 3, 0 6" fill="#b21f1f" />
+                    </marker>
+                    <marker id="arrowhead-green" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+                        <polygon points="0 0, 8 3, 0 6" fill="#007600" />
+                    </marker>
+                </defs>
+
+                <!-- CALL BY VALUE SECTION -->
+                <text x="140" y="22" class="sub-title">1. Call By Value (Separate Copies)</text>
+                
+                <!-- Main Frame -->
+                <rect x="15" y="35" width="120" height="210" class="box-main" />
+                <text x="25" y="58" class="text-head">main()</text>
+                <rect x="30" y="75" width="90" height="40" class="var-box" />
+                <text x="40" y="98" class="text-lbl">a = 10</text>
+                <text x="40" y="130" class="text-addr">&amp;a: 2000</text>
+
+                <rect x="30" y="150" width="90" height="40" class="var-box" />
+                <text x="40" y="173" class="text-lbl">b = 20</text>
+                <text x="40" y="205" class="text-addr">&amp;b: 2002</text>
+
+                <!-- swapValue Frame -->
+                <rect x="165" y="35" width="120" height="210" class="box-func" />
+                <text x="175" y="58" class="text-head">swapValue()</text>
+                <rect x="180" y="75" width="90" height="40" class="var-box" />
+                <text x="190" y="98" class="text-val">p1 = 10</text>
+                <text x="190" y="130" class="text-addr">&amp;p1: 3000</text>
+
+                <rect x="180" y="150" width="90" height="40" class="var-box" />
+                <text x="190" y="173" class="text-val">p2 = 20</text>
+                <text x="190" y="205" class="text-addr">&amp;p2: 3002</text>
+
+                <!-- Copy Value Arrows -->
+                <path d="M 120 95 L 172 95" class="arrow" />
+                <path d="M 120 170 L 172 170" class="arrow" />
+
+
+                <!-- CALL BY REFERENCE SECTION -->
+                <text x="460" y="22" class="sub-title">2. Call By Reference (Pointer Binding)</text>
+
+                <!-- Main Frame -->
+                <rect x="335" y="35" width="120" height="210" class="box-main" />
+                <text x="345" y="58" class="text-head">main()</text>
+                <rect x="350" y="75" width="90" height="40" class="var-box" />
+                <text x="360" y="98" class="text-lbl">a = 10</text>
+                <text x="360" y="130" class="text-addr">&amp;a: 2000</text>
+
+                <rect x="350" y="150" width="90" height="40" class="var-box" />
+                <text x="360" y="173" class="text-lbl">b = 20</text>
+                <text x="360" y="205" class="text-addr">&amp;b: 2002</text>
+
+                <!-- swapRef Frame -->
+                <rect x="485" y="35" width="120" height="210" class="box-func" />
+                <text x="495" y="58" class="text-head">swapRef()</text>
+                <rect x="500" y="75" width="90" height="40" class="var-box" />
+                <text x="505" y="98" class="text-val">p1=2000</text>
+                <text x="505" y="130" class="text-addr">&amp;p1: 4000</text>
+
+                <rect x="500" y="150" width="90" height="40" class="var-box" />
+                <text x="505" y="173" class="text-val">p2=2002</text>
+                <text x="505" y="205" class="text-addr">&amp;p2: 4002</text>
+
+                <!-- Pointer Reference Arrows -->
+                <path d="M 500 95 C 470 95, 470 95, 448 95" class="arrow-ref" />
+                <path d="M 500 170 C 470 170, 470 170, 448 170" class="arrow-ref" />
+            </svg>
+        </div>
+    </section>
+
+    <!-- Section 6.4 -->
+    <section>
+        <h2>6.4 Passing Arrays To Functions: Idea Of Call By Reference</h2>
+        <p>
+            When an array is passed to a function in C, the name of the array decays into a pointer pointing directly to its first element (base address).
+        </p>
+        <div class="formula-box">
+            Base Address Principle: Array parameters are ALWAYS passed using Call by Reference automatically because the array name represents &amp;array[0].
+        </div>
+
+        <h4>Array Parameter Syntax:</h4>
+<pre><code>// Method 1: Formal parameter as unsized array
+void printArray(int arr[], int size);
+
+// Method 2: Formal parameter as pointer
+void printArray(int *arr, int size);</code></pre>
+
+        <h3>Code Example: Modifying Array Elements Inside a Function</h3>
+<pre><code>#include &lt;stdio.h&gt;
+
+// Function to multiply each array element by 2
+void doubleElements(int arr[], int size) {
+    int i;
+    for (i = 0; i &lt; size; i++) {
+        arr[i] = arr[i] * 2; // Directly modifies caller's array memory
+    }
+}
+
+int main() {
+    int numbers[5] = {1, 2, 3, 4, 5};
+    int i;
+
+    printf("Original Array: ");
+    for (i = 0; i &lt; 5; i++) {
+        printf("%d ", numbers[i]);
+    }
+
+    // Passing array to function (passes base address)
+    doubleElements(numbers, 5);
+
+    printf("\nModified Array: ");
+    for (i = 0; i &lt; 5; i++) {
+        printf("%d ", numbers[i]);
+    }
+    printf("\n");
+
+    return 0;
+}</code></pre>
+
+        <h4>Output:</h4>
+<pre><code>Original Array: 1 2 3 4 5 
+Modified Array: 2 4 6 8 10 </code></pre>
+
+        <h3>Line-by-Line Execution Explanation Table</h3>
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Line / Statement</th>
+                        <th>Execution Breakdown</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>int numbers[5] = {1, 2, 3, 4, 5};</code></td>
+                        <td>Allocates contiguous memory for 5 integers and initializes them. <code>numbers</code> points to <code>&amp;numbers[0]</code>.</td>
+                    </tr>
+                    <tr>
+                        <td><code>doubleElements(numbers, 5);</code></td>
+                        <td>Passes base address of <code>numbers</code> to formal parameter <code>arr[]</code> and size integer 5 to <code>size</code>.</td>
+                    </tr>
+                    <tr>
+                        <td><code>arr[i] = arr[i] * 2;</code></td>
+                        <td>Calculates offset address using base address (<code>*(arr + i)</code>) and doubles actual values in main's memory block.</td>
+                    </tr>
+                    <tr>
+                        <td><code>printf("%d ", numbers[i]);</code></td>
+                        <td>Prints the mutated array elements <code>2 4 6 8 10</code> directly from <code>main()</code> scope.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3>Academic References</h3>
+        <ul>
+            <li>Brian W. Kernighan &amp; Dennis M. Ritchie, <em>"The C Programming Language"</em>, 2nd Edition, Prentice Hall.</li>
+            <li>Yashavant Kanetkar, <em>"Let Us C"</em>, BPB Publications.</li>
+        </ul>
+    </section>
+</div>
+
+</body>
+</html>
