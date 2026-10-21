@@ -1,833 +1,414 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mathematics 2 ASTU modulewise pyq| StudyXohai</title>
-    <meta name="description" content="Mathematics 2 ASTU modulewise pyq. StudyXohai provides Assam Science and Technology University (ASTU) previous year question papers organized module-wise for easy exam preparation.">
-    <meta name="keywords" content="Astu, previous year, question. paper, bvec, Jec, jist, dec, aec, gec, b.tech question paper, assam b.tech previous year question paper"/>
-    <meta name="robots" content="index, follow">
-    <link rel="icon" href="/favicon.ico">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mathematics II PYQ</title>
 
-<link rel="canonical" href="https://studyxohai.netlify.app/">
-    <meta property="og:title" content="Study Xohai">
-<meta property="og:description" content="Module wise question paper, notes, ebooks">
-<meta property="og:image" content="preview.png">
-<meta property="og:url" content="https://studyxohai.netlify.app/">
-<meta property="og:type" content="website">
-<meta name="description" content="Mathematics 2 ASTU modulewise pyq. StudyXohai provides Assam Science and Technology University (ASTU) previous year question papers organized module-wise for easy exam preparation.">
-<link rel="icon" type="image/png" href="preview.png">
-<link rel="apple-touch-icon" href="preview.png">
-<link rel="manifest" href="preview.png">
-    <script>
-    //<![CDATA[
-    window.MathJax = {
+  <!-- MathJax Config MUST come before script -->
+  <script>
+  window.MathJax = {
     tex: {
-    inlineMath: [['$', '$'], ['\\(', '\\)']],
-    displayMath: [['$$', '$$'], ['\\[', '\\]']],
-    packages: ['base', 'ams', 'mhchem']
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']],
+      packages: ['base', 'ams', 'mhchem']
     },
-    options: { renderActions: { addMenu: [] } }
-    };
-    //]]> 
-    </script>
-<style id='page-skin-1' type='text/css'><!--
-body {
-font-family: system-ui, Arial;
-margin: 0;
-background: #FFFFFF;
-color: #222;
-}
-/* Make full width on mobile */
-@media screen and (max-width: 768px) {
-.main-inner,
-.content-outer,
-.content-inner,
-.post-outer,
-.post-body {
-width: 100% !important;
-max-width: 100% !important;
-padding-left: 0px !important;
-padding-right: 0px !important;
-margin: 0 !important;
-}
-}
-header {
-background: #D3D3D3;
-padding: 25px;
-text-align: center;
-font-size: 20px;
-font-weight: bold;
-border-bottom: 1px solid #ddd;
-}
-.container {
-max-width: 800px;
-margin-left: 5px;
-padding: 0px;
-}
-.post {
-background: #ffffff;
-font-size: 15px;
-font-weight: normal;
-padding: 0px;
-margin-left: 5px;
-border-radius: 0px;
-box-shadow: 0 0px 0px rgba(0,0,0,0);
-line-height: 1.7;
-}
-h2 {
-margin-top: 0;
-}
-img {
-max-width: 100%;
-height: auto;
-}
-@media (max-width: 768px) {
-.container {
-padding: 0px;
-}
-}
-hr {
-border: none;
-height: 1px;
-background: #ddd;
-margin: 0px 0;
-}
+    svg: {
+      fontCache: 'global'
+    }
+  };
+  </script>
+  <!-- Load MathJax -->
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 
---></style>
-
-
+  <link rel="stylesheet" href="https://studyxohai.netlify.app/3rdSem/pagestyle.css">
 </head>
 <body>
-<header>
-Study Xohai
-</header>
-<div class='container'>
-<div class='section' id='main'><div class='widget Blog' data-version='1' id='Blog1'>
-<div class='post'>
-<h2>MATH ASTU PYQ 2ND SEM</h2>
-<div><h2><b>&nbsp;<span style="background-color: #01ffff;">Module 1: LINEAR ALGEBRA</span></b></h2>
-
-
-<p><br /></p>
-<p>Q1.(a) Find the rank of the matrix by reducing to normal form.<span>&nbsp; &nbsp; <span style="color: red;">mark 5 ASTU 2023</span></span><br /></p>
-<div style="text-align: center;">
-  $\begin{bmatrix} 2&amp; -2&amp;0&amp;6\\4&amp;2
-  &amp;0&amp;2\\1&amp;-1&amp;0&amp;3\\1&amp;-2&amp;1&amp;2\end{bmatrix}$
-</div>
-<div style="text-align: left;"><br /></div>
-
-<details>
-  <summary style="color: blue; cursor: pointer;">See Answer</summary>
-  <p>Given matrix:</p>
-
-  $$ A = \begin{bmatrix} 2 &amp; -2 &amp; 0 &amp; 6 \\ 4 &amp; 2 &amp; 0 &amp; 2
-  \\ 1 &amp; -1 &amp; 0 &amp; 3 \\ 1 &amp; -2 &amp; 1 &amp; 2 \end{bmatrix} $$
-
-  <p><b>Step 1: Row Operations</b></p>
-
-  <p>First, interchange $R_1$ and $R_3$:</p>
-
-  $$ R_1 \leftrightarrow R_3 \Rightarrow \begin{bmatrix} 1 &amp; -1 &amp; 0
-  &amp; 3 \\ 4 &amp; 2 &amp; 0 &amp; 2 \\ 2 &amp; -2 &amp; 0 &amp; 6 \\ 1 &amp;
-  -2 &amp; 1 &amp; 2 \end{bmatrix} $$
-
-  <p>Make elements below $a_{11}$ zero:</p>
-
-  <ul>
-    <li>$R_2 \rightarrow R_2 - 4R_1$</li>
-    <li>$R_3 \rightarrow R_3 - 2R_1$</li>
-    <li>$R_4 \rightarrow R_4 - R_1$</li>
-  </ul>
-
-  $$ \begin{bmatrix} 1 &amp; -1 &amp; 0 &amp; 3 \\ 0 &amp; 6 &amp; 0 &amp; -10
-  \\ 0 &amp; 0 &amp; 0 &amp; 0 \\ 0 &amp; -1 &amp; 1 &amp; -1 \end{bmatrix} $$
-
-  <p>Interchange $R_2$ and $R_4$:</p>
-
-  $$ \begin{bmatrix} 1 &amp; -1 &amp; 0 &amp; 3 \\ 0 &amp; -1 &amp; 1 &amp; -1
-  \\ 0 &amp; 0 &amp; 0 &amp; 0 \\ 0 &amp; 6 &amp; 0 &amp; -10 \end{bmatrix} $$
-
-  <p>Make $a_{22} = 1$ and eliminate below:</p>
-
-  <ul>
-    <li>$R_2 \rightarrow (-1)R_2$</li>
-    <li>$R_4 \rightarrow R_4 - 6R_2$</li>
-  </ul>
-
-  $$ \begin{bmatrix} 1 &amp; -1 &amp; 0 &amp; 3 \\ 0 &amp; 1 &amp; -1 &amp; 1 \\
-  0 &amp; 0 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 6 &amp; -16 \end{bmatrix} $$
-
-  <p>Move non-zero row up:</p>
-
-  $$ R_3 \leftrightarrow R_4 \Rightarrow \begin{bmatrix} 1 &amp; -1 &amp; 0
-  &amp; 3 \\ 0 &amp; 1 &amp; -1 &amp; 1 \\ 0 &amp; 0 &amp; 6 &amp; -16 \\ 0
-  &amp; 0 &amp; 0 &amp; 0 \end{bmatrix} $$
-
-  <p><b>Step 2: Column Operations</b></p>
-
-  <ul>
-    <li>$C_2 \rightarrow C_2 + C_1$</li>
-    <li>$C_4 \rightarrow C_4 - 3C_1$</li>
-    <li>$C_3 \rightarrow C_3 + C_2$</li>
-    <li>$C_4 \rightarrow C_4 - C_2$</li>
-  </ul>
-
-  <p>Final reduced form:</p>
-
-  $$ \begin{bmatrix} 1 &amp; 0 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 &amp; 0 \\ 0
-  &amp; 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 0 &amp; 0 \end{bmatrix} $$ $$
-  \Rightarrow \begin{bmatrix} I_3 &amp; 0 \\ 0 &amp; 0 \end{bmatrix} $$
-
-  <p><b>Conclusion:</b></p>
-
-  <p>
-    The matrix reduces to normal form with identity matrix of order 3.<br />
-    The rank of the matrix is <b>3</b>.
-  </p>
-</details>
-
-<div style="text-align: left;"><br /></div>
-<div style="text-align: left;">
-  (b)&nbsp; Solve the equation by Gauss elimination method<span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp; &nbsp;&nbsp;</span><span style="color: red;">mark 5 ASTU 2023</span>
-</div>
-<div style="text-align: left;">
-  <span><span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp; &nbsp; &nbsp;x + 2y + 3z = 3</span><br /></span>
-</div>
-<div style="text-align: left;">
-  <span><span><span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp; &nbsp;&nbsp;</span></span></span>2x + 3y + 8z = 4
-</div>
-<div>
-  <span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp; &nbsp;</span>&nbsp;5x + 8y + 19z
-  = 11
-</div><details>
-  <summary style="color: blue; cursor: pointer;">See Answer</summary>
-<p style="margin: 5px 0;">
-    To solve the system of linear equations using Gauss elimination, we transform the augmented matrix into row-echelon form.
-</p>
-<p style="margin: 5px 0;">
-    <strong>1. Augmented Matrix</strong><br>
-    The given system is:<br>
-    $$\begin{cases} x + 2y + 3z = 3 \\ 2x + 3y + 8z = 4 \\ 5x + 8y + 19z = 11 \end{cases}$$<br>
-    Represented as an augmented matrix:<br>
-    $$\left[\begin{array}{ccc:c} 1 & 2 & 3 & 3 \\ 2 & 3 & 8 & 4 \\ 5 & 8 & 19 & 11 \end{array}\right]$$
-</p>
-<p style="margin: 5px 0;">
-    <strong>2. Row Operations</strong><br>
-    <strong>Step 1: Eliminate $x$ from $R_2$ and $R_3$</strong><br>
-    - $R_2 \rightarrow R_2 - 2R_1$<br>
-    - $R_3 \rightarrow R_3 - 5R_1$<br>
-    $$\left[\begin{array}{ccc:c} 1 & 2 & 3 & 3 \\ 0 & -1 & 2 & -2 \\ 0 & -2 & 4 & -4 \end{array}\right]$$<br>
-    <strong>Step 2: Eliminate $y$ from $R_3$</strong><br>
-    - $R_3 \rightarrow R_3 - 2R_2$<br>
-    $$\left[\begin{array}{ccc:c} 1 & 2 & 3 & 3 \\ 0 & -1 & 2 & -2 \\ 0 & 0 & 0 & 0 \end{array}\right]$$
-</p>
-<p style="margin: 5px 0;">
-    <strong>3. Back Substitution</strong><br>
-    The last row $(0 = 0)$ indicates that the system has <strong>infinitely many solutions</strong>. This happens because the third equation is a linear combination of the first two.<br>
-    Let $z = k$ (where $k$ is any real number).<br>
-    <strong>From $R_2$:</strong><br>
-    $-y + 2z = -2$<br>
-    $-y + 2k = -2$<br>
-    $y = 2k + 2$<br>
-    <strong>From $R_1$:</strong><br>
-    $x + 2y + 3z = 3$<br>
-    $x + 2(2k + 2) + 3k = 3$<br>
-    $x + 4k + 4 + 3k = 3$<br>
-    $x + 7k = -1$<br>
-    $x = -7k - 1$
-</p>
-<p style="margin: 5px 0;">
-    <strong>Final Solution</strong><br>
-    The general solution is:<br>
-    - $x = -1 - 7k$<br>
-    - $y = 2 + 2k$<br>
-    - $z = k$<br>
-    (For example, if $k = 0$, then $x = -1$, $y = 2$, $z = 0$ is one possible solution.)
-</p> 
-</details>
-<div><br /></div>
-<div>(c) Determine the value of b for which the equations&nbsp;</div>
-<div>
-  <span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp; &nbsp;&nbsp;</span>&nbsp;2x + y +
-  2z = 0
-</div>
-<div>
-  <span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp; &nbsp;&nbsp;</span>&nbsp;x + y +
-  3z = 0
-</div>
-<div>
-  <span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp; &nbsp;&nbsp;</span>&nbsp;4x + 3y
-  + bz= 0
-</div>
-<div>
-  has (i) trivial solution (ii) non trivial solutions.<span>&nbsp; &nbsp;&nbsp;</span><span style="color: red;">mark 5 ASTU 2023</span>
-</div>
-<details>
-
- <summary style="color: blue; cursor: pointer;">See Answer</summary>
-
-<p> <b>Solution</b><br>
-
-    The coefficient matrix of above system of equation
-
-</p>
-
-<p>
-
-    $A$= <br>$\begin{bmatrix} 2 & 1 & 2 \\ 1 & 1 & 3 \\ 4 & 3 & b \end{bmatrix}$
-
-</p>
-
-<p>
-
-    Determinant of $A = 2(1 \cdot b - 9) - 1(b - 12) + 2(3 - 4)$<br>$ = 2b - 18 - b + 12 - 2$
-
-</p>
-
-<p>
-
-    So $|A| = (b - 8)$
-
-</p>
-
-<p>
-
-    Trivial solution if determinant $A \neq 0$ <br>means $b - 8 \neq 0$<br> this implies $b \neq 8$
-
-</p>
-
-<p>
-
-    Non trivial solution if determinant of $A = 0$<br> so $b - 8 = 0$<br> so $b = 8$
-
-</p></details>
-<div>
-  2. (a)&nbsp;&nbsp;examine if matrix A is diagonalizable. If so find the
-  spectral matrix P and diagonal matrix D, such that P<sup>-1</sup>AP =
-  D.&nbsp;<span>&nbsp; &nbsp; <span style="color: red;">mark 6 ASTU 2023</span></span>
-</div>
-<div style="text-align: left;">
-  <br />
-  <div style="text-align: center;">
-    $\begin{bmatrix} 1 &amp; 2 &amp; 3 \\ 4 &amp; 5 &amp; 6 \\ 7 &amp; 8 &amp; 9
-    \end{bmatrix}$
-  </div><details>
-  <summary style="color: blue; cursor: pointer;">See Answer</summary>
-<p style="margin: 5px 0;">
-    To determine if matrix $A$ is diagonalizable, we follow these steps: find the eigenvalues, find the eigenvectors, and check if there are enough linearly independent eigenvectors.
-</p>
-<p style="margin: 5px 0;">
-    <strong>1. Find the Eigenvalues</strong><br>
-    The matrix is: $A = \begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9 \end{bmatrix}$<br>
-    We find the eigenvalues by solving the characteristic equation $\det(A - \lambda I) = 0$: $\det\begin{bmatrix} 1-\lambda & 2 & 3 \\ 4 & 5-\lambda & 6 \\ 7 & 8 & 9-\lambda \end{bmatrix} = 0$<br>
-    Expanding the determinant: <br>$(1-\lambda)[(5-\lambda)(9-\lambda) - 48]$<br> - $2[4(9-\lambda) - 42] + 3[32 - 7(5-\lambda)] = 0$<br>
-    $\implies(1-\lambda)(\lambda^2 - 14\lambda - 3)$ <br>- $2(-4\lambda - 6) + 3(7\lambda - 3) = 0$<br>
-    $\implies-\lambda^3 + 15\lambda^2 + 18\lambda = 0 $<br>$ \implies -\lambda(\lambda^2 - 15\lambda - 18) = 0$<br>
-    <strong>The eigenvalues are:</strong><br>
-    - $\lambda_1 = 0$<br>
-    - $\lambda_{2,3} = \frac{15 \pm \sqrt{225 - 4(1)(-18)}}{2} = \frac{15 \pm \sqrt{297}}{2} = \frac{15 \pm 3\sqrt{33}}{2}$<br>
-    Since the three eigenvalues are <strong>distinct</strong> ($\lambda_1 \approx 0$, $\lambda_2 \approx 16.12$, $\lambda_3 \approx -1.12$), the matrix $A$ is <strong>diagonalizable</strong>.
-</p>
-<p style="margin: 5px 0;">
-    <strong>2. Diagonal Matrix ($D$)</strong><br>
-    The diagonal matrix $D$ consists of the eigenvalues along the main diagonal: $D = \begin{bmatrix} 0 & 0 & 0 \\ 0 & \frac{15 + 3\sqrt{33}}{2} & 0 \\ 0 & 0 & \frac{15 - 3\sqrt{33}}{2} \end{bmatrix}$
-</p>
-<p style="margin: 5px 0;">
-    <strong>3. Spectral Matrix ($P$)</strong><br>
-    The spectral matrix $P$ (also called the <strong>modal matrix</strong>) is formed by the eigenvectors corresponding to these eigenvalues.<br>
-    - For $\lambda_1 = 0$: Solve $(A - 0I)\mathbf{x} = 0$. By row reduction, the eigenvector is: $\mathbf{v_1} = \begin{bmatrix} 1 \\ -2 \\ 1 \end{bmatrix}$.<br>
-    - For $\lambda_2, \lambda_3$: Solve $(A - \lambda I)\mathbf{x} = 0$. The eigenvectors involve more complex radicals based on the values above.
-</p>
-<p style="margin: 5px 0;">
-    <strong>Final result:</strong> $A$ is <strong>diagonalizable</strong> because it has three distinct eigenvalues. The matrix $P$ is $[ \mathbf{v_1} \vert \mathbf{v_2} \vert \mathbf{v_3} ]$ and $D$ is the diagonal matrix of eigenvalues.
-</p>
-// 
-</details>
-  <div style="text-align: center;"><br /></div>
-  <div style="text-align: left;">
-    (b) State Cayley-Hamilton theorem and verify the same for the matrix A =
-    $\begin{bmatrix} 3 &amp; 1 \\ 2 &amp; 2 \end{bmatrix}$ &nbsp; . Hence find
-    A<sup>-1</sup>.<span>&nbsp; &nbsp; <span style="color: red;">mark 5 ASTU 2023</span></span>
-  </div>
-  <div style="text-align: left;"><br /></div>
-  <div style="text-align: left;">
-    &nbsp;Show that the vector (2,1,1), (1,2,1), (1,1,2) are linearly
-    independent.<span>&nbsp; &nbsp; <span style="color: red;">mark 4 ASTU 2023</span></span>
-  </div>
-  <div style="text-align: left;"><br /></div>
-  <div style="text-align: left;">
-    3. (a)&nbsp;&nbsp;If A = $\begin{bmatrix} 5 &amp; 3 \\ 3 &amp; 2
-    \end{bmatrix}$ satisfy Caley-hamilton theorem then<br />
-    <br />(i) $A^{2}+7A+I=0$<br />(ii)$A^{2}-7A-I=0$<br />(iii)$A^{2}-7A+I=0$<br />(iv)
-    none of these<span>&nbsp; &nbsp;&nbsp;</span><span style="color: red;">mark 1 ASTU 2022</span></div>
-  <div style="text-align: left;">
-    <br />
-    (b) The equations $2x + y = 0 \quad \text{and} \quad 4x + 2y = 0$
-
-    <br />(a) No solution <br />(b) Trivial solution <br />(c) Non-trivial
-    solutions <br />(d) None of these<span>&nbsp; &nbsp;&nbsp;</span><span style="color: red;">mark 1ASTU 2022</span><br /><br />(c) From the following which is
-    skew-symmetric matrix:
-
-    <br /><br />(i) $\begin{bmatrix} 0 &amp; -h &amp; -g \\ h &amp; 0 &amp; -f
-    \\ g &amp; f &amp; 0 \end{bmatrix}$
-
-    <br /><br />(ii) $\begin{bmatrix} 0 &amp; -h &amp; g \\ h &amp; 0 &amp; -f
-    \\ g &amp; f &amp; 1 \end{bmatrix}$
-
-    <br /><br />(iii) $\begin{bmatrix} 1 &amp; -h &amp; -g \\ h &amp; 0 &amp; -f
-    \\ g &amp; f &amp; 0 \end{bmatrix}$
-
-    <br /><br />(iv) $\begin{bmatrix} 0 &amp; -h &amp; -g \\ h &amp; 1 &amp; -f
-    \\ g &amp; f &amp; 0 \end{bmatrix}$<span>&nbsp; &nbsp;&nbsp;</span><span style="color: red;">mark 1 ASTU 2022</span><br />
-    <p>4. Answer the following:&nbsp;</p>
-    <p>&nbsp;(a) Reduce the matrix<span>&nbsp; &nbsp;&nbsp;</span><span style="color: red;">mark 5 ASTU 2022</span></p>
-    <div style="text-align: center;">
-      A = $\begin{bmatrix} 3 &amp; 1 &amp; 4 &amp; 6 \\ 2 &amp; 1 &amp; 2 &amp;
-      4 \\ 4 &amp; 2 &amp; 5 &amp; 8 \\ 1 &amp; 1 &amp; 2 &amp; 2 \end{bmatrix}$</div>
-
-    <br />(b) Show that the vectors (1,1,-1), (2,-3,5), (-2,1,4) of R are linearly independent.<span>&nbsp; &nbsp;&nbsp;</span><span style="color: red;">mark 5 ASTU 2022</span><br />(c) Find
-    the eigenvalues and corresponding eigenvectors of<span>&nbsp; &nbsp;&nbsp;</span><span style="color: red;">mark 5 ASTU 2022</span><div style="text-align: center;">
-      <br />A = $\begin{bmatrix} 6 &amp; -2 &amp; 2 \\ -2 &amp; 3 &amp; -1 \\ 2
-      &amp; -1 &amp; 3 \end{bmatrix}$
-    </div>
-
-    <br />(d) Using Gauss&#8211;Jordan method find the inverse of<span>&nbsp; &nbsp;&nbsp;</span><span style="color: red;">mark 5 ASTU 2022</span><br />
-    <div style="text-align: center;">
-      A = $\begin{bmatrix} 1 &amp; 0 &amp; 2 \\ 2 &amp; -1 &amp; 3 \\ 4 &amp; 1
-      &amp; 5 \end{bmatrix}$
-    </div>
-    <p></p>
-  </div>
-  <p>
-    5. (a) For a system of non-homogeneous linear equaton AX =B if
-    $\rho$[A:B]$\neq$ $ \rho$(A) then <br />
-    (i) the system is consistent <br />
-    (ii) the system is inconsistent <br />
-    (iii) the system has a unique solution <br />
-    (iv) the system has an infinite number of solutions<span>&nbsp; &nbsp;&nbsp;</span><span style="color: red;">mark 1 ASTU 2018</span></p>
-  <p>
-    &nbsp; <br />(b) For a non-singular square matrix A<span>&nbsp; &nbsp;&nbsp;</span><span style="color: red;">mark 1 ASTU 2018</span><br /><br />
-
-    (i) $A^{-1} = \dfrac{\text{adj }A}{|A|}$<br />
-
-    (ii) $A^{-1} = \dfrac{|A|}{\text{adj }A}$<br />
-
-    (iii) $A^{-1} = |A| , \text{adj }A$<br />
-
-    (iv) none of these<br /><br />
-
-    (c) Fill in the blanks<br />A square matrix $A$ is orthogonal if $AA^{-1} =
-    A^{-1}A$ = ________<span>&nbsp; &nbsp;&nbsp;</span><span style="color: red;">mark 1 ASTU 2018</span></p>
-  <p>
-    <br />
-    6. Answer the following
-  </p>
-  <p>
-    <br />
-
-    (a) Define orthogonal matrix. For any two orthogonal matrices $A$ and $B$ of
-    the same size, show that $AB$ is an orthogonal matrix.<span>&nbsp; &nbsp;&nbsp;</span><span style="color: red;">mark 2 ASTU 2018</span></p>
-  <p>
-    <br />
-    (b) Find the rank of the matrix<span>&nbsp; &nbsp;&nbsp;</span><span style="color: red;">mark 4 ASTU 2018</span><br />
-
-    A = $\begin{bmatrix} 1 &amp; 2 &amp; 3 &amp; 2 \\ 2 &amp; 3 &amp; 5 &amp; 1
-    \\ 1 &amp; 3 &amp; 4 &amp; 5 \end{bmatrix}$
-  </p>
-  <p>
-    <br />
-    (c)For what value of $\lambda$ and $\mu$ do the system of equations<span>&nbsp; &nbsp;&nbsp;</span><span style="color: red;">mark 4 ASTU 2018</span><br />$x
-    + y + z = 6$<br />
-    $x + 2y + 3z = 10$<br />
-    $x + 2y + \lambda z = \mu$ <br />have (i) No solution (ii) Unique
-    solution (iii) More than one solution.</p><p><br />(d) Find the
-    eigenvalues and eigenvectors of the matrix<span>&nbsp; &nbsp;&nbsp;</span><span style="color: red;">mark 5 ASTU 2018</span><br />
-    $A = \begin{bmatrix} -2 &amp; 2 &amp; -3 \\ 2 &amp; 1 &amp; -6 \\ -1 &amp;
-    -2 &amp; 0 \end{bmatrix}$
-  </p>
-  <p>
-    <br />(e) Verify Cayley&#8211;Hamilton theorem for the matrix<span>&nbsp; &nbsp;&nbsp;</span><span style="color: red;">mark 5 ASTU 2018</span><br />
-    A = $\begin{bmatrix} 2 &amp; -1 &amp; 1 \\ -1 &amp; 2 &amp; -1 \\ 1 &amp; -1
-    &amp; 2 \end{bmatrix}$ Hence compute $A^{-1}$.<br />
-  </p>&nbsp;7. (a) If $A$ is a non-singular $n \times n$ matrix then<span>&nbsp; &nbsp;&nbsp;</span><span style="color: red;">mark 1 ASTU 2021</span></div><div style="text-align: left;"><br /></div><div style="text-align: left;">(i) $\rho(A) = 0$&nbsp;</div><div style="text-align: left;"><br /></div><div style="text-align: left;">(ii) $\rho(A) = n$&nbsp;</div><div style="text-align: left;"><br /></div><div style="text-align: left;">(iii) $\rho(A) = -n$&nbsp;</div><div style="text-align: left;"><br /></div><div style="text-align: left;">(iv) None of these&nbsp;</div><div style="text-align: left;"><br /></div><div style="text-align: left;">&nbsp;(b) If $\lambda$ be an eigen value of a matrix $A$ then $\lambda^{-1}$ is an eigen value of&nbsp;<span>&nbsp; &nbsp;&nbsp;</span><span style="color: red;">mark 1 ASTU 2021</span></div><div><br /></div><div style="text-align: left;"><br /></div><div style="text-align: left;">(i) $A$&nbsp;</div><div style="text-align: left;"><br /></div><div style="text-align: left;">(ii) $\dfrac{|A|}{\lambda}$&nbsp;</div><div style="text-align: left;"><br /></div><div style="text-align: left;">(iii) $A^{-1}$&nbsp;</div><div style="text-align: left;"><br /></div><div style="text-align: left;">(iv) $\dfrac{\lambda}{|A|}$&nbsp;</div><div style="text-align: left;"><br /></div><div style="text-align: left;">&nbsp;(c) A system of homogeneous linear equation $AX = 0$ is always&nbsp;<span>&nbsp; &nbsp;&nbsp;</span><span style="color: red;">mark 1 ASTU 2021</span></div><div><br /></div><div style="text-align: left;"><br /></div><div style="text-align: left;">(i) Consistent&nbsp;</div><div style="text-align: left;"><br /></div><div style="text-align: left;">(ii) Inconsistent&nbsp;</div><div style="text-align: left;"><br /></div><div style="text-align: left;">(iii) Has a unique solution&nbsp;</div><div style="text-align: left;"><br /></div><div style="text-align: left;">(iv) Has an infinite number of solutions&nbsp;&nbsp;</div><div style="text-align: left;"><br /></div><div style="text-align: left;">8. Answer the following&nbsp;</div><div style="text-align: left;"><br /></div><div style="text-align: left;">(a) Prove that the inverse of an orthogonal matrix is orthogonal and its transpose is also orthogonal.&#11;<span>&nbsp; &nbsp;&nbsp;</span><span style="color: red;">mark 4 ASTU 2021</span></div><div style="text-align: left;"><br /></div><div style="text-align: left;">(b) Find the inverse of<span>&nbsp; &nbsp;&nbsp;</span><span style="color: red;">mark 4 ASTU 2021</span></div><div style="text-align: left;"><span>&nbsp;&nbsp; &nbsp;</span>&nbsp;A = $\begin{bmatrix}
-1 &amp; 3 &amp; 3 \\
-1 &amp; 4 &amp; 3 \\
-1 &amp; 3 &amp; 4
-\end{bmatrix}$&nbsp;</div><div style="text-align: left;"><br /></div><div style="text-align: left;">(c) Find the rank of the matrix&nbsp;<span>&nbsp; &nbsp;&nbsp;</span><span style="color: red;">mark 4 ASTU 2021</span></div><div style="text-align: left;">&nbsp;$\begin{bmatrix}
-1 &amp; 2 &amp; 3 \\
-1 &amp; 4 &amp; 2 \\
-2 &amp; 6 &amp; 5
-\end{bmatrix}$</div><div style="text-align: left;"><br /></div><div style="text-align: left;">(d) If  
-$u = x \phi\!\left(\dfrac{y}{x}\right) + \psi\!\left(\dfrac{y}{x}\right)$  
-
-show that  
-$x \frac{\partial u}{\partial x} + y \frac{\partial u}{\partial y}
-= x \phi\!\left(\dfrac{y}{x}\right)$&nbsp;<span>&nbsp; &nbsp;&nbsp;</span><span style="color: red;">mark 3 ASTU 2021</span></div><div style="text-align: left;"><br /></div><div style="text-align: left;">(e) Find the eigen values and eigen vectors of the matrix
-
-A = $\begin{bmatrix}
-1 &amp; -2 \\
--5 &amp; 4
-\end{bmatrix}$&nbsp;<span>&nbsp; &nbsp;&nbsp;</span><span style="color: red;">mark 5 ASTU 2021</span></div><div style="text-align: left;"><br /></div><div style="text-align: left;">9. (a) Which one of the following matrices is a singular matrix?&nbsp;<span>&nbsp; &nbsp;&nbsp;</span><span style="color: red;">mark 1 ASTU 2019</span></div><div style="text-align: left;"><br /></div><div style="text-align: left;">(i) $\begin{bmatrix} 2 &amp; 3 \ 5 &amp; 4 \end{bmatrix}$&nbsp;</div><div style="text-align: left;"><br /></div><div style="text-align: left;">(ii) $\begin{bmatrix} 2 &amp; 4 \ 3 &amp; 6 \end{bmatrix}$&nbsp;</div><div style="text-align: left;"><br /></div><div style="text-align: left;">(iii) $\begin{bmatrix} 3 &amp; 2 \ 3 &amp; 6 \end{bmatrix}$&nbsp;</div><div style="text-align: left;"><br /></div><div style="text-align: left;">(iv) $\begin{bmatrix} 4 &amp; 3 \ 6 &amp; 2 \end{bmatrix}$&nbsp;</div><div style="text-align: left;"><br /></div><div style="text-align: left;">&nbsp;(b) If a square matrix has an eigen value $\lambda$ then the eigen value of $(kA)^T$ where $k \ne 0$ is scalar is&nbsp;<span>&nbsp; &nbsp;&nbsp;</span><span style="color: red;">mark 1 ASTU 2019</span></div><div style="text-align: left;"><br /></div><div style="text-align: left;">&nbsp;(i) $\dfrac{\lambda}{k}$&nbsp;</div><div style="text-align: left;"><br /></div><div style="text-align: left;">&nbsp;(ii) $\dfrac{k}{\lambda}$&nbsp;</div><div style="text-align: left;"><br /></div><div style="text-align: left;">&nbsp;(iii) $k\lambda$&nbsp;</div><div style="text-align: left;">&nbsp;</div><div style="text-align: left;">(iv) $\lambda^k$&nbsp;</div><div style="text-align: left;"><br /></div><div style="text-align: left;">&nbsp;(c) Find the inverse of the matrix
-
-A = $\begin{bmatrix}
-3 &amp; -3 &amp; 4 \\
-2 &amp; -3 &amp; 4 \\
-0 &amp; -1 &amp; 1
-\end{bmatrix}$ by applying elementary row transformation.&nbsp;<span>&nbsp; &nbsp;&nbsp;</span><span style="color: red;">mark 4 ASTU 2019</span></div><div style="text-align: left;"><br /></div><div style="text-align: left;">&nbsp;(d) Find the rank of the matrix
-
-$\begin{bmatrix}
-1 &amp; 2 &amp; 3 \\
-2 &amp; 4 &amp; 7 \\
-3 &amp; 6 &amp; 10
-\end{bmatrix}$&nbsp;<span>&nbsp; &nbsp;&nbsp;</span><span style="color: red;">mark 2 ASTU 2019</span></div><div style="text-align: left;"><br /></div><div style="text-align: left;">&nbsp;10. (a)  Solve the following system of linear equations
-<br>
-$2x + 3y + 4z = 11$<br>
-
-$x + 5y + 7z = 15$<br>
-
-$3x + 11y + 13z = 25$&nbsp;<span>&nbsp; &nbsp;&nbsp;</span><span style="color: red;">mark 4 ASTU 2019</span></div><details>
-
-  <summary style="color: blue; cursor: pointer;">See Answer</summary>
-  Soln: The augmented matrix is<br>
-$(A : B) = \begin{bmatrix} 2 & 3 & 4 : & 11 \\ 1 & 5 & 7 : & 15 \\ 3 & 11 & 13 : & 25 \end{bmatrix}$<br>
-$R_1 \leftrightarrow R_2$<br>
-$\begin{bmatrix} 1 & 5 & 7 : & 15 \\ 2 & 3 & 4 : & 11 \\ 3 & 11 & 13 : & 25 \end{bmatrix}$<br>
-$R_2 \rightarrow R_2 - 2R_1$<br>
-$R_3 \rightarrow R_3 - 3R_1$<br>
-$\begin{bmatrix} 1 & 5 & 7 : & 15 \\ 0 & -7 & -10 : & -19 \\ 0 & -4 & -8 : & -20 \end{bmatrix}$<br>
-$R_3 \rightarrow R_3 \div (-4)$<br>
-$\begin{bmatrix} 1 & 5 & 7 : & 15 \\ 0 & -7 & -10 : & -19 \\ 0 & 1 & 2 : & 5 \end{bmatrix}$<br>
-$R_3 \leftrightarrow R_2$<br>
-$\begin{bmatrix} 1 & 5 & 7 : & 15 \\ 0 & 1 & 2 : & 5 \\ 0 & -7 & -10 : & -19 \end{bmatrix}$<br>
-So $\rho(A : B) = \rho(A) = 3 =$ unknowns<br>
-unique soln<br>
-$x + 5y + 7z = 15$ &#8212; (i)<br>
-$y + 2z = 5$ &#8212; (ii)<br>
-$4z = 16$<br>
-$\Rightarrow z = 4$<br>
-(ii) $\Rightarrow y + 2 \times 4 = 5$<br>
-$\Rightarrow y = -3$<br>
-(i) $\Rightarrow x + 5 \times (-3) + 7 \times 4 = 15$<br>
-$\Rightarrow x - 15 + 28 = 15$<br>
-$\Rightarrow x + 13 = 15$<br>
-$\Rightarrow x = 2$<br></details>
-  
-  
-  <div style="text-align: left;"><br /></div><div style="text-align: left;">&nbsp;(b) Show that the vectors  $X_1 = (1,0,2,1), ;</div><div style="text-align: left;">&nbsp;X_2 = (3,1,2,1), ;&nbsp;</div><div style="text-align: left;">X_3 = (4,6,2,-4), ;&nbsp;</div><div style="text-align: left;">X_4 = (-6,0,-3,-4)$&nbsp;</div><div style="text-align: left;">&nbsp;are linearly dependent. Also find the relation between them.<span>&nbsp; &nbsp;&nbsp;</span><span style="color: red;">mark 4+1 ASTU 2019</span></div><div style="text-align: left;"><br /></div>
-
-<div style="text-align: left;">&nbsp;(c) Verify Cayley&#8211;Hamilton theorem for the matrix
-
-A = $\begin{bmatrix}
-4 &amp; 3 &amp; 1 \\
-2 &amp; 1 &amp; -2 \\
-1 &amp; 2 &amp; 1
-\end{bmatrix}$<span>&nbsp; &nbsp;&nbsp;</span><span style="color: red;">mark 5 ASTU 2019</span>
-  <p>
-    Q11. For what value of $\lambda$ and $\mu$ do the system of eq$^n$<br>
-    $x + y + z = 6$<br>
-    $x + 2y + 3z = 10$<br>
-    $x + 2y + \lambda z = \mu$<br>
-    have (i) No sol$^n$ (ii) Unique sol$^n$ (iii) More than one sol$^n$. <span style = "color:red;">ASTU2018
-  </p>
-  <details>
-  <summary style="color: blue; cursor: pointer;">See Answer</summary>
-Sol$^n: $ The augmented matrix<br>
-$(A : B) = \begin{bmatrix} 1 & 1 & 1 : & 6 \\ 1 & 2 & 3 : & 10 \\ 1 & 2 & \lambda : & \mu \end{bmatrix}$<br>
-$R_2 \rightarrow R_2 - R_1$<br>
-$R_3 \rightarrow R_3 - R_1$<br>
-$\begin{bmatrix} 1 & 1 & 1 : & 6 \\ 0 & 1 & 2 : & 4 \\ 0 & 1 & (\lambda-1) : & (\mu-6) \end{bmatrix}$<br>
-$R_3 \rightarrow R_3 - R_1$<br>
-$\begin{bmatrix} 1 & 1 & 1 : & 6 \\ 0 & 1 & 2 : & 4 \\ 0 & 0 & \lambda-3 : & \mu-10 \end{bmatrix}$<br>
-(i) No sol$^n$. if $\rho(A : B) > \rho(A)$<br>
-$\mu - 10 \neq 0$ and $\lambda - 3 = 0$<br>
-$\Rightarrow \mu \neq 10$ and $\lambda = 3$<br>
-(ii) Unique sol$^n$<br>
-if $\rho(A : B) = \rho(A) =$ unknowns<br>
-$= 3$<br>
-$\lambda - 3 \neq 0$ and $\mu - 10 \neq 0$<br>
-$\lambda \neq 3$ $\mu \neq 10$<br>
-(iii) More than one sol$^n$
-<hr style="border: 1px solid #ccc; margin: 20px 0;" /></details>
-  
-  <br /><br /><h2><span style="background-color: #01ffff;">Module 2: Ordinary Differential Eq<sup>n</sup></span></h2><p>
-1.(i) The general solution of the equation<span>&nbsp; &nbsp;&nbsp;</span><span style="color: red;">mark 1 ASTU 2024</span><br />$\frac{d^2 y}{dx^2} + 3 \frac{dy}{dx} + 2y = 0$
-
-(a) $y = Ae^{-x} + Be^{-2x}$<br /><br />
-
-(b) $y = Ae^{x} + Be^{2x}$<br /><br />
-
-(c) $y = e^{-x} + e^{-2x}$<br /><br />
-
-(d) $y = (A + Bx)e^{x}$<br />
-  <details>
-  <summary style="color: blue; cursor: pointer;">See Answer</summary>
-<p>
-    To find the general solution of the differential equation<br>
-    $$\frac{d^2y}{dx^2} + 3\frac{dy}{dx} + 2y = 0,$$ we follow these steps:
-</p>
-<p>
-    <strong>1. Write the Auxiliary Equation</strong><br>
-    Replace $\frac{d^2y}{dx^2}$ with $m^2$, $\frac{dy}{dx}$ with $m$, and $y$ with $1$:<br>
-    $$m^2 + 3m + 2 = 0$$
-</p>
-<p>
-    <strong>2. Solve for $m$</strong><br>
-    Factor the quadratic equation:<br>
-    $$(m + 1)(m + 2) = 0$$<br>
-    The roots are:<br>
-    $$m_1 = -1, \quad m_2 = -2$$
-</p>
-<p>
-    <strong>3. Formulate the General Solution</strong><br>
-    Since the roots are real and distinct $(m_1 \neq m_2)$, the general solution is given by the formula $y = Ae^{m_1x} + Be^{m_2x}$. Substituting our roots:<br>
-    $$y = Ae^{-x} + Be^{-2x}$$
-</p>
-<p>
-    <strong>Correct Option:</strong><br>
-    The answer is (a) $y = Ae^{-x} + Be^{-2x}$.
-</p>
-// 
-  </details><br />
-
-(ii) The integrating factor of the differential equation<span>&nbsp; &nbsp;&nbsp;</span><span style="color: red;">mark 1 ASTU 2024</span><br /><br />
-
-$(1 + y^2)\,dx = (\tan^{-1} y - x)\,dy$<br /><br />
-
-(a) $e^{\tan^{-1} x}$<br /><br />
-
-(b) $e^{\tan^{-1} y}$<br /><br />
-
-(c) $\tan^{-1} x$<br /><br />
-
-(d) $\tan^{-1} y$<br />
-  <details>
-  <summary style="color: blue; cursor: pointer;">See Answer</summary>
-<p style="margin: 5px 0;">
-    To find the integrating factor of the given differential equation, we first rearrange it into a standard linear form.
-</p>
-<p style="margin: 5px 0;">
-    <strong>1. Rearrange the Equation</strong><br>
-    The given equation is:<br>
-    $$(1 + y^2)dx = (\tan^{-1}y - x)dy$$<br>
-    Divide both sides by $(1 + y^2)dy$:<br>
-    $$\frac{dx}{dy} = \frac{\tan^{-1}y - x}{1 + y^2}$$<br>
-    Separate the terms:<br>
-    $$\frac{dx}{dy} + \frac{x}{1 + y^2} = \frac{\tan^{-1}y}{1 + y^2}$$
-</p>
-<p style="margin: 5px 0;">
-    <strong>2. Identify the Form</strong><br>
-    This is a first-order linear differential equation in the form $\frac{dx}{dy} + P(y)x = Q(y)$, where:<br>
-    - $P(y) = \frac{1}{1 + y^2}$<br>
-    - $Q(y) = \frac{\tan^{-1}y}{1 + y^2}$
-</p>
-<p style="margin: 5px 0;">
-    <strong>3. Calculate the Integrating Factor (I.F.)</strong><br>
-    The formula for the integrating factor is $I.F. = e^{\int P(y)dy}$.<br>
-    $$\int P(y)dy = \int \frac{1}{1 + y^2} dy = \tan^{-1}y$$<br>
-    Therefore:<br>
-    $$I.F. = e^{\tan^{-1}y}$$
-</p>
-<p style="margin: 5px 0;">
-    <strong>Correct Option:</strong><br>
-    (b) $e^{\tan^{-1}y}$
-</p>
-// 
-  </details><br />
- 12.(a)Solve the differential equation<span>&nbsp;&nbsp; &nbsp;</span><span style="color: red;">mark 6 ASTU 2024</span><br /><br />
- $(D - 2)^2 y = 8\left(e^{2x} + \sin 2x\right)$<br /><br />
-
-(b)Solve any THREE from the following:<span>&nbsp; &nbsp;&nbsp;</span><span style="color: red;">mark 3*3 ASTU 2024</span><br />
-
-<br />(i) $(x^4 + y^4)\,dx - xy^3\,dy = 0$<br /><details>
-  <summary style="color: blue; cursor: pointer;">See Answer</summary>
-<p>
-    To solve the differential equation $(x^4 + y^4)dx - xy^3dy = 0$, we can observe that it is a <strong>homogeneous differential equation</strong> because all terms are of the same degree (4).
-</p>
-<p>
-    <strong>Step 1: Rewrite the equation</strong><br>
-    Rearrange the equation to find the derivative $\frac{dy}{dx}$:<br>
-    $xy^3 dy = (x^4 + y^4)dx$<br>
-    $$\frac{dy}{dx} = \frac{x^4 + y^4}{xy^3}$$
-</p>
-<p>
-    <strong>Step 2: Substitution</strong><br>
-    Let $y = vx$, which implies $\frac{dy}{dx} = v + x\frac{dv}{dx}$. Substituting these into the equation:<br>
-    $$v + x\frac{dv}{dx} = \frac{x^4 + (vx)^4}{x(vx)^3}$$<br>
-    $$v + x\frac{dv}{dx} = \frac{x^4(1 + v^4)}{x^4v^3}$$<br>
-    $$v + x\frac{dv}{dx} = \frac{1 + v^4}{v^3}$$
-</p>
-<p>
-    <strong>Step 3: Separate Variables</strong><br>
-    Subtract $v$ from both sides:<br>
-    $$x\frac{dv}{dx} = \frac{1 + v^4}{v^3} - v$$<br>
-    $$x\frac{dv}{dx} = \frac{1 + v^4 - v^4}{v^3}$$<br>
-    $$x\frac{dv}{dx} = \frac{1}{v^3}$$<br>
-    Now, separate $v$ and $x$:<br>
-    $$v^3 dv = \frac{1}{x} dx$$
-</p>
-<p>
-    <strong>Step 4: Integrate</strong><br>
-    Integrate both sides:<br>
-    $$\int v^3 dv = \int \frac{1}{x} dx$$<br>
-    $$\frac{v^4}{4} = \ln|x| + C$$
-</p>
-<p>
-    <strong>Step 5: Back-substitute</strong><br>
-    Replace $v$ with $\frac{y}{x}$:<br>
-    $$\frac{(y/x)^4}{4} = \ln|x| + C$$<br>
-    $$\frac{y^4}{4x^4} = \ln|x| + C$$
-</p>
-<p>
-    <strong>General Solution:</strong><br>
-    $$y^4 = 4x^4(\ln|x| + C)$$
-</p>
-// 
-  </details><br />
-
-(ii) $p = \sin(y - px)$<br /><br />
-
-(iii) $(1 + x^2)\frac{dy}{dx} + y = \tan^{-1} x$<br /><br />
-
-(iv) $y = 2px + p^2 x^2$ 
-
-</p><p>
-13.(i) The general solution of the differential equation<span>&nbsp; &nbsp;&nbsp;</span><span style="color: red;">mark 1 ASTU 2022</span><br /><br />
-
-$py = p^2(x - b) + a$ is<br /><br />
-
-(a) $y^2 = 4a(x - b)$<br /><br />
-
-(b) $cy = c^2(x - b) + a$<br /><br />
-
-(c) $y = (x - b) + a$<br /><br />
-
-(d) None of these<br /><br />(ii) The integrating factor of the differential equation
-
-$\cos x \frac{dy}{dx} + y \sin x = 1$ is&nbsp;<span style="color: red;">mark 1 ASTU 2022</span><br /><br />
-
-(a) $\tan x$<br /><br />
-
-(b) $\cos x$<br /><br />
-
-(c) $\sin x$<br /><br />
-
-(d) $\sec x$<br /><br />
-
-14.(a) Find the differential equation of all circles touching the axis of $y$ at the origin and centres on the axis of $x$.&nbsp;<span style="color: red;">mark 3 ASTU 2022</span><br /><br />(b) Solve any 3 (three) of the following equations:&nbsp;<span style="color: red;">mark 3*4 ASTU 2022</span>&nbsp;</p><p><br />
-(i)
-$x(1 - x^2)\frac{dy}{dx} + (2x^2 - 1)y = x^3$&nbsp; &nbsp;</p><p>(ii) $x\frac{dy}{dx} + y = x^3 y^6$<br /><br />
-(iii)
-$\left(1 + e^{\frac{x}{y}}\right)dx + e^{\frac{x}{y}}\left(1 - \frac{x}{y}\right)dy = 0$<br /><br />
-
-
-
-(iv)
-$y = 2px + y^2 p^3$<br /><br />
-
-
-(v)
-$(px - y)(py + x) = 2p$<br /><br />
-
-
-(c) Solve the differential equation
-
-$y = 2px - p^2$&nbsp;<span style="color: red;">mark 3 ASTU 2022</span></p>&nbsp;&nbsp;</div><div><div>
-    <div><br /></div>
-  </div>
-</div>
-<div><br /></div>
-<div style="text-align: left;"><br /></div>
-<h2 style="background-color: lightblue;">Module 4</h2>
-<p>
-    Q.1. <br>(a) Prove that $u = y^3 - 3x^2y$ is a harmonic function. Construct its harmonic conjugate and find the corresponding analytic function $f(z)$ in terms of $z$. 
-    &nbsp;&nbsp;<span style="color: red;">mark 5 ASTU2024</span>
-</p>
-<p>
-    Q.2. <br>(a) Consider the transformation $w = ze^{i\pi/4}$ and find the region in the $w$-plane 
-    corresponding to the triangular region bounded by the lines $x = 0$, $y = 0$ and $x + y = 1$ in the $z$-plane. 
-    &nbsp;&nbsp;<span style="color: red;">mark 5 ASTU2024</span>
-</p>
-<p>
-    Q.2. <br>(a) Show that the function f(z) = (x<sup>3</sup>(1+i) - y<sup>3</sup>(1-i)) / (x<sup>2</sup> + y<sup>2</sup>) when z &#8800; 0 and f(0) = 0 is 
-    not analytic at the origin, although Cauchy-Riemann equations are satisfied at the origin. 
-    <span style="color: red;">. mark 5 ASTU 2022</span>
-</p>
-<p>
-    (b) Prove that u = x<sup>3</sup> - 3xy<sup>2</sup> is a harmonic function. Determine its harmonic 
-    conjugate and then find the corresponding analytic function f(z) in terms of z. 
-    <span style="color: red;">mark 5 ASTU 2022</span>
-</p>
-<p>
-    (c) Under the transformation w = 1/z, find the image of |z - 2i| = 2. 
-    <span style="color: red;">mark 5 ASTU 2022</span>
-</p>
-<p>
-    Q.4.<br>(a) Show that the function $f(z) = u(x,y) + iv(x,y)$ is analytic in a domain D if 
-    <br>(i) $\frac{\partial u}{\partial x}, \frac{\partial u}{\partial y}, \frac{\partial v}{\partial x}, \frac{\partial v}{\partial y}$ exist and continuous in D.
-    <br>(ii) $\frac{\partial u}{\partial x} = \frac{\partial v}{\partial y}$ and $\frac{\partial u}{\partial y} = -\frac{\partial v}{\partial x}$ 
-    <span style="color: red;">&nbsp;&nbsp;mark 6 ASTU 2021</span>
-
-<br> (b) Show that an analytic function with a constant modulus is a constant function. 
-    <span style="color: red;">&nbsp;&nbsp;mark 4 ASTU 2021</span>
-<br>
-    (c) Define a harmonic function. Show that the function $\phi = y^3 - 3x^2y$ is 
-    harmonic. Also find harmonic conjugate $\psi$ of $\phi$ and the corresponding 
-    analytic function $f(z) = \phi + i\psi$ in terms of $z$. 
-    <span style="color: red;">&nbsp;&nbsp;mark(1+4=5) ASTU 2021</span></p>
-<p>
-    5. <br>(a) State and prove the necessary conditions for an analytic function $f(z) = u(x,y) + iv(x,y)$ in a 
-    domain $D$ of the complex plane. 
-    <span style="color: red;">(mark 5) ASTU2019</span>
-</p>
-<p>
-    (b) (i) If $f(z) = \dfrac{xy^2(x + iy)}{x^2 + y^4}, \, z \neq 0$ 
-    <br>$= 0, \qquad \qquad z = 0.$
-    <br>Show that the Cauchy-Riemann equations are satisfied at the origin. Yet $f'(0)$ does 
-    not exist uniquely. 
-    <span style="color: red;">(mark 5) ASTU2019</span>
-</p>
-<p>
-    Or
-</p>
-<p>
-    (ii) Show that $u(x,y) = e^x(\cos y - \sin y)$ is harmonic. Determine its harmonic 
-    conjugate $v(x,y)$ and hence the analytic function $f(z) = u + iv$. 
-    <span style="color: red;">(mark 2 + 3) ASTU2019</span>
-</p>
-<p>
-    (c) What is Mobius transformation? Show that the transformation $w = i\dfrac{1 - z}{1 + z}$ transforms the circle 
-    $|z| = 1$ into the real axis of the $w$-plane and the interior of the circle, |z| less than 1 into the upper half 
-    of the $w$ -plane. 
-    <span style="color: red;">(mark 1 + 4) ASTU2019</span>
-</p>
-<h2 style="background-color: lightblue;">Module 3</h2>
-<p>
-    1. <br>(a) Express the polynomial $x^4 + x^3 + x^2 + 1$ in terms of Legendre polynomials. 
-    <span style="color: red;">(mark 5) ASTU 2024</span>
-
-<br>
-    (b) Show that $J_{5/2}(x) = \sqrt{\dfrac{2}{\pi x}}\left(\dfrac{3 - x^2}{x^2}\sin x - \dfrac{3}{x}\cos x\right)$. 
-    <span style="color: red;">(mark 5) ASTU 2024</span>
-</p>
-<p>
-    2. <br>(a) Find the power series solution of $(1 - x^2)\dfrac{d^2y}{dx^2} - 2x\dfrac{dy}{dx} + 2y = 0$ about $x = 0$. 
-    <span style="color: red;">(mark 7) ASTU 2022</span>
-  <p>
-    3. <br>(a) Prove any one of the following: 
-    <span style="color: red;">(mark 4) ASTU 2021</span>
-    <br>(i) $J_{-1/2}(x) = \sqrt{\dfrac{2}{\pi x}} \cos x$
-    <br>(ii) $nP_n(x) = (2n - 1)xP_{n-1}(x) - (n - 1)P_{n-2}(x)$
-</p>
-<p>
-    (b) Solve the following differential by power series method 
-    <br>$2x\dfrac{d^2y}{dx^2} + \dfrac{dy}{dx} + xy = 0$ 
-    <span style="color: red;">(mark 7) ASTU 2021</span>
-</p>
-
-</div>
-</div>
-</div>
+
+
+
+
+<h2>Module 1</h2>
+<!-- ASTU 2025 -->
+<p>1. (a) The vector \(V = (\sin y + z)\hat{i} + (x \cos y - z)\hat{j} + (x - y)\hat{k}\) is<br>(a) Rotational<br>(b) Irrotational<br>(c) Solenoidal<br>(d) None of these <span style="color:red;">ASTU 2025 | mark 1</span></p>
+
+<p>1. (b) A unit normal vector to the surface \(x^2 y + 2xz = 4\) at point \((2, -2, 3)\) is<br>(a) \(-\frac{1}{3}\hat{i} + \frac{2}{3}\hat{j} + \frac{2}{3}\hat{k}\)<br>(b) \(\frac{1}{3}\hat{i} - \frac{2}{3}\hat{j} - \frac{2}{3}\hat{k}\)<br>(c) \(\frac{1}{3}\hat{i} + \frac{2}{3}\hat{j}\)<br>(d) \(\frac{1}{3}\hat{i} - \frac{2}{3}\hat{j} - \frac{4}{3}\hat{k}\) <span style="color:red;">ASTU 2025 | mark 1</span></p>
+
+<p>1. (c) The curl of the gradient of a differentiable scalar field is<br>(a) 0<br>(b) 1<br>(c) \(\frac{1}{2}\)<br>(d) None of these <span style="color:red;">ASTU 2025 | mark 1</span></p>
+
+<p>1. (d) If \(\phi(x,y,z) = 3x^2 y - y^2 z^2\), find the gradient of \(\phi\) at the point \((1, -2, -1)\). <span style="color:red;">ASTU 2025 | mark 3</span></p>
+
+<p>1. (e) Show that \(\nabla(\vec{r} \cdot \vec{a}) = \vec{a}\) where \(\vec{r} = x\hat{i} + y\hat{j} + z\hat{k}\) and \(\vec{a}\) is a constant vector. <span style="color:red;">ASTU 2025 | mark 2</span></p>
+
+<p>1. (f) Find the directional derivatives of \(\phi = x^2 yz + 4xz^2\) at \((1, -2, -1)\) in the direction \(2\hat{i} - \hat{j} - 2\hat{k}\). <span style="color:red;">ASTU 2025 | mark 4</span></p>
+
+<p>1. (g) Prove that \(\nabla \log|\vec{r}| = \frac{\vec{r}}{r^2}\) where \(r = |\vec{r}| = \sqrt{x^2 + y^2 + z^2}\). <span style="color:red;">ASTU 2025 | mark 3</span></p>
+
+<p>1. (h) Find the total work done in moving a particle in a force field given by \(\vec{F} = 3xy\hat{i} - 5z\hat{j} + 10x\hat{k}\) along the curve \(x = t^2 + 1\), \(y = 2t^2\), \(z = t^3\) from \(t = 1\) to \(t = 2\). <span style="color:red;">ASTU 2025 | mark 5</span></p>
+
+<p>1. (i) (i) State Green's theorem in a plane. <span style="color:red;">ASTU 2025 | mark 1</span></p>
+
+<p>1. (j) Show that the area bounded by a simple closed curve C is given by \(\frac{1}{2}\oint_{c} (x\,dy - y\,dx)\). <span style="color:red;">ASTU 2025 | mark 4</span></p>
+
+<p>1. (k) By double integration show that the area between the parabolas \(y^2 = 4ax\) and \(x^2 = 4ay\) is \(\frac{16}{3}a^2\). <span style="color:red;">ASTU 2025 | mark 5</span></p>
+
+<!-- ASTU 2024 -->
+<p>2. (a) The value of \(\text{curl}(\text{grad}\,\phi)\) where \(\phi\) is a scalar function is<br>(a) 1<br>(b) 2<br>(c) 3<br>(d) 0 <span style="color:red;">ASTU 2024 | mark 1</span></p>
+
+<p>2. (b) If \(\vec{A}\) be a constant vector and \(\vec{r} = x\hat{i} + y\hat{j} + z\hat{k}\), then \(\nabla \times (\vec{A} \times \vec{r}) =\)<br>(a) \(\vec{A}\)<br>(b) \(2\vec{A}\)<br>(c) \(3\vec{A}\)<br>(d) None of these <span style="color:red;">ASTU 2024 | mark 1</span></p>
+
+<p>2. (c) Find the directional derivative of \(f = e^{2x-y+z}\) at the point \(P(1, 1, -1)\) in the direction of the point \(Q(-3, 5, 6)\). <span style="color:red;">ASTU 2024 | mark 3</span></p>
+
+<p>2. (d) If \(\vec{A} = yz\hat{i} + zx\hat{j} + xy\hat{k}\) and \(\vec{B} = (y+z)\hat{i} + (z+x)\hat{j} + (x+y)\hat{k}\) then show that \(\vec{A} \times \vec{B}\) is solenoidal. <span style="color:red;">ASTU 2024 | mark 4</span></p>
+
+<p>2. (e) If \(\vec{r} = x\hat{i} + y\hat{j} + z\hat{k}\) and \(r = |\vec{r}|\), show that<br>(i) \(\text{div}\left(\frac{\vec{r}}{r^3}\right) = 0\)<br>(ii) \(\text{div}\,\vec{r} = 3\) <span style="color:red;">ASTU 2024 | mark 5</span></p>
+
+<p>2. (f) Evaluate the integral \(\int_{C}[(2x^2 - y^2)dx + (x^2 + y^2)dy]\) by using Green's theorem, where C is the boundary in the xy plane of the area enclosed by the semi circle \(x^2 + y^2 = 1\) in the upper half above the x-axis. <span style="color:red;">ASTU 2024 | mark 4</span></p>
+
+<!-- ASTU 2022 -->
+<p>3. (a) The directional derivative of \(f=xy+yz+zx\) in the direction of \(\hat{i}+2\hat{j}+2\hat{k}\) at the point \((1,2,0)\) is<br>(a) \(\frac{10}{3}\)<br>(b) \(\frac{1}{2}\)<br>(c) \(-\frac{10}{3}\)<br>(d) None of these <span style="color:red;">ASTU 2022 | mark 1</span></p>
+
+<p>3. (b) The tangent plane to the surface \(xz^2+x^2y-z+1=0\) at the point \((1,-3,2)\) is<br>(a) \(2x+y+3z+1=0\)<br>(b) \(2x-y-3z+1=0\)<br>(c) \(-2x+y+3z+1=0\)<br>(d) None of these <span style="color:red;">ASTU 2022 | mark 1</span></p>
+
+<p>3. (c) The magnitude of the vector drawn in a perpendicular to the surface \(x^2+2y^2+z^2=7\) at the point \((1,-1,2)\) is<br>(a) \(\frac{2}{3}\)<br>(b) \(\frac{3}{2}\)<br>(c) 6<br>(d) None of these <span style="color:red;">ASTU 2022 | mark 1</span></p>
+
+<p>3. (d) A particle moves along the curve \(x=2t^2\), \(y=t^2-4t\) and \(z=3t-5\) where t is the time. Find the components of velocity and acceleration at time \(t=1\) in the direction of \(\hat{i}-3\hat{j}+2\hat{k}\). <span style="color:red;">ASTU 2022 | mark 4</span></p>
+
+<p>3. (e) Find a unit vector normal to the surface \(x^3+y^3+3xyz=3\) at the point \((1,2,-1)\) <span style="color:red;">ASTU 2022 | mark 4</span></p>
+
+<p>3. (f) Find the work done in moving a particle in the force field \(\vec{F}=3x^2\hat{i}+(2xz-y)\hat{j}+2z\hat{k}\) along the curve defined by \(x^2=4y\) and \(3x^3=8z\) from \(x=0\) to \(x=2\). <span style="color:red;">ASTU 2022 | mark 4</span></p>
+
+<p>3. (g) Show that the vector \(\vec{v}=(x+3y)\hat{i}+(y-3z)\hat{j}+(x-2z)\hat{k}\) is solenoidal. <span style="color:red;">ASTU 2022 | mark 3</span></p>
+
+<p>3. (h) Evaluate \(\int_{S}\vec{A}\cdot\hat{n}\,dS\) where \(\vec{A}=(x+y^2)\hat{i}-2x\hat{j}+2yz\hat{k}\) and S is the surface of the plane \(2x+y+2z=6\) included in the first octant. <span style="color:red;">ASTU 2022 | mark 6</span></p>
+
+<p>3. (i) Use divergence theorem of Gauss to evaluate \(\int_{S}\vec{F}\cdot\hat{n}\,dS\) where \(\vec{F}=x^3\hat{i}+y^3\hat{j}+z^3\hat{k}\) and S is the surface of the sphere \(x^2+y^2+z^2=a^2\). <span style="color:red;">ASTU 2022 | mark 6</span></p>
+
+<!-- ASTU 2021 -->
+<p>4. (a) Unit vector normal to the surface \(z=2xy\) at the point \((2,1,4)\) is<br>(a) \(2\hat{i}+4\hat{j}-\hat{k}\)<br>(b) \(4\hat{i}+\hat{j}+\hat{k}\)<br>(c) \(\frac{1}{\sqrt{21}}(2\hat{i}+4\hat{j}-\hat{k})\)<br>(d) \(\frac{1}{\sqrt{21}}(4\hat{i}+2\hat{j}-\hat{k})\) <span style="color:red;">ASTU 2021 | mark 1</span></p>
+
+<p>4. (b) A vector \(\vec{F}\) is irrotational if<br>(a) \(\text{Curl}\,\vec{F}=0\)<br>(b) \(\text{div}\,\vec{F}=0\)<br>(c) \(\text{Curl}\,\vec{F}\ne0\)<br>(d) \(\text{div}\,\vec{F}\ne0\) <span style="color:red;">ASTU 2021 | mark 1</span></p>
+
+<p>4. (c) If \(u(x,y)\), \(v(x,y)\), \(\frac{\partial u}{\partial x}\) and \(\frac{\partial v}{\partial x}\) are continuous functions over the region R bounded by simple closed curve C in xy-plane then<br>(a) \(\oint_{C}(udx+vdy)=\iint_{R}(\frac{\partial u}{\partial x}-\frac{\partial v}{\partial y})dxdy\)<br>(b) \(\oint_{C}(udx+vdy)=\iint_{R}(\frac{\partial v}{\partial x}-\frac{\partial u}{\partial y})dxdy\)<br>(c) \(\oint_{C}(udx+vdy)=\iint_{R}(\frac{\partial u}{\partial x}+\frac{\partial v}{\partial y})dxdy\)<br>(d) \(\oint_{C}(udx+vdy)=\iint_{R}(\frac{\partial u}{\partial x}\pm\frac{\partial v}{\partial y})dxdy\) <span style="color:red;">ASTU 2021 | mark 1</span></p>
+
+<p>4. (d) Evaluate \(\text{grad}\,\phi\) where \(\phi=\log(x^2+y^2+z^2)\) <span style="color:red;">ASTU 2021 | mark 2</span></p>
+
+<p>4. (e) Show that \(\nabla^2 f(r) = f''(r) + \frac{2}{r}f'(r)\). <span style="color:red;">ASTU 2021 | mark 3</span></p>
+
+<p>4. (f) Find the directional derivative of the scalar function \(\phi(x,y,z)=x^2y+y^2z+z^2x\) at the point \((2,2,2)\) in the direction of the normal to the surface \(4x^2y+2z^2=2\) at the point \((2,-1,3)\). <span style="color:red;">ASTU 2021 | mark 5</span></p>
+
+<p>4. (g) Use Stoke's theorem to evaluate \(\int_{C}(ydx+zdy+xdz)\) where C is the curve of intersection of the sphere \(x^2+y^2+z^2=a^2\) and the plane \(y+z=a\). <span style="color:red;">ASTU 2021 | mark 5</span></p>
+
+<p>4. (h) Prove that the vector field \(\vec{A}=2x(y^2+z^3)\hat{i}+2x^2y\hat{j}+3x^2z^2\hat{k}\) is conservative. Find its scalar potential and the work done in moving a particle from \((-1, 2, 1)\) to \((2, 3, 4)\). <span style="color:red;">ASTU 2021 | mark 6</span></p>
+
+<!-- ASTU 2019 -->
+<p>5. (a) The tangent vector to the curve \(x=t^2-1\), \(y=4t-3\), \(z=2t^2-6t\) at \(t=1\) is given by<br>(a) \(2\hat{i}+4\hat{j}-2\hat{k}\)<br>(b) \(2\hat{i}-4\hat{j}-2\hat{k}\)<br>(c) \(\hat{i}+\hat{j}-\hat{k}\)<br>(d) none of these <span style="color:red;">ASTU 2019 | mark 1</span></p>
+
+<p>5. (b) The maximum value of the directional derivative of \(\phi=x^2-2y^2+4z^2\) at the point \((1,1,-1)\) is<br>(a) \(6\sqrt{\frac{7}{3}}\)<br>(b) \(\frac{3\sqrt{3}}{7}\)<br>(c) \(\sqrt{84}\)<br>(d) None of these <span style="color:red;">ASTU 2019 | mark 1</span></p>
+
+<p>5. (c) The value of \(\lambda\) so that the vector \(\vec{v}=(x+3y)\hat{i}+(y-2z)\hat{j}+(x+\lambda z)\hat{k}\) is a solenoidal vector is<br>(a) -2<br>(b) 1<br>(c) 3<br>(d) none of these <span style="color:red;">ASTU 2019 | mark 1</span></p>
+
+<p>5. (d) Show that \(\nabla r^n = n r^{n-2}\vec{r}\) where \(\vec{r}=x\hat{i}+y\hat{j}+z\hat{k}\) <span style="color:red;">ASTU 2019 | mark 2</span></p>
+
+<p>5. (e) Show that \(\text{div}(\text{curl}\,\vec{v})=0\). <span style="color:red;">ASTU 2019 | mark 3</span></p>
+
+<p>5. (f) Show that the vector field represented by \(\vec{F}=(z^2+2x+3y)\hat{i}+(3x+2y+z)\hat{j}+(y+2zx)\hat{k}\) is irrotational. Obtain a scalar function such that \(\vec{F}=\text{grad}\,\phi\). <span style="color:red;">ASTU 2019 | mark 5</span></p>
+
+<p>5. (g) Evaluate \(\iint_{S}\vec{F}\cdot\hat{n}\,dS\) over the entire surface of the region above the xy-plane bounded by the cone \(z^2=x^2+y^2\) and the plane \(z=4\), if \(\vec{F}=4xz\hat{i}+xyz^2\hat{j}+3z\hat{k}\). <span style="color:red;">ASTU 2019 | mark 5</span></p>
+
+<p>5. (h) Apply Stoke's theorem to evaluate \(\int_{C}\vec{F}\cdot d\vec{r}\) where \(\vec{F}=y^2\hat{i}+xy\hat{j}+xz\hat{k}\) and C is bounding curve of the hemisphere \(x^2+y^2+z^2=9\), \(z>0\) oriented in the positive direction. <span style="color:red;">ASTU 2019 | mark 5</span></p>
+
+<p>5. (i) Use Green's theorem in a plane to evaluate the integral \(\oint_{C}[(2x^2-y^2)dx+(x^2+y^2)dy]\), where C is the boundary in the xy-plane of the area enclosed by the x-axis and the semi-circle \(x^2+y^2=1\) in the upper half xy-plane. <span style="color:red;">ASTU 2019 | mark 5</span></p>
+
+
+
+
+
+<h2>Module 2</h2>
+<!-- ASTU 2026 -->
+<p>1. (a) The degree of the equation $\left(\frac{d^2y}{dx^2}\right)^2 - \left[\left(\frac{dy}{dx}\right)^2 + 1\right]^3 = 0$ is<br>(i) 6<br>(ii) 2<br>(iii) 3<br>(iv) None of the above <span style="color:red">mark 1 ASTU 2026</span></p>
+
+<p>1. (b) For what values of a and b the differential equations $(y+x^3)dx + (ax+by^4)dy = 0$ is exact?<br>(i) $a=1, b \in \mathbb{R}$<br>(ii) $a=2, b=1$<br>(iii) $a=0, b=1$<br>(iv) None of the above <span style="color:red">mark 1 ASTU 2026</span></p>
+
+<p>1. (c) Solve: $(x \log x)dy - 2y dx = 0$ where $y(2) = (\log 2)^2$. <span style="color:red">mark 4 ASTU 2026</span></p>
+
+<p>1. (d) Solve: $\frac{dy}{dx} - \frac{y}{x} + \text{cosec}\left(\frac{y}{x}\right) = 0$ given that $y(1) = 0$. <span style="color:red">mark 4 ASTU 2026</span></p>
+
+<p>1. (e) Solve: $(\cos x + y \sin x)dx - \cos x dy = 0$ given $y(\pi) = 0$. <span style="color:red">mark 4 ASTU 2026</span></p>
+
+<p>1. (f) Solve: $y = 2px - xp^2$ where $p = \frac{dy}{dx}$. <span style="color:red">mark 4 ASTU 2026</span></p>
+
+<p>1. (g) Solve: $(D^2 + 1)y = \text{cosec}\,x$. <span style="color:red">mark 4 ASTU 2026</span></p>
+
+<p>1. (h) Solve: $x^2 \frac{d^2y}{dx^2} + 4x \frac{dy}{dx} + 2y = x^2 + \frac{1}{x^2}$. <span style="color:red">mark 4 ASTU 2026</span></p>
+
+<!-- ASTU 2025 -->
+<p>2. (a) The integrating factor of the differential equation $\frac{dx}{dy} + \frac{3x}{y} = \frac{1}{y^2}$ is<br>(a) $e^{y^3}$<br>(b) $y^3$<br>(c) $x^3$<br>(d) $-y^3$ <span style="color:red">mark 1 ASTU 2025</span></p>
+
+<p>2. (b) The particular integral of $(D^2+a^2)y = \sin ax$ is<br>(a) $-\frac{x}{2a}\cos ax$<br>(b) $\frac{x}{2a}\cos ax$<br>(c) $-\frac{ax}{2}\cos ax$<br>(d) $\frac{ax}{2}\cos ax$ <span style="color:red">mark 1 ASTU 2025</span></p>
+
+<p>2. (c) Solve any three:<br>(a) $\frac{d^2y}{dx^2} + \frac{1}{x}\frac{dy}{dx} = \frac{12 \log x}{x^2}$<br>(b) $\frac{dy}{dx} + \frac{y}{x} = \frac{y^2}{x^2}$<br>(c) $y = 2px + p^4 x^2$<br>(d) $(1+xy)y dx + (1-xy)x dy = 0$<br>(e) $(D^2+4)y = \cos 2x$. <span style="color:red">mark 12 ASTU 2025</span></p>
+
+<p>2. (d) Apply the method of variation of parameters to solve $\frac{d^2y}{dx^2} - 2\frac{dy}{dx} + y = e^x \log x$. <span style="color:red">mark 4 ASTU 2025</span></p>
+
+<!-- ASTU 2024 -->
+<p>3. (a) The general solution of the equation $\frac{d^2y}{dx^2} + 3\frac{dy}{dx} + 2y = 0$ is<br>(a) $y = A e^{-x} + B e^{-2x}$<br>(b) $y = A e^x + B e^{2x}$<br>(c) $y = e^{-x} + e^{-2x}$<br>(d) $y = (A+Bx)e^x$ <span style="color:red">mark 1 ASTU 2024</span></p>
+
+<p>3. (b) The integrating factor of the differential equation $(1+y^2)dx = (\tan^{-1}y - x)dy$ is<br>(a) $e^{\tan^{-1}x}$<br>(b) $e^{\tan^{-1}y}$<br>(c) $\tan^{-1}x$<br>(d) $\tan^{-1}y$ <span style="color:red">mark 1 ASTU 2024</span></p>
+
+<p>3. (c) Solve the differential equation $(D-2)^2 y = 8(e^{2x} + \sin 2x)$. <span style="color:red">mark 6 ASTU 2024</span></p>
+
+<p>3. (d) Solve any THREE from the following:<br>(i) $(x^4 + y^4)dx - xy^3 dy = 0$<br>(ii) $p = \sin(y - px)$<br>(iii) $(1+x^2)\frac{dy}{dx} + y = g \tan^{-1}x$<br>(iv) $y = 2px + p^4 x^2$. <span style="color:red">mark 9 ASTU 2024</span></p>
+
+<!-- ASTU 2022 -->
+<p>4. (a) The general solution of the differential equation \(py = p^2(x-b) + a\) is<br>(a) \(y^2 = 4a(x-b)\)<br>(b) \(cy = c^2(x-b) + a\)<br>(c) \(y = (x-b) + a\)<br>(d) None of these <span style="color:red">mark 1 ASTU 2022</span></p>
+
+<p>4. (b) The integrating factor of the differential equation \(\cos x \frac{dy}{dx} + y \sin x = 1\) is<br>(a) \(\tan x\)<br>(b) \(\cos x\)<br>(c) \(\sin x\)<br>(d) \(\sec x\) <span style="color:red">mark 1 ASTU 2022</span></p>
+
+<p>4. (c) A particular solution of \(\frac{d^2 y}{dx^2} + \frac{dy}{dx} - 2y = 0\) when \(x=0\), \(y=3\) is<br>(a) \(y = Ae^x + Be^{-2x}\)<br>(b) \(y = 2e^x + e^{-2x}\)<br>(c) \(y = ce^x + (3-c)e^{-2x}\)<br>(d) None of these <span style="color:red">mark 1 ASTU 2022</span></p>
+
+<p>4. (d) Find the differential equation of all circles touching the axis of y at the origin and centres on the axis of x. <span style="color:red">mark 3 ASTU 2022</span></p>
+
+<p>4. (e) Solve any 3 (three) of the following equations:<br>(i) \(x(1-x^2)\frac{dy}{dx} + (2x^2-1)y = x^3\)<br>(ii) \(x\frac{dy}{dx} + y = x^3 y^6\)<br>(iii) \((1+e^{x/y})dx + e^{x/y}(1-x/y)dy = 0\)<br>(iv) \(y = 2px + y^2 p^3\)<br>(v) \((px-y)(py+x) = 2p\) <span style="color:red">mark 4 ASTU 2022</span></p>
+
+<p>4. (f) Solve the differential equation \(y = 2px - p^2\). <span style="color:red">mark 3 ASTU 2022</span></p>
+
+<p>4. (g) Solve the differential equation \(\frac{d^2 y}{dx^2} - 5\frac{dy}{dx} + 6y = e^x \cos 2x\). <span style="color:red">mark 5 ASTU 2022</span></p>
+
+<!-- ASTU 2021 -->
+<p>5. (a) The solution of differential equation \(\frac{dy}{dx} + \sqrt{\frac{1-y^2}{1-x^2}} = 0\) is<br>(a) \(\sin^{-1} x - \sin^{-1} y = c\)<br>(b) \(\sin^{-1} x + \sin^{-1} y = c\)<br>(c) \(\sin^{-1} x = c \sin^{-1} y\)<br>(d) \((\sin^{-1} x)(\sin^{-1} y) = c\) <span style="color:red">mark 1 ASTU 2021</span></p>
+
+<p>5. (b) The integrating factor of the equation \(x \, dy - y \, dx = 0\) is not<br>(a) \(\frac{1}{x^2}\)<br>(b) \(\frac{1}{xy}\)<br>(c) \(\frac{1}{x^2+y^2}\)<br>(d) \(\frac{1}{x^2-y^2}\) <span style="color:red">mark 1 ASTU 2021</span></p>
+
+<p>5. (c) The auxiliary equation of an ordinary differential equation gives the<br>(a) particular integral<br>(b) particular solution<br>(c) complementary function<br>(d) singular solution <span style="color:red">mark 1 ASTU 2021</span></p>
+
+<p>5. (d) Show that the following equation is exact and hence find its solution. \((e^y+1)\cos x \, dx + e^y\sin x \, dy = 0\). <span style="color:red">mark 3 ASTU 2021</span></p>
+
+<p>5. (e) Solve the following equations: (any three)<br>(i) \(\sec x \frac{dy}{dx} = y + \sin x\)<br>(ii) \(\frac{dy}{dx} + \frac{y}{x} = \frac{y^2}{x^2}\)<br>(iii) \(y(xy+2x^2y^2)dx + x(xy-x^2y^2)dy = 0\)<br>(iv) \(y = 2px + yp^2\) where \(p = \frac{dy}{dx}\)<br>(v) \(xp^2 + x = 2yp\) where \(p = \frac{dy}{dx}\) <span style="color:red">mark 4 ASTU 2021</span></p>
+
+<p>5. (f) Solve any one of the following equations:<br>(i) \(\frac{d^2 y}{dx^2} - 5\frac{dy}{dx} + 6y = e^x \cos 2x\)<br>(ii) \(\frac{d^2 y}{dx^2} - 2\frac{dy}{dx} + y = x \sin x\) <span style="color:red">mark 4 ASTU 2021</span></p>
+
+<p>5. (g) Show that differential equation \((1+e^{x/y})dx + e^{x/y}(1-x/y)dy = 0\). <span style="color:red">mark 4 ASTU 2021</span></p>
+
+<!-- ASTU 2019 -->
+<p>6. (a) The differential equation \((ay^2+x+x^3)dx + (y^3-y+bxy)dy = 0\) is exact, if<br>(a) \(a=1, b=3\)<br>(b) \(a=b\)<br>(c) \(b=2a\)<br>(d) \(2b=a\) <span style="color:red">mark 1 ASTU 2019</span></p>
+
+<p>6. (b) The solution of the clairautis equation \(y+e^p = px\) is<br>(a) \(y=cx+e^c\)<br>(b) \(y=cx-e^c\)<br>(c) \(x=cy-e^c\)<br>(d) \(x=cy+e^{-c}\) <span style="color:red">mark 1 ASTU 2019</span></p>
+
+<p>6. (c) The integrating factor of the differential equation \((x^3+y^3)dx = xy^2 dy\) is<br>(a) \(\frac{1}{xyz}\)<br>(b) \(\frac{1}{y^2}\)<br>(c) \(\frac{1}{y^4}\)<br>(d) \(\frac{1}{x^4}\) <span style="color:red">mark 1 ASTU 2019</span></p>
+
+<p>6. (d) Solve the differential equation \(\frac{dy}{dx} - y\tan x = 3e^{-\sin x}\). <span style="color:red">mark 3 ASTU 2019</span></p>
+
+<p>6. (e) Solve any three of the following differential equations:<br>(i) \(\frac{dy}{dx} + x\sin 2y = x^3 \cos^2 y\)<br>(ii) \(y(2xy+1)dx + x(1+2xy-x^3y^3)dy = 0\)<br>(iii) \(y = 2px + y^2 p^3\)<br>(iv) \(x^2 p^2 + 3xyp + 2y^2 = 0\), where \(p = \frac{dy}{dx}\) <span style="color:red">mark 4 ASTU 2019</span></p>
+
+<p>6. (f) Solve any one of the following differential equations:<br>(i) \(\frac{d^2 y}{dx^2} - 4\frac{dy}{dx} + 3y = e^{2x}\)<br>(ii) \(\frac{d^2 y}{dx^2} - 4y = \sin 2x\) <span style="color:red">mark 4 ASTU 2019</span></p>
+
+<p>6. (g) Solve the differential equation \(\frac{d^2 y}{dx^2} - 3\frac{dy}{dx} + 2y = xe^{3x}\). <span style="color:red">mark 4 ASTU 2019</span></p>
+
+
+
+
+
+<h2>Module 3</h2>
+<!-- ASTU 2026 -->
+<p>1. (a) The particular integral (PI) of $(D^2+9)y=\sin 4x$ is<br>(i) $\frac{1}{2}\sin 4x$<br>(ii) $-\frac{1}{7}\cos 4x$<br>(iii) $-\frac{1}{7}\sin 4x$<br>(iv) None of the above <span style="color:red">mark 1 ASTU 2026</span></p>
+
+<p>1. (b) Find the series solution of $y' - 2xy = 0$. <span style="color:red">mark 6 ASTU 2026</span></p>
+
+<p>1. (c) Express the polynomial $f(x) = 4x^3 - 2x^2 - 3x + 8$ in terms of Legendre polynomials. <span style="color:red">mark 6 ASTU 2026</span></p>
+
+<p>1. (d) Prove that $\int x^3 J_0(x) dx = -x^2 J_1(x) - 2J_1(x)$. <span style="color:red">mark 4 ASTU 2026</span></p>
+
+<!-- ASTU 2025 -->
+<p>2. (a) The value of the integral $\int_{-1}^{1} x^3 P_3(x) dx$, where $P_3(x)$ is a Legendre polynomial of degree 3 is<br>(a) 0<br>(b) $\frac{2}{35}$<br>(c) $\frac{4}{35}$<br>(d) $\frac{11}{35}$ <span style="color:red">mark 1 ASTU 2025</span></p>
+
+<p>2. (b) If $J_0(x)$ and $J_1(x)$ are Bessel's functions, then $J_1'(x)$ is given by<br>(a) $-J_0(x)$<br>(b) $J_0(x) - \frac{1}{x}J_1(x)$<br>(c) $J_0(x) + \frac{1}{x}J_1(x)$<br>(d) $\frac{1}{x}J_0(x) - J_1(x)$ <span style="color:red">mark 1 ASTU 2025</span></p>
+
+<p>2. (c) Show that $J_4(x) = \left(\frac{48}{x^3} - \frac{8}{x}\right)J_1(x) + \left(1 - \frac{24}{x^2}\right)J_0(x)$. <span style="color:red">mark 4 ASTU 2025</span></p>
+
+<p>2. (d) (i) Express $f(x) = x^3 - 5x^2 + x + 2$ in terms of Legendre's polynomial<br>Or<br>(ii) Prove that $\int_{-1}^{1} P_m(x) P_n(x) dx = 0$, $m \neq n$. <span style="color:red">mark 4 ASTU 2025</span></p>
+
+<p>2. (e) Solve in series the differential equation $\frac{d^2y}{dx^2} + (2x^2-x)\frac{dy}{dx} + y = 0$. <span style="color:red">mark 6 ASTU 2025</span></p>
+
+<!-- ASTU 2024 -->
+<p>3. (a) For the differential equation $(x^2-2x)\frac{d^2y}{dx^2} + \frac{dy}{dx} - 2y = 0$ the point $x=0$ is<br>(a) ordinary<br>(b) regular singular<br>(c) irregular singular<br>(d) none of these <span style="color:red">mark 1 ASTU 2024</span></p>
+
+<p>3. (b) For the Legendre polynomial $P_n(x)$, $P_n(-1)$ is<br>(a) 1<br>(b) -1<br>(c) $(-1)^n$<br>(d) none of these <span style="color:red">mark 1 ASTU 2024</span></p>
+
+<p>3. (c) Solve in series the differential equation $\frac{d^2y}{dx^2} + xy = 0$. <span style="color:red">mark 5 ASTU 2024</span></p>
+
+<p>3. (d) Express the polynomial $x^4 + x^3 + x^2 + 1$ in terms of Legendre polynomials. <span style="color:red">mark 5 ASTU 2024</span></p>
+
+<p>3. (e) Show that $J_{5/2}(x) = \sqrt{\frac{2}{\pi x}}\left(\frac{3-x^2}{x^2}\sin x - \frac{3}{x}\cos x\right)$. <span style="color:red">mark 5 ASTU 2024</span></p>
+
+<p>3. (f) State the generating function for Legendre polynomials and hence show that $P_n(-x) = (-1)^n P_n(x)$. <span style="color:red">mark 5 ASTU 2024</span></p>
+
+<!-- ASTU 2022 -->
+<p>4. (a) The integral $\int x J_0(x) \, dx$ is equal to<br>(a) $x J_1(x) - J_0(x)$<br>(b) $x J_1(x)$<br>(c) $J_1(x)$<br>(d) None of these <span style="color:red">mark 1 ASTU 2022</span></p>
+
+<p>4. (b) Find the power series solution of $(1-x^2)\frac{d^2 y}{dx^2} - 2x\frac{dy}{dx} + 2y = 0$ about $x = 0$. <span style="color:red">mark 7 ASTU 2022</span></p>
+
+<!-- ASTU 2021 -->
+<p>5. (a) Among the following relations involving Bessel functions, the incorrect one is<br>(a) $J_n(x) = \frac{x}{2n}[J_{n-1}(x) + J_{n+1}(x)]$<br>(b) $\frac{d}{dx}[J_n(x)] = x^n J_{n-1}(x)$<br>(c) $J_{n+1}(x) = \frac{n}{x}J_n(x) - J_{n-1}(x)$<br>(d) $J_n'(x) = \frac{n}{x}J_n(x) - J_{n+1}(x)$ <span style="color:red">mark 1 ASTU 2021</span></p>
+
+<p>5. (b) Prove any one of the following:<br>(i) $J_{-1/2}(x) = \sqrt{\frac{2}{\pi x}} \cos x$<br>(ii) $nP_n(x) = (2n-1)xP_{n-1}(x) - (n-1)P_{n-2}(x)$ <span style="color:red">mark 4 ASTU 2021</span></p>
+
+<p>5. (c) Solve the following differential by power series method $2x\frac{d^2 y}{dx^2} + \frac{dy}{dx} + xy = 0$. <span style="color:red">mark 7 ASTU 2021</span></p>
+
+<!-- ASTU 2019 -->
+<p>6. (a) The Rodrigue's formula for $P_n(x)$, The Legendre's polynomial of degree $n$ is $P_n(x) = K\frac{d^n}{dx^n}(x^2-1)^n$ where<br>(a) $K = \frac{n!}{2^n}$<br>(b) $K = \frac{2^n}{n!}$<br>(c) $K = \frac{1}{2^n n!}$<br>(d) $K = \frac{1}{2^n (n!)^2}$ <span style="color:red">mark 1 ASTU 2019</span></p>
+
+<p>6. (b) The series $x - \frac{x^3}{2^2(1!)^2} + \frac{x^5}{2^4(2!)^2} - \frac{x^7}{2^6(3!)^2} + \dots \infty$ equals<br>(a) $J_0(x)$<br>(b) $J_{1/2}(x)$<br>(c) $x J_0(x)$<br>(d) $x J_{1/2}(x)$ <span style="color:red">mark 1 ASTU 2019</span></p>
+
+<p>6. (c) Solve in series the equation $2x^2\frac{d^2 y}{dx^2} + (2x^2-x)\frac{dy}{dx} + y = 0$. <span style="color:red">mark 7 ASTU 2019</span></p>
+
+<p>6. (d) Prove that (any one):<br>(i) $J_{-n}(x) = (-1)^n J_n(x)$<br>(ii) $P_n(-x) = (-1)^n P_n(x)$. <span style="color:red">mark 4 ASTU 2019</span></p>
+
+<p>6. (e) Express $f(x) = x^3 - 5x^2 + x + 2$ in terms of Legendre's polynomial. <span style="color:red">mark 3 ASTU 2019</span></p>
+
+<p>6. (f) Prove that (any one):<br>(i) $\frac{d}{dx}[x^{-n} J_n(x)] = -x^{-n} J_{n+1}(x)$<br>(ii) $xP_n' - P_{n-1}' = nP_n$. <span style="color:red">mark 3 ASTU 2019</span></p>
+
+
+<h2>Module 4</h2>
+<!-- ASTU 2026 -->
+<p>1. (a) The only function that is analytic from the following is<br>(i) $\sin z$<br>(ii) $\bar{z}$<br>(iii) $\text{Im}(z)$<br>(iv) $\text{Re}(iz)$ <span style="color:red">mark 1 ASTU 2026</span></p>
+
+<p>1. (b) For the conformal transformation $w = z^2$, the coefficient of magnification at $z = 1 + i$ is<br>(i) $\sqrt{2}$<br>(ii) $2\sqrt{2}$<br>(iii) 2<br>(iv) None of the above <span style="color:red">mark 1 ASTU 2026</span></p>
+
+<p>1. (c) Prove that the function $\sin z$ is analytic and find its derivative. <span style="color:red">mark 4 ASTU 2026</span></p>
+
+<p>1. (d) Show that $U(x, y) = x^3 - 3xy^2$ is harmonic and find its harmonic conjugate. <span style="color:red">mark 4 ASTU 2026</span></p>
+
+<p>1. (e) Prove that the function $f(z) = \sqrt{|xy|}$ is not regular at the origin although Cauchy-Riemann equations are satisfied. <span style="color:red">mark 5 ASTU 2026</span></p>
+
+<!-- ASTU 2025 -->
+<p>2. (a) The only function that is analytic from the following is<br>(a) $\sin z$<br>(b) $\bar{z}$<br>(c) $\text{Im}(z)$<br>(d) $\text{Re}(iz)$ <span style="color:red">mark 1 ASTU 2025</span></p>
+
+<p>2. (b) The image of the circle $|z| = 2$ under the mapping $w = z + (3 + 2i)$ is a<br>(a) Circle<br>(b) Ellipse<br>(c) Pair of lines<br>(d) Hyperbola <span style="color:red">mark 1 ASTU 2025</span></p>
+
+<p>2. (c) Show that the function $e^x(\cos y + i \sin y)$ is analytic and find its derivative. <span style="color:red">mark 4 ASTU 2025</span></p>
+
+<p>2. (d) If $f(z)$ is a regular function of $z$, prove that $\left(\frac{\partial^2}{\partial x^2} + \frac{\partial^2}{\partial y^2}\right) |f(z)|^2 = 4 |f'(z)|^2$. <span style="color:red">mark 5 ASTU 2025</span></p>
+
+<p>2. (e) Find the image of the infinite strip $\frac{1}{4} \le y \le \frac{1}{2}$ under the transformation $w = \frac{1}{z}$. <span style="color:red">mark 4 ASTU 2025</span></p>
+
+<!-- ASTU 2024 -->
+<p>3. (a) The real part of $f(z) = \cos z$ is<br>(a) $\cosh x \cos xy$<br>(b) $\cos x \cosh y$<br>(c) $\cos x \cosh x$<br>(d) none of these <span style="color:red">mark 1 ASTU 2024</span></p>
+
+<p>3. (b) The image of the circle $|z| = 2$ under the mapping $w = z + (3 + 2i)$ is a<br>(a) circle<br>(b) ellipse<br>(c) pair of lines<br>(d) hyperbola <span style="color:red">mark 1 ASTU 2024</span></p>
+
+<p>3. (c) Which of the following functions is analytic?<br>(a) $z + \bar{z}$<br>(b) $2z^2 + 2\bar{z} + c$<br>(c) $|z|^2$<br>(d) $z^2 + 2z + c$ <span style="color:red">mark 1 ASTU 2024</span></p>
+
+<p>3. (d) Prove that $u = y^3 - 3x^2y$ is a harmonic function. Construct its harmonic conjugate and find the corresponding analytic function $f(z)$ in terms of $z$. <span style="color:red">mark 5 ASTU 2024</span></p>
+
+<p>3. (e) Consider the transformation $w = z e^{i\pi/4}$ and find the region in the w-plane corresponding to the triangular region bounded by the lines $x = 0$, $y = 0$ and $x + y = 1$ in the z-plane. <span style="color:red">mark 5 ASTU 2024</span></p>
+
+<!-- ASTU 2022 -->
+<p>4. (a) The function $f(z) = \bar{z}$ is<br>(a) analytic at the origin.<br>(b) analytic at all points in the complex plane<br>(c) not analytic at any point in the complex plane<br>(d) analytic at finite number of point in the complex plane <span style="color:red">mark 1 ASTU 2022</span></p>
+
+<p>4. (b) The Cauchy-Riemann equation in polar form is given by<br>(a) $\frac{\partial u}{\partial r} = \frac{1}{r}\frac{\partial v}{\partial \theta}$, $\frac{\partial u}{\partial \theta} = -r\frac{\partial v}{\partial r}$<br>(b) $\frac{\partial u}{\partial r} = -\frac{1}{r}\frac{\partial v}{\partial \theta}$, $\frac{\partial u}{\partial \theta} = r\frac{\partial v}{\partial r}$<br>(c) $\frac{\partial u}{\partial r} = r\frac{\partial v}{\partial \theta}$, $\frac{\partial u}{\partial \theta} = -\frac{1}{r}\frac{\partial v}{\partial r}$<br>(d) None of these <span style="color:red">mark 1 ASTU 2022</span></p>
+
+<p>4. (c) Show that the function $f(z) = \frac{x^3(1+i)-y^3(1-i)}{x^2+y^2}$ when $z \neq 0$ and $f(0)=0$ is not analytic at the origin, although Cauchy-Riemann equations are satisfied at the origin. <span style="color:red">mark 5 ASTU 2022</span></p>
+
+<p>4. (d) Prove that $u = x^3 - 3xy^2$ is a harmonic function. Determine its harmonic conjugate and then find the corresponding analytic function $f(z)$ in terms of $z$. <span style="color:red">mark 5 ASTU 2022</span></p>
+
+<p>4. (e) Under the transformation $w = \frac{1}{z}$ find the image of $|z-2i| = 2$. <span style="color:red">mark 5 ASTU 2022</span></p>
+
+<!-- ASTU 2021 -->
+<p>5. (a) For a function $f(z) = u+iv$ where u and v are functions of real variables, which of the following statement is true<br>(a) If $f(z)$ is analytic then u and v satisfy C-R equations<br>(b) If u and v satisfy C-R equations then $f(z)$ is analytic<br>(c) If u and v satisfy C-R equations at a point then $f(z)$ is analytic at that point<br>(d) none of these <span style="color:red">mark 1 ASTU 2021</span></p>
+
+<p>5. (b) The function $f(z) = \bar{z}$ is not analytic at<br>(a) $z=0$<br>(b) $z=1$<br>(c) $z=i$<br>(d) any point in complex plane <span style="color:red">mark 1 ASTU 2021</span></p>
+
+<p>5. (c) Show that the function $f(z) = u(x,y) + iv(x,y)$ is analytic in a domain D if<br>(i) $\frac{\partial u}{\partial x}, \frac{\partial u}{\partial y}, \frac{\partial v}{\partial x}, \frac{\partial v}{\partial y}$ exist and continuous in D.<br>(ii) $\frac{\partial u}{\partial x} = \frac{\partial v}{\partial y}$ and $\frac{\partial u}{\partial y} = -\frac{\partial v}{\partial x}$ <span style="color:red">mark 6 ASTU 2021</span></p>
+
+<p>5. (d) Show that an analytic function with a constant modulus is a constant function. <span style="color:red">mark 4 ASTU 2021</span></p>
+
+<p>5. (e) Define a harmonic function. Show that the function $\phi = y^3 - 3x^2y$ is harmonic. Also find harmonic conjugate $\psi$ of $\phi$ and the corresponding analytic function $f(z) = \phi + i\psi$ in terms of z. <span style="color:red">mark 5 ASTU 2021</span></p>
+
+<p>5. (f) Show that function $f(z) = \frac{x^3(1+i)-y^3(1-i)}{x^2+y^2}, (z \neq 0)$ and $f(0)=0$ is continuous and that the Cauchy-Riemann equations are satisfied at origin, yet $f'(0)$ does not exist. <span style="color:red">mark 5 ASTU 2021</span></p>
+
+<!-- ASTU 2019 -->
+<p>6. (a) State and prove the necessary conditions for an analytic function $f(z) = u(x,y) + iv(x,y)$ in a domain D of the complex plane. <span style="color:red">mark 5 ASTU 2019</span></p>
+
+<p>6. (b) If $f(z) = \frac{xy^2(x+iy)}{x^2+y^4}, z \neq 0$, $f(0) = 0$. Show that the Cauchy-Riemann equations are satisfied at the origin. Yet $f'(0)$ does not exist uniquely. <span style="color:red">mark 5 ASTU 2019</span><br>Or<br>Show that $u(x,y) = e^x(\cos y - \sin y)$ is harmonic. Determine its harmonic conjugate $v(x,y)$ and hence the analytic function $f(z) = u + iv$. <span style="color:red">mark 5 ASTU 2019</span></p>
+
+<p>6. (c) What is Mobius transformation? Show that the transformation $w = i\frac{1-z}{1+z}$ transforms the circle $|z|=1$ into the real axis of the w-plane and the interior of the circle, $|z|<1$ into the upper half of the w-plane. <span style="color:red">mark 5 ASTU 2019</span></p>
+
+
+
+<h2>Module 5</h2>
+<!-- ASTU 2026 -->
+<p>1. (a) If $f(z)$ is analytic at all points interior to a rectifiable non intersecting closed curve C except at $z=1$, $z=3$, the residue of $f(z)$ at these are -1, 2 then the value of $\oint f(z) dz$ is<br>(i) $4\pi i$<br>(ii) $2\pi i$<br>(iii) $8\pi i$<br>(iv) $2\pi$ <span style="color:red">mark 1 ASTU 2026</span></p>
+
+<p>1. (b) Evaluate $\int_{0}^{1+i}(x^2-iy)dz$ along the path (I) $y=x$ (II) $y=x^2$. <span style="color:red">mark 4 ASTU 2026</span></p>
+
+<p>1. (c) Expand $f(z) = \frac{z^2-1}{(z+2)^2(z+3)}$ for $|z|>3$. <span style="color:red">mark 3 ASTU 2026</span></p>
+
+<p>1. (d) Determine the poles of the function $f(z) = \frac{z^2}{(z-1)^2(z+2)}$ and find the residue at each pole. <span style="color:red">mark 4 ASTU 2026</span></p>
+
+<p>1. (e) Evaluate: $\int_{C}\frac{2z-1}{z(z+1)(z-3)}dz$ where C is $|z|=2$. <span style="color:red">mark 4 ASTU 2026</span></p>
+
+<p>1. (f) Evaluate: $\int_{0}^{2\pi}\frac{d\theta}{1-2a\sin\theta+a^2}$, $0<a<1$. <span style="color:red">mark 4 ASTU 2026</span></p>
+
+<!-- ASTU 2025 -->
+<p>2. (a) The value of $\int_{C}\frac{z dz}{\sin z}$ where $C: |z|=4$ is<br>(a) $2\pi i$<br>(b) 0<br>(c) $-2\pi i$<br>(d) $4\pi i$ <span style="color:red">mark 1 ASTU 2025</span></p>
+
+<p>2. (b) Find the residue of $\frac{z^2}{z^2+a^2}$ at $z=ai$. <span style="color:red">mark 2 ASTU 2025</span></p>
+
+<p>2. (c) Evaluate (i) $\int_{0}^{1+i}(x^2-iy)dz$ along the path $y=x^2$.<br>Or<br>(ii) Evaluate $\oint_{C}\frac{e^{2z}}{(z+1)^4}dz$ where C is the circle $|z|=2$. <span style="color:red">mark 3 ASTU 2025</span></p>
+
+<p>2. (d) Expand $\frac{1}{z^2-3z+2}$ in the region $1 \le |z| \le 2$. <span style="color:red">mark 3 ASTU 2025</span></p>
+
+<p>2. (e) Evaluate $\oint_{C}\frac{z-3}{z^2+2z+5}dz$ where C is the circle $|z+1-i|=2$. <span style="color:red">mark 4 ASTU 2025</span></p>
+
+<p>2. (f) (i) Apply calculus of residue to prove that $\int_{0}^{2\pi} e^{\cos\theta}\cos(\sin\theta - n\theta)d\theta = \frac{2\pi}{n!}$<br>Or<br>(ii) $\int_{-\infty}^{\infty}\frac{x^2}{(x^2+a^2)(x^2+b^2)}dx$, $(a>0, b>0)$. <span style="color:red">mark 5 ASTU 2025</span></p>
+
+<!-- ASTU 2024 -->
+<p>3. (a) For the function $f(z)=\frac{\cos z}{z}$, $z=0$ is a<br>(a) pole<br>(b) removable singularity<br>(c) essential singularity<br>(d) none of these <span style="color:red">mark 1 ASTU 2024</span></p>
+
+<p>3. (b) Evaluate $\int_{L}\bar{z}dz$ from $z=0$ to $z=4i$, first along the straight line $z=0$ to $z=2i$ and then along the line to $z=4+2i$. <span style="color:red">mark 5 ASTU 2024</span></p>
+
+<p>3. (c) State Cauchy's integral formula and hence evaluate $\oint_{C}\frac{e^{-2z}}{(z+1)^4}dz$ where C is the circle $|z|=2$. <span style="color:red">mark 5 ASTU 2024</span></p>
+
+<p>3. (d) Expand the function $f(z)=\frac{(z-2)(z+2)}{(z+1)(z+4)}$ in the region $1<|z|<4$. <span style="color:red">mark 5 ASTU 2024</span></p>
+
+<p>3. (e) State residue-theorem and apply it to evaluate $\oint_{C}\frac{z^2 dz}{(z-1)^2(z+2)}$ where C is the circle $|z|=3$. <span style="color:red">mark 5 ASTU 2024</span></p>
+
+<p>3. (f) Evaluate $\int_{0}^{2\pi}\frac{d\theta}{5+4\cos\theta}$. <span style="color:red">mark 5 ASTU 2024</span></p>
+
+<!-- ASTU 2022 -->
+<p>4. (a) Let f(z) is analytic at all points interior to a rectifiable non-intersecting closed curve C except at the points at $z=1$ and $z=3$, the residues of $f(z)$ at these are -1 and 2 then the value of $\oint_{C} f(z) dz$ is equal to<br>(a) $4\pi i$<br>(b) $2\pi i$<br>(c) $8\pi i$<br>(d) $2\pi$ <span style="color:red">mark 1 ASTU 2022</span></p>
+
+<p>4. (b) State Cauchy's Integral formula and hence evaluate $\oint_{C} \frac{e^{2z}}{(z+1)^4} dz$ where C is the circle $|z|=2$. <span style="color:red">mark 5 ASTU 2022</span></p>
+
+<p>4. (c) Expand $f(z)$ using Laurent's series valid for the following regions where $f(z) = \frac{1}{(z+1)(z+3)}$<br>(i) $|z|>3$<br>(ii) $0<|1+z|<2$ <span style="color:red">mark 5 ASTU 2022</span></p>
+
+<p>4. (d) Evaluate any two of the following integrals:<br>(i) $\oint_{C} \frac{e^{z}}{\cos \pi z} dz$ where C is the circle $|z|=1$<br>(ii) $\int_{0}^{2\pi} \frac{d\theta}{2+\cos \theta}$<br>(iii) $\int_{0}^{\infty} \frac{dx}{x^4+1}$ <span style="color:red">mark 8 ASTU 2022</span></p>
+
+<!-- ASTU 2021 -->
+<p>5. (a) The value of the integral $\oint_{C} z^2 dz$, where C is the circle with centre at the origin and radius r, is equal to<br>(a) $2\pi r$<br>(b) 0<br>(c) $2\pi$<br>(d) none of these <span style="color:red">mark 1 ASTU 2021</span></p>
+
+<p>5. (b) Evaluate $\int_{L} \bar{z} dz$ Where L is the path from $z=0$ to $z=4+2i$ along the straight line from $z=0$ to $z=2i$ and then the straight line from $z=2i$ to $z=4+2i$. <span style="color:red">mark 5 ASTU 2021</span></p>
+
+<p>5. (c) Expand $f(z) = \frac{1}{z(z-1)(z-2)}$ in Laurent's series valid for the following regions:<br>(1) $0<|z|<1$<br>(2) $|z|>2$ <span style="color:red">mark 4 ASTU 2021</span><br>Or<br>Show that the transformation $w = \frac{1}{z}$ maps a circle in the z-plane to a circle in the w-plane or to a straight line if the circle in the z-plane passes through the origin. <span style="color:red">mark 4 ASTU 2021</span></p>
+
+<p>5. (d) By using Cauchy's integral formula or otherwise, evaluate $\oint_{C} \frac{e^{2z}}{(z+1)^4} dz$ where C is the circle $|z|=2$. <span style="color:red">mark 3 ASTU 2021</span></p>
+
+<p>5. (e) Evaluate the following integral by using residue theorem $\oint_{C} \frac{z^2}{(z-1)^2(z+2)} dz$ where C is the circle $|z|=3$. <span style="color:red">mark 4 ASTU 2021</span><br>Or<br>Apply calculus of residues to evaluate $\int_{0}^{\infty} \frac{\cos mx}{a^2+x^2} dx, m \ge 0, a > 0$. <span style="color:red">mark 4 ASTU 2021</span></p>
+
+<!-- ASTU 2019 -->
+<p>6. (a) The value of the integral $\int_{C} \frac{z^2-z+1}{z-1} dz$, where C is the circle $|z|=\frac{1}{2}$, is<br>(a) 0<br>(b) $\pi i$<br>(c) $-\pi i$<br>(d) none of these <span style="color:red">mark 1 ASTU 2019</span></p>
+
+<p>6. (b) The bound of the integral $|\int_{C} \frac{dz}{z}|$ where C is the circle $|z|=r$, is<br>(a) $\pi$<br>(b) $2\pi$<br>(c) $2\pi r$<br>(d) $\log(r)$ <span style="color:red">mark 1 ASTU 2019</span></p>
+
+<p>6. (c) By using Cauchy's integral formula for derivatives, evaluate $\oint_{C} \frac{e^{-2z}}{(z+1)^3} dz$, where C is the circle $|z|=2$. <span style="color:red">mark 3 ASTU 2019</span></p>
+
+<p>6. (d) Expand $f(z) = \frac{1}{(z+1)(z+3)}$ in a Taylor's/Laurent's series valid for the regions:<br>(1) $|z|<1$<br>(2) $1<|z|<3$ <span style="color:red">mark 4 ASTU 2019</span><br>Or<br>State the Taylor's theorem. Expand $f(z) = \sin z$ in a Taylor's series in powers of $(z-\pi/4)$. <span style="color:red">mark 4 ASTU 2019</span></p>
+
+<p>6. (e) By using Cauchy's Residue theorem, evaluate $\oint_{C} \frac{2z-1}{z(z+1)(z-3)} dz$, where C is the circle $|z|=2$. <span style="color:red">mark 3 ASTU 2019</span></p>
+
+<p>6. (f) Apply the method of contour integration to evaluate (any one):<br>(i) $\int_{0}^{2\pi} \frac{d\theta}{1-2a\cos \theta+a^2}, 0<a<1$<br>(ii) $\int_{-\infty}^{\infty} \frac{x^2 dx}{(x^2+1)(x^2+4)}$ <span style="color:red">mark 5 ASTU 2019</span></p>
+
 <nav class="bottom-nav">
 
     <a href="/" class="bottom-nav-item active">

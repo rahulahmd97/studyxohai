@@ -1,0 +1,1136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit - 5: Basic Algorithms</title>
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']],
+      packages: ['base', 'ams'] // removed mhchem, not needed for DE
+    },
+    svg: {
+      fontCache: 'global'
+    }
+  };
+  </script>
+  <!-- Load MathJax -->
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    <style>
+        /* Base typography & CSS variables */
+        :root {
+            --accent: #b21f1f;
+            --text: #222222;
+            --muted: #555555;
+            --border: #777777;
+            --bg-main: #ffffff;
+            --bg-body: #fbfbfb;
+            --bg-code: #f7f7f7;
+            --border-code: #dddddd;
+        }
+
+        body {
+            font-family: Georgia, "Times New Roman", serif;
+            color: var(--text);
+            background-color: var(--bg-body);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        /* Main Container */
+        .study-notes {
+            max-width: 960px;
+            padding: 18px 14px 36px;
+            margin: 0 auto;
+            background-color: var(--bg-main);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.03);
+            box-sizing: border-box;
+        }
+
+        /* Header styling */
+        header {
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 12px;
+            margin-bottom: 24px;
+            text-align: center;
+        }
+
+        .subject-title {
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--muted);
+            margin-bottom: 4px;
+            font-weight: bold;
+        }
+
+        .unit-title {
+            font-size: 1.1rem;
+            color: var(--accent);
+            font-weight: bold;
+            margin-bottom: 6px;
+        }
+
+        h1 {
+            font-size: clamp(1.4rem, 4vw, 1.8rem);
+            color: #111111;
+            margin: 8px 0 4px;
+            line-height: 1.25;
+            text-align: center;
+        }
+
+        /* Section Headings */
+        h2 {
+            font-size: clamp(1.15rem, 3.2vw, 1.35rem);
+            color: var(--accent);
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 6px;
+            margin-top: 32px;
+            margin-bottom: 14px;
+        }
+
+        h3 {
+            font-size: clamp(1.05rem, 2.8vw, 1.18rem);
+            color: var(--text);
+            margin-top: 24px;
+            margin-bottom: 10px;
+        }
+
+        h4 {
+            font-size: clamp(0.98rem, 2.2vw, 1.05rem);
+            color: #444444;
+            margin-top: 18px;
+            margin-bottom: 8px;
+        }
+
+        p {
+            margin-top: 0;
+            margin-bottom: 14px;
+            text-align: justify;
+        }
+
+        ul, ol {
+            margin-top: 0;
+            margin-bottom: 14px;
+            padding-left: 24px;
+        }
+
+        li {
+            margin-bottom: 6px;
+        }
+
+        /* Formula & Concept Highlight Boxes */
+        .formula-box {
+            background-color: #f0f4f8;
+            border-left: 4px solid var(--accent);
+            padding: 10px 14px;
+            margin: 14px 0 16px;
+            font-family: Georgia, serif;
+            font-weight: bold;
+        }
+
+        .note-box {
+            background-color: #fff9e6;
+            border-left: 4px solid #d97706;
+            padding: 10px 14px;
+            margin: 14px 0;
+            font-size: 0.95rem;
+        }
+
+        /* Code Block Styling */
+        pre {
+            font-family: "Courier New", Courier, monospace;
+            background-color: var(--bg-code);
+            border: 1px solid var(--border-code);
+            padding: 12px 13px;
+            border-radius: 6px;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            word-break: break-word;
+            font-size: 0.88rem;
+            line-height: 1.45;
+            overflow-x: auto;
+            margin-top: 8px;
+            margin-bottom: 16px;
+            color: #111111;
+        }
+
+        code {
+            font-family: "Courier New", Courier, monospace;
+            background-color: #f2f2f2;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-size: 0.9em;
+        }
+
+        pre code {
+            background-color: transparent;
+            padding: 0;
+            border-radius: 0;
+        }
+
+        /* Tables & Wrappers */
+        .table-wrap {
+            width: 100%;
+            overflow-x: auto;
+            margin-bottom: 18px;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        table {
+            width: 100%;
+            min-width: 500px;
+            border-collapse: collapse;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 0.9rem;
+            margin-top: 6px;
+        }
+
+        th, td {
+            border: 1px solid var(--border);
+            padding: 8px 10px;
+            text-align: left;
+            vertical-align: middle;
+        }
+
+        th {
+            background-color: #f7f7f7;
+            font-weight: bold;
+            color: #111111;
+        }
+
+        /* Diagrams & Inline SVGs */
+        .diagram-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 22px 0;
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        .diagram {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Responsive Media Queries */
+        @media screen and (max-width: 600px) {
+            .study-notes {
+                padding: 14px 10px 24px;
+            }
+            ul, ol {
+                padding-left: 18px;
+            }
+        }
+
+        @media screen and (max-width: 420px) {
+            body {
+                font-size: 0.94rem;
+            }
+            pre {
+                font-size: 0.80rem;
+                padding: 8px 10px;
+            }
+            th, td {
+                padding: 6px 8px;
+            }
+        }
+
+        @media screen and (max-width: 340px) {
+            .study-notes {
+                padding: 10px 6px 18px;
+            }
+            pre {
+                font-size: 0.75rem;
+            }
+        }
+    /* Module Navigation */
+.module-navigation {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 16px;
+    margin: 20px 0;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.05);
+}
+
+.module-nav-title {
+    color: #0f172a;
+    font-size: 17px;
+    font-weight: 700;
+    margin: 0 0 12px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #dbeafe;
+}
+
+.module-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.module-list li {
+    margin: 0;
+    padding: 0;
+}
+
+.module-list a {
+    display: block;
+    padding: 10px 12px;
+    color: #036bfc;
+    background: #f8fafc;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 1.5;
+    transition: background 0.2s ease,
+                color 0.2s ease,
+                border-color 0.2s ease;
+}
+
+.module-list a:hover {
+    color: #1d4ed8;
+    background: #eff6ff;
+    border-color: #bfdbfe;
+}
+
+/* Mobile-friendly layout */
+@media (max-width: 600px) {
+    .module-navigation {
+        padding: 12px;
+    }
+
+    .module-nav-title {
+        font-size: 16px;
+    }
+
+    .module-list a {
+        padding: 10px;
+        font-size: 13px;
+    }
+}
+
+</style></head><body>
+
+  
+<!-- Module Navigation -->
+<nav class="module-navigation">
+    <p class="module-nav-title">📚 Programming for Problem Solving</p>
+
+    <ul class="module-list">
+        <li><a href="/notes/pfpsmodule1.html">Module 1: Introduction to Programming</a></li>
+        <li><a href="/notes/pfpsmodule2.html">Module 2: Conditional Branching and Loops</a></li>
+        <li><a href="/notes/pfpsmodule3.html">Module 3: Basic Algorithms</a></li>
+        <li><a href="/notes/pfpsmodule4.html">Module 4: Functions</a></li>
+        <li><a href="/notes/pfpsmodule5.html">Module 5: Structures and Arrays</a></li>
+    </ul>
+</nav>
+
+<div class="study-notes">
+    <!-- Header Section -->
+    <header>
+        <div class="subject-title">PPS</div>
+        <div class="unit-title">Unit - 5</div>
+        <h1>Basic Algorithms</h1>
+    </header>
+
+    <!-- SECTION 5.1 SEARCHING -->
+    <section>
+        <h2>5.1 Searching Algorithms</h2>
+        <p>
+            <strong>Searching</strong> is the algorithmic process of locating a specific target element (often called a <em>key</em>) within a collection of data items stored in linear memory or data structures.
+        </p>
+        <p>
+            <strong>Sorting</strong> is the process of arranging a collection of data elements in a specific order, either ascending or descending. Efficient searching algorithms, such as Binary Search, depend directly on data being sorted beforehand.
+        </p>
+
+        <!-- 1. LINEAR SEARCH -->
+        <h3>1. Linear Search (Sequential Search)</h3>
+        <p>
+            <strong>Linear Search</strong> sequentially checks each element of an array from left to right until the desired target key is located or the end of the array is reached. It does not require elements to be ordered or sorted.
+        </p>
+
+        <h4>Linear Search Algorithm:</h4>
+        <ol>
+            <li>Start from index <code>i = 0</code>.</li>
+            <li>Compare <code>arr[i]</code> with target value <code>key</code>.</li>
+            <li>If <code>arr[i] == key</code>, search is successful. Return index <code>i</code>.</li>
+            <li>If <code>arr[i] != key</code>, increment <code>i = i + 1</code>.</li>
+            <li>Repeat steps 2–4 while <code>i &lt; n</code>.</li>
+            <li>If <code>i == n</code> without finding <code>key</code>, return <code>-1</code> (element not found).</li>
+        </ol>
+
+        <h4>Step-by-step Example Trace (Search Key = 7):</h4>
+        <p>Consider the array <code>arr = [12, 35, 7, 42, 19]</code> with <code>n = 5</code>:</p>
+
+        <!-- SVG Diagram: Linear Search Trace -->
+        <div class="diagram-container">
+            <svg class="diagram" width="560" height="150" viewBox="0 0 560 150" xmlns="http://www.w3.org/2000/svg">
+                <style>
+                    .box-def { fill: #f7f7f7; stroke: #333; stroke-width: 2; }
+                    .box-match { fill: #d1fae5; stroke: #059669; stroke-width: 2.5; }
+                    .txt-val { font-family: Courier New, monospace; font-size: 15px; font-weight: bold; fill: #111; text-anchor: middle; }
+                    .txt-match { font-family: Courier New, monospace; font-size: 15px; font-weight: bold; fill: #047857; text-anchor: middle; }
+                    .txt-lbl { font-family: Arial, sans-serif; font-size: 11px; fill: #555; text-anchor: middle; }
+                    .txt-addr { font-family: Arial, sans-serif; font-size: 12px; font-weight: bold; fill: #b21f1f; text-anchor: middle; }
+                </style>
+
+                <!-- Element 0 -->
+                <text x="60" y="30" class="txt-lbl">arr[0]</text>
+                <rect x="25" y="40" width="70" height="45" class="box-def"/>
+                <text x="60" y="68" class="txt-val">12</text>
+                <text x="60" y="108" class="txt-lbl">i = 0 (≠ 7)</text>
+
+                <!-- Element 1 -->
+                <text x="160" y="30" class="txt-lbl">arr[1]</text>
+                <rect x="125" y="40" width="70" height="45" class="box-def"/>
+                <text x="160" y="68" class="txt-val">35</text>
+                <text x="160" y="108" class="txt-lbl">i = 1 (≠ 7)</text>
+
+                <!-- Element 2 - Match -->
+                <text x="260" y="30" class="txt-lbl">arr[2]</text>
+                <rect x="225" y="40" width="70" height="45" class="box-match"/>
+                <text x="260" y="68" class="txt-match">7</text>
+                <text x="260" y="108" class="txt-addr">MATCH! (i=2)</text>
+
+                <!-- Element 3 -->
+                <text x="360" y="30" class="txt-lbl">arr[3]</text>
+                <rect x="325" y="40" width="70" height="45" class="box-def"/>
+                <text x="360" y="68" class="txt-val">42</text>
+
+                <!-- Element 4 -->
+                <text x="460" y="30" class="txt-lbl">arr[4]</text>
+                <rect x="425" y="40" width="70" height="45" class="box-def"/>
+                <text x="460" y="68" class="txt-val">19</text>
+            </svg>
+        </div>
+
+        <h4>Time Complexity Analysis:</h4>
+        <ul>
+            <li><strong>Best Case:</strong> $O(1)$ — Target key is located at index <code>0</code> (1 comparison).</li>
+            <li><strong>Worst Case:</strong> $O(n)$ — Target key is at the last index <code>n-1</code> or absent ($n$ comparisons).</li>
+            <li><strong>Average Case:</strong> $O(n)$ — On average, elements are found after $\frac{n+1}{2}$ comparisons.</li>
+            <li><strong>Space Complexity:</strong> $O(1)$ auxiliary space.</li>
+        </ul>
+
+        <h4>Program P1: Linear Search in C</h4>
+<pre><code>#include &lt;stdio.h&gt;
+
+int linearSearch(int arr[], int n, int key) {
+    int i;
+    for (i = 0; i &lt; n; i++) {
+        if (arr[i] == key) {
+            return i; // Target found at index i
+        }
+    }
+    return -1; // Target not found
+}
+
+int main() {
+    int arr[] = {12, 35, 7, 42, 19};
+    int n = sizeof(arr) / sizeof(arr[0]);
+    int key = 7;
+
+    int result = linearSearch(arr, n, key);
+
+    if (result != -1) {
+        printf("Element %d found at index %d.\n", key, result);
+    } else {
+        printf("Element %d not found in the array.\n", key);
+    }
+
+    return 0;
+}</code></pre>
+
+        <h4>Merits and Demerits of Linear Search:</h4>
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Merits</th>
+                        <th>Demerits</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Simple to implement and easy to understand.</td>
+                        <td>Inefficient for very large datasets ($O(n)$ comparisons).</td>
+                    </tr>
+                    <tr>
+                        <td>Works on unsorted arrays and linked lists.</td>
+                        <td>Slow response time in worst-case scenario.</td>
+                    </tr>
+                    <tr>
+                        <td>Requires no additional memory or data pre-processing.</td>
+                        <td>Redundant comparisons made when array is already sorted.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- 2. BINARY SEARCH -->
+        <h3>2. Binary Search</h3>
+        <p>
+            <strong>Binary Search</strong> is an efficient divide-and-conquer search algorithm that works strictly on <strong>sorted arrays</strong>. It works by repeatedly comparing the target key against the middle element of the array.
+        </p>
+
+        <h4>Iterative Binary Search Algorithm:</h4>
+        <ol>
+            <li>Set <code>low = 0</code> and <code>high = n - 1</code>.</li>
+            <li>Calculate <code>mid = low + (high - low) / 2</code>.</li>
+            <li>If <code>arr[mid] == key</code>, search is successful; return <code>mid</code>.</li>
+            <li>If <code>key &lt; arr[mid]</code>, search lower half by updating <code>high = mid - 1</code>.</li>
+            <li>If <code>key &gt; arr[mid]</code>, search upper half by updating <code>low = mid + 1</code>.</li>
+            <li>Repeat steps 2–5 while <code>low &lt;= high</code>. Return <code>-1</code> if not found.</li>
+        </ol>
+
+        <h4>Step-by-Step Example Trace (Search 44 in Sorted Array):</h4>
+        <p>Consider array: <code>arr = [11, 22, 33, 44, 55, 66, 77, 88, 99]</code> (n = 9):</p>
+
+        <!-- SVG Diagram: Binary Search Trace -->
+        <div class="diagram-container">
+            <svg class="diagram" width="620" height="190" viewBox="0 0 620 190" xmlns="http://www.w3.org/2000/svg">
+                <style>
+                    .cell { fill: #f7f7f7; stroke: #444; stroke-width: 1.5; }
+                    .cell-mid { fill: #fef08a; stroke: #ca8a04; stroke-width: 2; }
+                    .cell-match { fill: #d1fae5; stroke: #059669; stroke-width: 2.5; }
+                    .t-val { font-family: Courier New, monospace; font-size: 13px; font-weight: bold; fill: #111; text-anchor: middle; }
+                    .t-sub { font-family: Arial, sans-serif; font-size: 10px; fill: #666; text-anchor: middle; }
+                    .t-ptr { font-family: Arial, sans-serif; font-size: 11px; font-weight: bold; fill: #b21f1f; text-anchor: middle; }
+                </style>
+
+                <!-- Pass 1 Header -->
+                <text x="10" y="25" font-family="Arial" font-size="12" font-weight="bold" fill="#b21f1f">Pass 1: low=0, high=8 -> mid=4 (val=55 > 44) -> high=3</text>
+
+                <!-- Array Cells Pass 1 -->
+                <g transform="translate(10, 35)">
+                    <!-- 0..8 -->
+                    <rect x="0" y="0" width="40" height="30" class="cell"/><text x="20" y="20" class="t-val">11</text><text x="20" y="-4" class="t-sub">0</text>
+                    <rect x="40" y="0" width="40" height="30" class="cell"/><text x="60" y="20" class="t-val">22</text><text x="60" y="-4" class="t-sub">1</text>
+                    <rect x="80" y="0" width="40" height="30" class="cell"/><text x="100" y="20" class="t-val">33</text><text x="100" y="-4" class="t-sub">2</text>
+                    <rect x="120" y="0" width="40" height="30" class="cell"/><text x="140" y="20" class="t-val">44</text><text x="140" y="-4" class="t-sub">3</text>
+                    <rect x="160" y="0" width="40" height="30" class="cell-mid"/><text x="180" y="20" class="t-val">55</text><text x="180" y="-4" class="t-sub">4</text>
+                    <rect x="200" y="0" width="40" height="30" class="cell"/><text x="220" y="20" class="t-val">66</text><text x="220" y="-4" class="t-sub">5</text>
+                    <rect x="240" y="0" width="40" height="30" class="cell"/><text x="260" y="20" class="t-val">77</text><text x="260" y="-4" class="t-sub">6</text>
+                    <rect x="280" y="0" width="40" height="30" class="cell"/><text x="300" y="20" class="t-val">88</text><text x="300" y="-4" class="t-sub">7</text>
+                    <rect x="320" y="0" width="40" height="30" class="cell"/><text x="340" y="20" class="t-val">99</text><text x="340" y="-4" class="t-sub">8</text>
+
+                    <text x="20" y="45" class="t-ptr">low</text>
+                    <text x="180" y="45" class="t-ptr">mid</text>
+                    <text x="340" y="45" class="t-ptr">high</text>
+                </g>
+
+                <!-- Pass 2 Header -->
+                <text x="10" y="115" font-family="Arial" font-size="12" font-weight="bold" fill="#b21f1f">Pass 2: low=0, high=3 -> mid=1 (val=22 < 44) -> low=2</text>
+
+                <!-- Pass 3 Header -->
+                <text x="10" y="145" font-family="Arial" font-size="12" font-weight="bold" fill="#059669">Pass 3: low=2, high=3 -> mid=3 (val=44 == 44) -> FOUND at index 3!</text>
+            </svg>
+        </div>
+
+        <h4>Time Complexity Derivation:</h4>
+        <p>
+            At each division step, the search space size is halved:
+            $$n \longrightarrow \frac{n}{2} \longrightarrow \frac{n}{4} \longrightarrow \dots \longrightarrow 1$$
+            After $k$ recursive/iterative divisions, $\frac{n}{2^k} = 1 \implies 2^k = n \implies k = \log_2(n)$.
+        </p>
+        <ul>
+            <li><strong>Best Case:</strong> $O(1)$ (when middle element matches key immediately).</li>
+            <li><strong>Worst Case:</strong> $O(\log_2 n)$.</li>
+            <li><strong>Average Case:</strong> $O(\log_2 n)$.</li>
+            <li><strong>Space Complexity:</strong> $O(1)$ iterative, $O(\log_2 n)$ recursive call stack.</li>
+        </ul>
+
+        <h4>Program P2: Iterative &amp; Recursive Binary Search in C</h4>
+<pre><code>#include &lt;stdio.h&gt;
+
+// Iterative Binary Search
+int binarySearchIterative(int arr[], int n, int key) {
+    int low = 0, high = n - 1;
+    while (low &lt;= high) {
+        int mid = low + (high - low) / 2;
+
+        if (arr[mid] == key)
+            return mid; // Key found
+        if (arr[mid] &lt; key)
+            low = mid + 1; // Search right subarray
+        else
+            high = mid - 1; // Search left subarray
+    }
+    return -1; // Key not present
+}
+
+// Recursive Binary Search
+int binarySearchRecursive(int arr[], int low, int high, int key) {
+    if (low &lt;= high) {
+        int mid = low + (high - low) / 2;
+
+        if (arr[mid] == key)
+            return mid;
+        if (arr[mid] &gt; key)
+            return binarySearchRecursive(arr, low, mid - 1, key);
+        return binarySearchRecursive(arr, mid + 1, high, key);
+    }
+    return -1;
+}
+
+int main() {
+    int arr[] = {11, 22, 33, 44, 55, 66, 77, 88, 99};
+    int n = sizeof(arr) / sizeof(arr[0]);
+    int key = 44;
+
+    int resIterative = binarySearchIterative(arr, n, key);
+    int resRecursive = binarySearchRecursive(arr, 0, n - 1, key);
+
+    printf("Iterative Search: Key %d found at index %d.\n", key, resIterative);
+    printf("Recursive Search: Key %d found at index %d.\n", key, resRecursive);
+
+    return 0;
+}</code></pre>
+
+        <h4>Merits and Demerits of Binary Search:</h4>
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Merits</th>
+                        <th>Demerits</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Extremely fast for large datasets ($O(\log n)$ time).</td>
+                        <td>Requires data array to be strictly sorted first.</td>
+                    </tr>
+                    <tr>
+                        <td>Significantly reduces comparison operations.</td>
+                        <td>Not directly suited for linked list structures without random access.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- SECTION 5.2 BASIC SORTING ALGORITHMS -->
+    <section>
+        <h2>5.2 Basic Sorting Algorithms</h2>
+        <p>
+            Sorting is a fundamental operation that reorders elements in non-decreasing or non-increasing order.
+        </p>
+
+        <!-- BUBBLE SORT -->
+        <h3>1. Bubble Sort</h3>
+        <p>
+            <strong>Bubble Sort</strong> operates by repeatedly stepping through the list, comparing adjacent elements, and swapping them if they are in the wrong order. With each full pass, the largest unsorted element "bubbles up" to its correct position at the end of the array.
+        </p>
+
+        <h4>Algorithm:</h4>
+        <ol>
+            <li>For <code>i = 0</code> to <code>n - 2</code> (Passes):</li>
+            <li>For <code>j = 0</code> to <code>n - i - 2</code> (Comparisons):</li>
+            <li>If <code>arr[j] &gt; arr[j + 1]</code>, swap <code>arr[j]</code> and <code>arr[j + 1]</code>.</li>
+            <li>If no swaps occur in an entire pass, the array is sorted early.</li>
+        </ol>
+
+        <h4>Pass-by-Pass Trace Example: Array <code>A = {5, 3, 1, 9, 8, 2, 4, 7}</code></h4>
+
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Pass</th>
+                        <th>Step-by-Step Array State / Action</th>
+                        <th>Array After Pass</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Pass 1</strong></td>
+                        <td>
+                            Swap(5,3) &rarr; [3,5,1,9,8,2,4,7]<br>
+                            Swap(5,1) &rarr; [3,1,5,9,8,2,4,7]<br>
+                            5&lt;9 (No swap)<br>
+                            Swap(9,8) &rarr; [3,1,5,8,9,2,4,7]<br>
+                            Swap(9,2) &rarr; [3,1,5,8,2,9,4,7]<br>
+                            Swap(9,4) &rarr; [3,1,5,8,2,4,9,7]<br>
+                            Swap(9,7) &rarr; [3,1,5,8,2,4,7,9]
+                        </td>
+                        <td><code>[3, 1, 5, 8, 2, 4, 7, 9]</code><br><em>(9 placed)</em></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Pass 2</strong></td>
+                        <td>
+                            Swap(3,1) &rarr; [1,3,5,8,2,4,7,9]<br>
+                            Swap(8,2) &rarr; [1,3,5,2,8,4,7,9]<br>
+                            Swap(8,4) &rarr; [1,3,5,2,4,8,7,9]<br>
+                            Swap(8,7) &rarr; [1,3,5,2,4,7,8,9]
+                        </td>
+                        <td><code>[1, 3, 5, 2, 4, 7, 8, 9]</code><br><em>(8 placed)</em></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Pass 3</strong></td>
+                        <td>
+                            Swap(5,2) &rarr; [1,3,2,5,4,7,8,9]<br>
+                            Swap(5,4) &rarr; [1,3,2,4,5,7,8,9]
+                        </td>
+                        <td><code>[1, 3, 2, 4, 5, 7, 8, 9]</code><br><em>(7 placed)</em></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Pass 4</strong></td>
+                        <td>
+                            Swap(3,2) &rarr; [1,2,3,4,5,7,8,9]
+                        </td>
+                        <td><code>[1, 2, 3, 4, 5, 7, 8, 9]</code><br><em>(Sorted)</em></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h4>Program P3: Bubble Sort with Early Exit Optimization in C</h4>
+<pre><code>#include &lt;stdio.h&gt;
+
+void bubbleSort(int arr[], int n) {
+    int i, j, temp;
+    int swapped;
+
+    for (i = 0; i &lt; n - 1; i++) {
+        swapped = 0;
+        for (j = 0; j &lt; n - i - 1; j++) {
+            if (arr[j] &gt; arr[j + 1]) {
+                // Swap elements
+                temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+                swapped = 1;
+            }
+        }
+        // If no two elements were swapped in inner loop, break
+        if (swapped == 0)
+            break;
+    }
+}
+
+int main() {
+    int arr[] = {5, 3, 1, 9, 8, 2, 4, 7};
+    int n = sizeof(arr) / sizeof(arr[0]);
+    int i;
+
+    bubbleSort(arr, n);
+
+    printf("Sorted array using Bubble Sort:\n");
+    for (i = 0; i &lt; n; i++) {
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
+
+    return 0;
+}</code></pre>
+
+        <p><strong>Bubble Sort Complexity:</strong> Best Case $O(n)$ (optimized), Worst &amp; Average Case $O(n^2)$. Space Complexity: $O(1)$.</p>
+
+        <!-- SELECTION SORT -->
+        <h3>2. Selection Sort</h3>
+        <p>
+            <strong>Selection Sort</strong> divides the array into a sorted and an unsorted region. In each pass, it selects the minimum element from the unsorted region and swaps it with the first element of the unsorted region.
+        </p>
+
+        <h4>Pass-by-Pass Trace Example: Array <code>A = {25, 79, 41, 9, 34, 60}</code></h4>
+
+        <!-- SVG Diagram: Selection Sort Trace -->
+        <div class="diagram-container">
+            <svg class="diagram" width="580" height="210" viewBox="0 0 580 210" xmlns="http://www.w3.org/2000/svg">
+                <style>
+                    .s-head { font-family: Arial, sans-serif; font-size: 12px; font-weight: bold; fill: #b21f1f; }
+                    .s-box { fill: #f7f7f7; stroke: #444; stroke-width: 1.5; }
+                    .s-sorted { fill: #d1fae5; stroke: #059669; stroke-width: 1.5; }
+                    .s-min { fill: #fef08a; stroke: #ca8a04; stroke-width: 2; }
+                    .s-txt { font-family: Courier New, monospace; font-size: 13px; font-weight: bold; fill: #111; text-anchor: middle; }
+                </style>
+
+                <!-- Initial -->
+                <text x="10" y="20" class="s-head">Init: [25, 79, 41, 9, 34, 60]</text>
+
+                <!-- Pass 1 -->
+                <text x="10" y="50" class="s-head">Pass 1 (Min=9 at idx 3, Swap with idx 0):</text>
+                <g transform="translate(10, 60)">
+                    <rect x="0" y="0" width="40" height="25" class="s-sorted"/><text x="20" y="17" class="s-txt">9</text>
+                    <rect x="45" y="0" width="40" height="25" class="s-box"/><text x="65" y="17" class="s-txt">79</text>
+                    <rect x="90" y="0" width="40" height="25" class="s-box"/><text x="110" y="17" class="s-txt">41</text>
+                    <rect x="135" y="0" width="40" height="25" class="s-box"/><text x="155" y="17" class="s-txt">25</text>
+                    <rect x="180" y="0" width="40" height="25" class="s-box"/><text x="200" y="17" class="s-txt">34</text>
+                    <rect x="225" y="0" width="40" height="25" class="s-box"/><text x="245" y="17" class="s-txt">60</text>
+                </g>
+
+                <!-- Pass 2 -->
+                <text x="10" y="110" class="s-head">Pass 2 (Min=25 at idx 3, Swap with idx 1):</text>
+                <g transform="translate(10, 120)">
+                    <rect x="0" y="0" width="40" height="25" class="s-sorted"/><text x="20" y="17" class="s-txt">9</text>
+                    <rect x="45" y="0" width="40" height="25" class="s-sorted"/><text x="65" y="17" class="s-txt">25</text>
+                    <rect x="90" y="0" width="40" height="25" class="s-box"/><text x="110" y="17" class="s-txt">41</text>
+                    <rect x="135" y="0" width="40" height="25" class="s-box"/><text x="155" y="17" class="s-txt">79</text>
+                    <rect x="180" y="0" width="40" height="25" class="s-box"/><text x="200" y="17" class="s-txt">34</text>
+                    <rect x="225" y="0" width="40" height="25" class="s-box"/><text x="245" y="17" class="s-txt">60</text>
+                </g>
+
+                <!-- Pass 3 -->
+                <text x="10" y="170" class="s-head">Pass 3 (Min=34 at idx 4, Swap with idx 2):</text>
+                <g transform="translate(10, 180)">
+                    <rect x="0" y="0" width="40" height="25" class="s-sorted"/><text x="20" y="17" class="s-txt">9</text>
+                    <rect x="45" y="0" width="40" height="25" class="s-sorted"/><text x="65" y="17" class="s-txt">25</text>
+                    <rect x="90" y="0" width="40" height="25" class="s-sorted"/><text x="110" y="17" class="s-txt">34</text>
+                    <rect x="135" y="0" width="40" height="25" class="s-box"/><text x="155" y="17" class="s-txt">79</text>
+                    <rect x="180" y="0" width="40" height="25" class="s-box"/><text x="200" y="17" class="s-txt">41</text>
+                    <rect x="225" y="0" width="40" height="25" class="s-box"/><text x="245" y="17" class="s-txt">60</text>
+                </g>
+            </svg>
+        </div>
+
+        <h4>Program P4: Selection Sort in C</h4>
+<pre><code>#include &lt;stdio.h&gt;
+
+void selectionSort(int arr[], int n) {
+    int i, j, minIdx, temp;
+
+    for (i = 0; i &lt; n - 1; i++) {
+        minIdx = i;
+        for (j = i + 1; j &lt; n; j++) {
+            if (arr[j] &lt; arr[minIdx]) {
+                minIdx = j;
+            }
+        }
+        // Swap minimum element with first element of unsorted region
+        if (minIdx != i) {
+            temp = arr[i];
+            arr[i] = arr[minIdx];
+            arr[minIdx] = temp;
+        }
+    }
+}
+
+int main() {
+    int arr[] = {25, 79, 41, 9, 34, 60};
+    int n = sizeof(arr) / sizeof(arr[0]);
+    int i;
+
+    selectionSort(arr, n);
+
+    printf("Sorted array using Selection Sort:\n");
+    for (i = 0; i &lt; n; i++) {
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
+
+    return 0;
+}</code></pre>
+
+        <p>
+            <strong>Time Complexity Derivation:</strong> Total comparisons:
+            $$(n-1) + (n-2) + \dots + 1 = \frac{n(n-1)}{2} = \frac{n^2 - n}{2} \in O(n^2)$$
+            Best, Worst, and Average Case Time Complexity are all $O(n^2)$.
+        </p>
+
+        <!-- INSERTION SORT -->
+        <h3>3. Insertion Sort</h3>
+        <p>
+            <strong>Insertion Sort</strong> builds the final sorted array one item at a time. It takes each element from the unsorted region and inserts it into its correct position within the already sorted sub-array.
+        </p>
+
+        <h4>Pass-by-Pass Trace Example: Array <code>A = {25, 79, 41, 9, 34, 60}</code></h4>
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Pass</th>
+                        <th>Key Inserted</th>
+                        <th>Shift Operations</th>
+                        <th>Array After Pass</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Pass 1</strong></td>
+                        <td>Key = 79</td>
+                        <td>79 &gt; 25 (No shift required)</td>
+                        <td><code>[25, 79, 41, 9, 34, 60]</code></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Pass 2</strong></td>
+                        <td>Key = 41</td>
+                        <td>Shift 79 right; insert 41 before 79</td>
+                        <td><code>[25, 41, 79, 9, 34, 60]</code></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Pass 3</strong></td>
+                        <td>Key = 9</td>
+                        <td>Shift 79, 41, 25 right; insert 9 at index 0</td>
+                        <td><code>[9, 25, 41, 79, 34, 60]</code></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Pass 4</strong></td>
+                        <td>Key = 34</td>
+                        <td>Shift 79, 41 right; insert 34 before 41</td>
+                        <td><code>[9, 25, 34, 41, 79, 60]</code></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Pass 5</strong></td>
+                        <td>Key = 60</td>
+                        <td>Shift 79 right; insert 60 before 79</td>
+                        <td><code>[9, 25, 34, 41, 60, 79]</code></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h4>Program P5: Insertion Sort in C</h4>
+<pre><code>#include &lt;stdio.h&gt;
+
+void insertionSort(int arr[], int n) {
+    int i, key, j;
+    for (i = 1; i &lt; n; i++) {
+        key = arr[i];
+        j = i - 1;
+
+        /* Move elements of arr[0..i-1] that are greater than key
+           to one position ahead of their current position */
+        while (j &gt;= 0 &amp;&amp; arr[j] &gt; key) {
+            arr[j + 1] = arr[j];
+            j = j - 1;
+        }
+        arr[j + 1] = key;
+    }
+}
+
+int main() {
+    int arr[] = {25, 79, 41, 9, 34, 60};
+    int n = sizeof(arr) / sizeof(arr[0]);
+    int i;
+
+    insertionSort(arr, n);
+
+    printf("Sorted array using Insertion Sort:\n");
+    for (i = 0; i &lt; n; i++) {
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
+
+    return 0;
+}</code></pre>
+
+        <p><strong>Complexity:</strong> Best Case $O(n)$ (already sorted), Worst/Average Case $O(n^2)$. Space Complexity: $O(1)$.</p>
+    </section>
+
+    <!-- SECTION 5.3 FINDING ROOTS OF EQUATIONS -->
+    <section>
+        <h2>5.3 Finding Roots of Quadratic Equations</h2>
+        <p>
+            A standard quadratic equation is expressed as:
+            $$ax^2 + bx + c = 0 \quad (a \neq 0)$$
+        </p>
+        <p>
+            The roots are computed using the Discriminant formula $d = b^2 - 4ac$:
+        </p>
+        <div class="formula-box">
+            $$x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$$
+        </div>
+
+        <h4>Algorithm to Compute Roots:</h4>
+        <ol>
+            <li>Input coefficients <code>a</code>, <code>b</code>, and <code>c</code>.</li>
+            <li>If <code>a == 0</code>, equation is not quadratic; terminate.</li>
+            <li>Compute Discriminant <code>d = b*b - 4*a*c</code>.</li>
+            <li>If <code>d &gt; 0</code>: Roots are real and distinct.
+                $$r_1 = \frac{-b + \sqrt{d}}{2a}, \quad r_2 = \frac{-b - \sqrt{d}}{2a}$$
+            </li>
+            <li>If <code>d == 0</code>: Roots are real and equal.
+                $$r_1 = r_2 = \frac{-b}{2a}$$
+            </li>
+            <li>If <code>d &lt; 0</code>: Roots are complex and imaginary.
+                $$\text{Real Part} = \frac{-b}{2a}, \quad \text{Imaginary Part} = \frac{\sqrt{-d}}{2a}$$
+            </li>
+        </ol>
+
+        <h4>Complete C Program for Finding Roots:</h4>
+<pre><code>#include &lt;stdio.h&gt;
+#include &lt;math.h&gt;
+
+int main() {
+    double a, b, c, discriminant, root1, root2, realPart, imagPart;
+
+    printf("Enter coefficients a, b and c: ");
+    if (scanf("%lf %lf %lf", &amp;a, &amp;b, &amp;c) != 3 || a == 0) {
+        printf("Invalid input! 'a' must be a non-zero real number.\n");
+        return 1;
+    }
+
+    discriminant = b * b - 4 * a * c;
+
+    // Condition for real and distinct roots
+    if (discriminant &gt; 0) {
+        root1 = (-b + sqrt(discriminant)) / (2 * a);
+        root2 = (-b - sqrt(discriminant)) / (2 * a);
+        printf("Roots are Real and Distinct:\n");
+        printf("Root 1 = %.2lf\nRoot 2 = %.2lf\n", root1, root2);
+    }
+    // Condition for real and equal roots
+    else if (discriminant == 0) {
+        root1 = root2 = -b / (2 * a);
+        printf("Roots are Real and Equal:\n");
+        printf("Root 1 = Root 2 = %.2lf\n", root1);
+    }
+    // Condition for complex/imaginary roots
+    else {
+        realPart = -b / (2 * a);
+        imagPart = sqrt(-discriminant) / (2 * a);
+        printf("Roots are Complex and Imaginary:\n");
+        printf("Root 1 = %.2lf + %.2lfi\n", realPart, imagPart);
+        printf("Root 2 = %.2lf - %.2lfi\n", realPart, imagPart);
+    }
+
+    return 0;
+}</code></pre>
+    </section>
+
+    <!-- SECTION 5.4 ASYMPTOTIC NOTATIONS & COMPLEXITY -->
+    <section>
+        <h2>5.4 Notion of Order of Complexity</h2>
+        <p>
+            <strong>Asymptotic Analysis</strong> evaluates the performance of an algorithm as the input size $n$ grows infinitely large ($n \to \infty$).
+        </p>
+
+        <!-- 1. BIG-OH NOTATION -->
+        <h3>1. Big-O Notation $O(g(n))$ — Upper Bound (Worst Case)</h3>
+        <p>
+            Defines an upper bound for an algorithm's running time. Function $f(n) = O(g(n))$ if there exist positive constants $c$ and $n_0$ such that:
+            $$f(n) \le c \cdot g(n) \quad \forall n \ge n_0$$
+        </p>
+
+        <!-- SVG Diagram: Big-O Curve -->
+        <div class="diagram-container">
+            <svg class="diagram" width="460" height="200" viewBox="0 0 460 200" xmlns="http://www.w3.org/2000/svg">
+                <style>
+                    .axis { stroke: #333; stroke-width: 2; }
+                    .curve-g { stroke: #b21f1f; stroke-width: 2.5; fill: none; }
+                    .curve-f { stroke: #2563eb; stroke-width: 2.5; stroke-dasharray: 4,4; fill: none; }
+                    .lbl-txt { font-family: Georgia, serif; font-size: 12px; font-weight: bold; }
+                </style>
+                <!-- Axes -->
+                <line x1="40" y1="170" x2="420" y2="170" class="axis"/>
+                <line x1="40" y1="170" x2="40" y2="20" class="axis"/>
+
+                <!-- Curves -->
+                <path d="M 40,160 Q 180,140 400,30" class="curve-g"/>
+                <path d="M 40,150 Q 200,110 400,70" class="curve-f"/>
+
+                <!-- Labels -->
+                <text x="405" y="30" fill="#b21f1f" class="lbl-txt">c · g(n)</text>
+                <text x="405" y="70" fill="#2563eb" class="lbl-txt">f(n)</text>
+                <line x1="180" y1="170" x2="180" y2="120" stroke="#777" stroke-dasharray="2,2"/>
+                <text x="175" y="185" font-family="Arial" font-size="11" fill="#333">n₀</text>
+                <text x="210" y="190" font-family="Arial" font-size="11" fill="#555">Input Size (n) →</text>
+            </svg>
+        </div>
+
+        <!-- 2. BIG-OMEGA NOTATION -->
+        <h3>2. Big-Omega Notation $\Omega(g(n))$ — Lower Bound (Best Case)</h3>
+        <p>
+            Defines a lower bound for an algorithm's running time. Function $f(n) = \Omega(g(n))$ if there exist positive constants $c$ and $n_0$ such that:
+            $$c \cdot g(n) \le f(n) \quad \forall n \ge n_0$$
+        </p>
+
+        <!-- SVG Diagram: Big-Omega Curve -->
+        <div class="diagram-container">
+            <svg class="diagram" width="460" height="200" viewBox="0 0 460 200" xmlns="http://www.w3.org/2000/svg">
+                <style>
+                    .axis { stroke: #333; stroke-width: 2; }
+                    .curve-f { stroke: #2563eb; stroke-width: 2.5; fill: none; }
+                    .curve-g { stroke: #059669; stroke-width: 2.5; stroke-dasharray: 4,4; fill: none; }
+                </style>
+                <line x1="40" y1="170" x2="420" y2="170" class="axis"/>
+                <line x1="40" y1="170" x2="40" y2="20" class="axis"/>
+
+                <path d="M 40,150 Q 180,100 400,30" class="curve-f"/>
+                <path d="M 40,165 Q 200,140 400,90" class="curve-g"/>
+
+                <text x="405" y="30" fill="#2563eb" class="lbl-txt">f(n)</text>
+                <text x="405" y="90" fill="#059669" class="lbl-txt">c · g(n)</text>
+                <line x1="170" y1="170" x2="170" y2="125" stroke="#777" stroke-dasharray="2,2"/>
+                <text x="165" y="185" font-family="Arial" font-size="11" fill="#333">n₀</text>
+            </svg>
+        </div>
+
+        <!-- 3. BIG-THETA NOTATION -->
+        <h3>3. Big-Theta Notation $\Theta(g(n))$ — Tight Bound (Average Case)</h3>
+        <p>
+            Defines a tight bound. Function $f(n) = \Theta(g(n))$ if there exist positive constants $c_1, c_2$ and $n_0$ such that:
+            $$c_1 \cdot g(n) \le f(n) \le c_2 \cdot g(n) \quad \forall n \ge n_0$$
+        </p>
+
+        <!-- SVG Diagram: Big-Theta Curve -->
+        <div class="diagram-container">
+            <svg class="diagram" width="460" height="200" viewBox="0 0 460 200" xmlns="http://www.w3.org/2000/svg">
+                <style>
+                    .axis { stroke: #333; stroke-width: 2; }
+                    .curve-c2 { stroke: #b21f1f; stroke-width: 2; fill: none; }
+                    .curve-f { stroke: #2563eb; stroke-width: 2.5; fill: none; }
+                    .curve-c1 { stroke: #059669; stroke-width: 2; fill: none; }
+                </style>
+                <line x1="40" y1="170" x2="420" y2="170" class="axis"/>
+                <line x1="40" y1="170" x2="40" y2="20" class="axis"/>
+
+                <path d="M 40,150 Q 180,110 400,25" class="curve-c2"/>
+                <path d="M 40,158 Q 180,125 400,60" class="curve-f"/>
+                <path d="M 40,165 Q 180,140 400,95" class="curve-c1"/>
+
+                <text x="405" y="25" fill="#b21f1f" class="lbl-txt">c₂ · g(n)</text>
+                <text x="405" y="60" fill="#2563eb" class="lbl-txt">f(n)</text>
+                <text x="405" y="95" fill="#059669" class="lbl-txt">c₁ · g(n)</text>
+                <line x1="160" y1="170" x2="160" y2="135" stroke="#777" stroke-dasharray="2,2"/>
+                <text x="155" y="185" font-family="Arial" font-size="11" fill="#333">n₀</text>
+            </svg>
+        </div>
+
+        <h4>Example Mathematical Proofs:</h4>
+
+        <div class="note-box">
+            <strong>Example 1: Prove $f(n) = 2n + 1 \in O(n)$</strong><br>
+            We must show $2n + 1 \le c \cdot n$ for $n \ge n_0$.<br>
+            For $n \ge 1$: $2n + 1 \le 2n + n = 3n$.<br>
+            Thus, choosing constant $c = 3$ and $n_0 = 1$, we satisfy $f(n) \le 3n \implies f(n) = O(n)$.
+        </div>
+
+        <div class="note-box">
+            <strong>Example 2: Prove $f(n) = 2n - 2 \in \Omega(n)$</strong><br>
+            We must show $2n - 2 \ge c \cdot n$ for $n \ge n_0$.<br>
+            For $n \ge 2$: $2n - 2 \ge 2n - n = 1n$.<br>
+            Thus, choosing $c = 1$ and $n_0 = 2$, we satisfy $f(n) \ge 1n \implies f(n) = \Omega(n)$.
+        </div>
+
+        <div class="note-box">
+            <strong>Example 3: Prove $f(n) = 3n - 2 \in \Theta(n)$</strong><br>
+            We must find $c_1, c_2$ such that $c_1 \cdot n \le 3n - 2 \le c_2 \cdot n$ for $n \ge n_0$.<br>
+            Lower Bound: $3n - 2 \ge 1n$ for $n \ge 1 \implies c_1 = 1$.<br>
+            Upper Bound: $3n - 2 \le 3n$ for $n \ge 1 \implies c_2 = 3$.<br>
+            Therefore, $1n \le 3n - 2 \le 3n$ for $n_0 = 1 \implies f(n) = \Theta(n)$.
+        </div>
+    </section>
+</div>
+
+</body>
+</html>
+```
+
+### Summary of Included Content & Features:
+1. **Design Token Parity:** Strict adherence to font stack (Georgia for main text, Arial for diagrams, Courier New for code), crimson primary accent `#b21f1f`, responsive container bounds, table wrappers, and code block formatting.
+2. **5.1 Searching Algorithms:** Full explanations, step-by-step trace illustrations (Linear Search key=7, Binary Search key=44), complexity analysis, complete C programs (P1 & P2), and merit/demerit tables.
+3. **5.2 Basic Sorting Algorithms:** Bubble Sort, Selection Sort, and Insertion Sort covered with algorithms, pass-by-pass trace tables, inline SVG execution diagrams, full C programs (P3, P4, P5), and complexity derivations.
+4. **5.3 Finding Roots of Equations:** Complete step-by-step algorithm for quadratic equations ($ax^2+bx+c=0$), discriminant cases, and full C program with error handling.
+5. **5.4 Asymptotic Notations:** Detailed explanations of Big-O, Big-Omega, and Big-Theta notations, including responsive vector diagrams (SVG curves) for bounds and worked mathematical proofs ($2n+1$, $2n-2$, $3n-2$).

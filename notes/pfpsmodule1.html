@@ -3,7 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PFPF Module 1: Introduction to programming</title><style>
+  <title>PFPF Module 1: Introduction to programming</title>
+  <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']],
+      packages: ['base', 'ams'] // removed mhchem, not needed for DE
+    },
+    svg: {
+      fontCache: 'global'
+    }
+  };
+  </script>
+  <!-- Load MathJax -->
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script><style>
   * {
     box-sizing: border-box;
   }
@@ -129,7 +143,14 @@
     line-height: 1.5;
   }
 
-  .study-notes .table-wrap {\n    width: 100%;\n    overflow-x: auto;\n    -webkit-overflow-scrolling: touch;\n    margin: 16px 0 22px;\n  }\n\n  .study-notes .table-wrap table {
+  .study-notes .table-wrap {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: 16px 0 22px;
+  }
+
+  .study-notes .table-wrap table {
     width: 100%;
     min-width: 560px;
     border-collapse: collapse;
@@ -137,7 +158,12 @@
     font-size: 15px;
   }
 
-  .study-notes > .section table {\n    table-layout: auto;\n  }\n\n  .study-notes th,\n  .study-notes td {
+  .study-notes > .section table {
+    table-layout: auto;
+  }
+
+  .study-notes th,
+  .study-notes td {
     border: 1px solid var(--border);
     padding: 9px 10px;
     vertical-align: middle;
@@ -270,7 +296,93 @@
       width: 65px;
     }
   }
+  
+/* Module Navigation */
+.module-navigation {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 16px;
+    margin: 20px 0;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.05);
+}
+
+.module-nav-title {
+    color: #0f172a;
+    font-size: 17px;
+    font-weight: 700;
+    margin: 0 0 12px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #dbeafe;
+}
+
+.module-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.module-list li {
+    margin: 0;
+    padding: 0;
+}
+
+.module-list a {
+    display: block;
+    padding: 10px 12px;
+    color: #036bfc;
+    background: #f8fafc;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 1.5;
+    transition: background 0.2s ease,
+                color 0.2s ease,
+                border-color 0.2s ease;
+}
+
+.module-list a:hover {
+    color: #1d4ed8;
+    background: #eff6ff;
+    border-color: #bfdbfe;
+}
+
+/* Mobile-friendly layout */
+@media (max-width: 600px) {
+    .module-navigation {
+        padding: 12px;
+    }
+
+    .module-nav-title {
+        font-size: 16px;
+    }
+
+    .module-list a {
+        padding: 10px;
+        font-size: 13px;
+    }
+}
+
 </style></head><body>
+
+  
+<!-- Module Navigation -->
+<nav class="module-navigation">
+    <p class="module-nav-title">📚 Programming for Problem Solving</p>
+
+    <ul class="module-list">
+        <li><a href="/notes/pfpsmodule1.html">Module 1: Introduction to Programming</a></li>
+        <li><a href="/notes/pfpsmodule2.html">Module 2: Conditional Branching and Loops</a></li>
+        <li><a href="/notes/pfpsmodule3.html">Module 3: Basic Algorithms</a></li>
+        <li><a href="/notes/pfpsmodule4.html">Module 4: Functions</a></li>
+        <li><a href="/notes/pfpsmodule5.html">Module 5: Structures and Arrays</a></li>
+    </ul>
+</nav>
+
 
 <article class="study-notes">
 
